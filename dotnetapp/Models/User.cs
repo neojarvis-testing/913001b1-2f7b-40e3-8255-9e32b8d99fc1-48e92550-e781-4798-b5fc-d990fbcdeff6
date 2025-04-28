@@ -30,6 +30,5 @@ namespace dotnetapp.Models
         [Required(ErrorMessage = "User role is required.")]
         [StringLength(20, ErrorMessage = "User role cannot exceed 20 characters.")]
         public string UserRole {get;set;}
-
     }
 }

@@ -7,9 +7,8 @@ namespace dotnetapp.Exceptions
 {
     public class InsufficientBalanceException : Exception
     {
-        public InsufficientBalanceException(string messages) : base(messages)
-        {
 
-        }
+        public InsufficientBalanceException(string message) : base(message){ }
+
     }
 }
