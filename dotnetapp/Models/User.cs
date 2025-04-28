@@ -27,6 +27,5 @@ namespace dotnetapp.Models
 
         [Required(ErrorMessage = "User role is required.")]
         public string UserRole {get;set;}
-
     }
 }

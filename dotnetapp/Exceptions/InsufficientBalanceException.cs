@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace dotnetapp.Exceptions
 {
-    public class InsufficientBalanceException
+    public class InsufficientBalanceException : Exception
     {
-        
+        public InsufficientBalanceException(string message) : base(message){ }
     }
 }
