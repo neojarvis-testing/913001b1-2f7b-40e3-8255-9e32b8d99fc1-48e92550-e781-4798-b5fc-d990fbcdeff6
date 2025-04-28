@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace dotnetapp.Models
 {
+    
     public class Account
     {
         [Key]

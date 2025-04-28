@@ -14,7 +14,7 @@ namespace dotnetapp.Models
 
         [Required]
         [ForeignKey("User")]
-        public string UserId {get;set;}
+        public int UserId {get;set;}
 
         [Required(ErrorMessage = "Comments are required.")]
         public string Comments{get;set;}
