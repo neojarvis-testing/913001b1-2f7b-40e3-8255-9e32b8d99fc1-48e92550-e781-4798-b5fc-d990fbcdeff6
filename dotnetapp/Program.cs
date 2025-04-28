@@ -10,8 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Configure Serilog for logging to a file
 var logFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Logs", "app.log");
 Log.Logger = new LoggerConfiguration()
+    .Enrich.FromLogContext()
     .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day)
     .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add Serilog to logging
 builder.Logging.ClearProviders();
@@ -28,6 +31,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Register Services
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<AccountService>();
 
 var app = builder.Build();
 
@@ -42,6 +46,7 @@ app.UseSerilogRequestLogging(); // Enable Serilog request logging
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
