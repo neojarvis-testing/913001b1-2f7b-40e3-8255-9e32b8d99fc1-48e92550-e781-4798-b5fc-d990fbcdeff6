@@ -13,8 +13,12 @@ namespace dotnetapp.Models
 
         public string? Name {get;set;}
 
+
+        public string? Name {get;set;}
+
         [Display(Name = "Full Name")]
         public string? Name {get;set;}   // Stores the user's full name
+
 
     }
 }
