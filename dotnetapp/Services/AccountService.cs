@@ -55,13 +55,13 @@ namespace dotnetapp.Services
             {
                 return null;
             }
-            else{
+            
                 account.Balance = updatedAccount.Balance;
                 account.Status = updatedAccount.Status;
                 account.LastUpdated = DateTime.Now;
                 _context.SaveChanges();
                 return account;
-            }
+            
         }
 
         public bool DeleteAccount(int accountId)
@@ -71,11 +71,11 @@ namespace dotnetapp.Services
             {
                 return false;
             }
-            else{
+            
                 _context.Accounts.Remove(account);
                 _context.SaveChanges();
                 return true;
-            }
+            
         }
     }
 }

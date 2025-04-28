@@ -10,5 +10,6 @@ namespace dotnetapp.Services
         Transaction CreateTransaction(Transaction transaction);
         Transaction UpdateTransactionByManager(int transactionId, Transaction updatedTransaction);
         IEnumerable<Transaction> GetTransactionsByUserId(int userId);
+        
     }
 }
