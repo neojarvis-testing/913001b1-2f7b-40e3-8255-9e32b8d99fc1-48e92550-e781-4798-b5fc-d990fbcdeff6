@@ -1,0 +1,429 @@
+2025-04-28 09:10:35.365 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:10:35.393 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:10:35.507 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 09:10:35.526 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:10:35.542 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:11:06.174 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:11:06.198 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:11:06.312 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 09:11:06.830 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-04-28 09:11:06.856 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-04-28 09:11:06.859 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-04-28 09:11:06.860 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-04-28 09:11:06.877 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-04-28 09:11:06.892 +00:00 [INF] Applying migration '20250428091035_Updated'.
+2025-04-28 09:11:06.962 +00:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [Email] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Username] nvarchar(50) NOT NULL,
+    [MobileNumber] nvarchar(max) NOT NULL,
+    [UserRole] nvarchar(20) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2025-04-28 09:13:28.600 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:13:28.626 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:13:28.739 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 09:13:29.015 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:13:29.031 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:13:29.693 +00:00 [INF] Executed DbCommand (611ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [main_appdb];
+2025-04-28 09:13:29.834 +00:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [main_appdb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-04-28 09:13:29.854 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-04-28 09:13:29.947 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-04-28 09:13:29.948 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-04-28 09:13:29.965 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-04-28 09:13:29.979 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-04-28 09:13:29.993 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-28 09:15:22.101 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:15:22.126 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:15:22.248 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 09:15:22.267 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:15:22.284 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:15:34.588 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:15:34.613 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 09:15:34.725 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 09:15:35.009 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-04-28 09:15:35.033 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-04-28 09:15:35.037 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-04-28 09:15:35.037 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-04-28 09:15:35.054 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-04-28 09:15:35.068 +00:00 [INF] Applying migration '20250428091522_Initialsetup'.
+2025-04-28 09:15:35.139 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [Email] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Username] nvarchar(50) NOT NULL,
+    [MobileNumber] nvarchar(max) NOT NULL,
+    [UserRole] nvarchar(20) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2025-04-28 09:15:35.141 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Accounts] (
+    [AccountId] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [AccountHolderName] nvarchar(100) NOT NULL,
+    [AccountType] nvarchar(50) NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [Status] nvarchar(50) NULL,
+    [ProofOfIdentity] nvarchar(255) NOT NULL,
+    [DateCreated] datetime2 NULL,
+    [LastUpdated] datetime2 NULL,
+    CONSTRAINT [PK_Accounts] PRIMARY KEY ([AccountId]),
+    CONSTRAINT [FK_Accounts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([UserId]) ON DELETE CASCADE
+);
+2025-04-28 09:15:35.143 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Feedbacks] (
+    [FeedbackId] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [Comments] nvarchar(500) NOT NULL,
+    [DateProvided] datetime2 NOT NULL,
+    CONSTRAINT [PK_Feedbacks] PRIMARY KEY ([FeedbackId]),
+    CONSTRAINT [FK_Feedbacks_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([UserId]) ON DELETE CASCADE
+);
+2025-04-28 09:15:35.144 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Transactions] (
+    [TransactionId] int NOT NULL IDENTITY,
+    [AccountId] int NOT NULL,
+    [TransactionDate] datetime2 NOT NULL,
+    [TransactionType] nvarchar(50) NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Status] nvarchar(50) NULL,
+    [Description] nvarchar(255) NULL,
+    CONSTRAINT [PK_Transactions] PRIMARY KEY ([TransactionId]),
+    CONSTRAINT [FK_Transactions_Accounts_AccountId] FOREIGN KEY ([AccountId]) REFERENCES [Accounts] ([AccountId]) ON DELETE CASCADE
+);
+2025-04-28 09:15:35.145 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Accounts_UserId] ON [Accounts] ([UserId]);
+2025-04-28 09:15:35.146 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Feedbacks_UserId] ON [Feedbacks] ([UserId]);
+2025-04-28 09:15:35.146 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transaction_AccountId] ON [Transactions] ([AccountId]);
+2025-04-28 09:15:35.148 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250428091522_Initialsetup', N'6.0.0');
+2025-04-28 10:00:09.968 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:00:36.304 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:01:19.234 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:02:38.575 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:04:19.882 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:04:56.989 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:10:10.935 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 10:10:10.965 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 10:10:10.966 +00:00 [INF] Hosting environment: Development
+2025-04-28 10:10:10.966 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 10:10:29.770 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 10:10:29.814 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 10:10:29.817 +00:00 [INF] HTTP GET / responded 404 in 4.5827 ms
+2025-04-28 10:10:29.822 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 54.8509ms
+2025-04-28 10:10:34.270 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger - -
+2025-04-28 10:10:34.272 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger - - - 301 0 - 1.6148ms
+2025-04-28 10:10:34.552 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 10:10:34.656 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 104.3397ms
+2025-04-28 10:10:34.969 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui.css - -
+2025-04-28 10:10:34.998 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-04-28 10:10:34.999 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui.css - - - 200 143632 text/css 29.9735ms
+2025-04-28 10:10:35.718 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-bundle.js - -
+2025-04-28 10:10:35.839 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-standalone-preset.js - -
+2025-04-28 10:10:35.905 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-04-28 10:10:35.905 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 65.8999ms
+2025-04-28 10:10:36.185 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-04-28 10:10:36.185 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 466.7356ms
+2025-04-28 10:10:37.616 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 10:10:37.652 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/favicon-32x32.png - -
+2025-04-28 10:10:37.652 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-04-28 10:10:37.652 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/favicon-32x32.png - - - 200 628 image/png 0.3689ms
+2025-04-28 10:10:37.660 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 10:10:37.668 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 52.2671ms
+2025-04-28 10:10:40.515 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 10:10:40.516 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 0.5768ms
+2025-04-28 10:10:41.047 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 10:10:41.048 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 10:10:41.049 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 1.7723ms
+2025-04-28 10:10:44.108 +00:00 [INF] Application is shutting down...
+2025-04-28 10:10:59.647 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 10:10:59.676 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 10:10:59.677 +00:00 [INF] Hosting environment: Development
+2025-04-28 10:10:59.677 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 10:11:16.908 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 10:11:16.952 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 10:11:16.954 +00:00 [INF] HTTP GET / responded 404 in 4.4756 ms
+2025-04-28 10:11:16.959 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 54.3359ms
+2025-04-28 10:11:26.493 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 10:11:26.599 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 106.2637ms
+2025-04-28 10:11:26.969 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 10:11:27.013 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 10:11:27.021 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 51.8271ms
+2025-04-28 10:12:44.340 +00:00 [INF] Application is shutting down...
+2025-04-28 11:03:00.306 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 11:03:00.350 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 11:03:00.351 +00:00 [INF] Hosting environment: Development
+2025-04-28 11:03:00.351 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 11:03:10.107 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 11:03:10.151 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 11:03:10.154 +00:00 [INF] HTTP GET / responded 404 in 4.4847 ms
+2025-04-28 11:03:10.159 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 55.7603ms
+2025-04-28 11:03:14.972 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 11:03:15.075 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 103.3091ms
+2025-04-28 11:03:15.487 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 11:03:15.530 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 11:03:15.538 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 51.8051ms
+2025-04-28 11:03:44.331 +00:00 [INF] Application is shutting down...
+2025-04-28 11:03:49.414 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 11:03:49.443 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 11:03:49.443 +00:00 [INF] Hosting environment: Development
+2025-04-28 11:03:49.443 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 11:04:20.511 +00:00 [INF] Application is shutting down...
+2025-04-28 11:04:46.251 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 11:04:46.281 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 11:04:46.281 +00:00 [INF] Hosting environment: Development
+2025-04-28 11:04:46.281 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 11:05:11.785 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 11:05:11.868 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 11:05:11.896 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/html;+charset=utf-8 113.7246ms
+2025-04-28 11:05:12.617 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/favicon.ico - -
+2025-04-28 11:05:12.624 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 11:05:12.626 +00:00 [INF] HTTP GET /favicon.ico responded 404 in 2.2184 ms
+2025-04-28 11:05:12.628 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/favicon.ico - - - 404 0 - 11.5761ms
+2025-04-28 11:05:25.685 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 11:05:25.823 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 137.9134ms
+2025-04-28 11:05:26.254 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 11:05:26.256 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 11:05:26.258 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 3.7072ms
+2025-04-28 11:05:59.021 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 11:05:59.022 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 0.6686ms
+2025-04-28 11:05:59.357 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 11:05:59.358 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 11:05:59.358 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 1.5651ms
+2025-04-28 11:06:16.306 +00:00 [INF] Application is shutting down...
+2025-04-28 11:06:21.925 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 11:06:21.956 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 11:06:21.957 +00:00 [INF] Hosting environment: Development
+2025-04-28 11:06:21.957 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 11:06:34.196 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 11:06:34.242 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 11:06:34.245 +00:00 [INF] HTTP GET / responded 404 in 4.5139 ms
+2025-04-28 11:06:34.250 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 56.8561ms
+2025-04-28 11:06:38.082 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 11:06:38.183 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 101.0438ms
+2025-04-28 11:06:38.990 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 11:06:38.991 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 1.1205ms
+2025-04-28 11:06:39.405 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 11:06:39.469 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.1870ms
+2025-04-28 11:07:38.084 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/login application/json 63
+2025-04-28 11:07:38.088 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-28 11:07:38.116 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-04-28 11:07:38.394 +00:00 [INF] Login attempt for email: user@example.com
+2025-04-28 11:07:38.421 +00:00 [INF] Login process started for email: user@example.com
+2025-04-28 11:07:39.004 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 11:07:39.004 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-28 11:07:39.112 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 11:07:39.991 +00:00 [INF] Executed DbCommand (43ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-04-28 11:07:40.008 +00:00 [WRN] Invalid email: user@example.com
+2025-04-28 11:07:40.009 +00:00 [WRN] Login failed for email: user@example.com. Reason: Invalid email or password.
+2025-04-28 11:07:40.012 +00:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 11:07:40.029 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 1909.0751ms
+2025-04-28 11:07:40.030 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-28 11:07:40.030 +00:00 [INF] HTTP POST /api/Authentication/login responded 401 in 1945.0995 ms
+2025-04-28 11:07:40.033 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/login application/json 63 - 401 - application/json;+charset=utf-8 1949.4907ms
+2025-04-28 11:08:23.057 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/login application/json 64
+2025-04-28 11:08:23.058 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-28 11:08:23.058 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-04-28 11:08:23.063 +00:00 [INF] Login attempt for email: user@example.com
+2025-04-28 11:08:23.063 +00:00 [INF] Login process started for email: user@example.com
+2025-04-28 11:08:23.064 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 11:08:23.068 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-04-28 11:08:23.069 +00:00 [WRN] Invalid email: user@example.com
+2025-04-28 11:08:23.069 +00:00 [WRN] Login failed for email: user@example.com. Reason: Invalid email or password.
+2025-04-28 11:08:23.069 +00:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 11:08:23.069 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 11.0907ms
+2025-04-28 11:08:23.069 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-28 11:08:23.069 +00:00 [INF] HTTP POST /api/Authentication/login responded 401 in 11.5442 ms
+2025-04-28 11:08:23.069 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/login application/json 64 - 401 - application/json;+charset=utf-8 12.6082ms
+2025-04-28 11:09:54.589 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/register application/json 143
+2025-04-28 11:09:54.589 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-04-28 11:09:54.592 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-04-28 11:09:54.597 +00:00 [INF] Registration attempt for email: user@example.com
+2025-04-28 11:09:54.599 +00:00 [INF] Registration process started for email: user@example.com
+2025-04-28 11:09:54.641 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 11:09:54.642 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-04-28 11:09:54.947 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-04-28 11:09:54.984 +00:00 [INF] Registration successful for email: user@example.com
+2025-04-28 11:09:54.984 +00:00 [INF] Registration successful for email: user@example.com
+2025-04-28 11:09:54.984 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 11:09:54.984 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 392.1249ms
+2025-04-28 11:09:54.984 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-04-28 11:09:54.984 +00:00 [INF] HTTP POST /api/Authentication/register responded 200 in 395.2314 ms
+2025-04-28 11:09:54.984 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/register application/json 143 - 200 - application/json;+charset=utf-8 395.4720ms
+2025-04-28 11:10:40.242 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/login application/json 61
+2025-04-28 11:10:40.242 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-28 11:10:40.242 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-04-28 11:10:40.242 +00:00 [INF] Login attempt for email: user@example.com
+2025-04-28 11:10:40.242 +00:00 [INF] Login process started for email: user@example.com
+2025-04-28 11:10:40.243 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-28 11:10:40.245 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-04-28 11:10:40.685 +00:00 [INF] Token generated successfully.
+2025-04-28 11:10:40.786 +00:00 [INF] Login successful for email: user@example.com
+2025-04-28 11:10:40.786 +00:00 [INF] Login successful for email: user@example.com. Token issued.
+2025-04-28 11:10:40.786 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-28 11:10:40.786 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 544.4272ms
+2025-04-28 11:10:40.787 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-28 11:10:40.787 +00:00 [INF] HTTP POST /api/Authentication/login responded 200 in 544.7284 ms
+2025-04-28 11:10:40.787 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Authentication/login application/json 61 - 200 - application/json;+charset=utf-8 545.0440ms
+2025-04-28 11:11:07.508 +00:00 [INF] Application is shutting down...
+2025-04-28 12:53:06.723 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 12:53:06.756 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 12:53:06.757 +00:00 [INF] Hosting environment: Development
+2025-04-28 12:53:06.757 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 12:53:13.356 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 12:53:13.403 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 12:53:13.406 +00:00 [INF] HTTP GET / responded 404 in 5.0278 ms
+2025-04-28 12:53:13.412 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 59.5772ms
+2025-04-28 12:53:21.887 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 12:53:21.997 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 110.3584ms
+2025-04-28 12:53:22.582 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 12:53:22.650 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 68.4990ms
+2025-04-28 12:53:24.799 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 12:53:24.800 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 0.8711ms
+2025-04-28 12:53:25.199 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 12:53:25.201 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1.6084ms
+2025-04-28 13:02:35.988 +00:00 [INF] Application is shutting down...

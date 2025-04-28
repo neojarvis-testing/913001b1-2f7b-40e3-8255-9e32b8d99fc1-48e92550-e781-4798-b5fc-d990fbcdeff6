@@ -9,10 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace dotnetapp.Models
 {
 
-    
-
     [Index(nameof(UserId))]            //Index on UserId for faster lookups
- 
 
     public class Account
     {
