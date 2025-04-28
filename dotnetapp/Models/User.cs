@@ -13,10 +13,12 @@ namespace dotnetapp.Models
 
         [EmailAddress(ErrorMessage = "Invalid email format.")]
         [Required(ErrorMessage = "Email is required.")]
+        [StringLength(254, ErrorMessage = "Email cannot exceed 254 characters.")]
         public string Email {get;set;}
 
         [Required(ErrorMessage = "Password is required.")]
         [DataType(DataType.Password)]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be between 6 and 100 characters.")]
         public string Password {get;set;}
 
         [Required(ErrorMessage = "Username is required.")]
@@ -25,6 +27,7 @@ namespace dotnetapp.Models
 
         [Required(ErrorMessage = "Mobile number is required.")]
         [Phone(ErrorMessage = "Invalid phone number format.")]
+        [StringLength(15, MinimumLength = 6, ErrorMessage = "Mobile number cannot exceed 15 characters.")]
         public string MobileNumber {get;set;}
 
         [Required(ErrorMessage = "User role is required.")]
