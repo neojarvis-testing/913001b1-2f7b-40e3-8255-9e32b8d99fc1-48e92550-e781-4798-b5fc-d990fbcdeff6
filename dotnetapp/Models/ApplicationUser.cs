@@ -12,6 +12,7 @@ namespace dotnetapp.Models
         [StringLength(30, ErrorMessage = "Name cannot exceed 30 characters.")]
 
 
+
         [Display(Name = "Full Name")]
         public string? Name {get;set;}   // Stores the user's full name
 
