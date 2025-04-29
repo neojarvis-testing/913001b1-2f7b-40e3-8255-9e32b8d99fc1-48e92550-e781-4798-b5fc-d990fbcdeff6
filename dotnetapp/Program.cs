@@ -32,6 +32,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+ 
  
 var app = builder.Build();
  
@@ -50,3 +52,5 @@ app.UseAuthorization();
 app.MapControllers();
  
 app.Run();
+ 
+ 
