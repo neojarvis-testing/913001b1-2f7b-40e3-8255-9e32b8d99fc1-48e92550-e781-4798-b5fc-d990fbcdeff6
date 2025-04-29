@@ -277,3 +277,29 @@ System.InvalidOperationException: No authenticationScheme was specified, and the
 2025-04-28 13:00:35.939 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
 2025-04-28 13:00:35.939 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0476 ms
 2025-04-28 13:00:35.939 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2234ms
+2025-04-28 13:01:01.614 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 13:01:01.615 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0452 ms
+2025-04-28 13:01:01.615 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.8096ms
+2025-04-28 13:01:01.687 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 13:01:01.688 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0245 ms
+2025-04-28 13:01:01.688 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.2706ms
+2025-04-28 13:01:01.688 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 13:01:01.688 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0082 ms
+2025-04-28 13:01:01.688 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1106ms
+2025-04-28 13:01:01.719 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 13:01:01.720 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0186 ms
+2025-04-28 13:01:01.720 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2425ms
+2025-04-28 13:01:01.720 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 13:01:01.720 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0087 ms
+2025-04-28 13:01:01.720 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1901ms
+2025-04-28 13:01:01.724 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 13:01:01.724 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0162 ms
+2025-04-28 13:01:01.724 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2195ms
+2025-04-28 13:01:01.725 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 13:01:01.725 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0195 ms
+2025-04-28 13:01:01.725 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1489ms
+2025-04-28 13:03:42.896 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 13:03:42.897 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 0.7008ms
+2025-04-28 13:03:43.342 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 13:03:43.344 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.4967ms
+2025-04-28 13:05:20.370 +00:00 [INF] Application is shutting down...
