@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CustomernavComponent } from './customernav.component';
 
@@ -8,7 +11,8 @@ describe('CustomernavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomernavComponent ]
+      declarations: [ CustomernavComponent ],
+      imports: [ReactiveFormsModule, RouterTestingModule, HttpClientTestingModule, FormsModule],
     })
     .compileComponents();
   });
@@ -19,7 +23,8 @@ describe('CustomernavComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  
+  fit('Frontend_should_create_Customernav_component', () => {
     expect(component).toBeTruthy();
   });
 });

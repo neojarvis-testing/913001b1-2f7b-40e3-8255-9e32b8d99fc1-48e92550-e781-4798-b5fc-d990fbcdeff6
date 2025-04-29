@@ -8,7 +8,7 @@ using dotnetapp.Exceptions;
  
 namespace dotnetapp.Services
 {
-    public class TransactionService : ITransactionService
+    public class TransactionService
     {
         private readonly ApplicationDbContext _context;
  
