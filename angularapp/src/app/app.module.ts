@@ -45,9 +45,8 @@ import { RegistrationComponent } from './components/registration/registration.co
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
     NavbarComponent,
-    // RegisterComponent,
-    TransactionformComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    TransactionformComponent
   ],
   imports: [
     BrowserModule,
