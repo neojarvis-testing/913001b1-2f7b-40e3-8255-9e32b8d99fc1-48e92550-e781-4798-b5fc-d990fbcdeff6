@@ -1,0 +1,66 @@
+2025-04-29 06:45:29.634 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-29 06:45:29.669 +00:00 [INF] Creating key {7893cabc-cd2c-43ce-ab1e-0e0dc2e97caa} with creation date 2025-04-29 06:45:29Z, activation date 2025-04-29 06:45:29Z, and expiration date 2025-07-28 06:45:29Z.
+2025-04-29 06:45:29.677 +00:00 [WRN] No XML encryptor configured. Key {7893cabc-cd2c-43ce-ab1e-0e0dc2e97caa} may be persisted to storage in unencrypted form.
+2025-04-29 06:45:29.680 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-7893cabc-cd2c-43ce-ab1e-0e0dc2e97caa.xml'.
+2025-04-29 06:45:29.746 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 06:45:29.749 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 06:45:29.750 +00:00 [INF] Hosting environment: Development
+2025-04-29 06:45:29.750 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 06:45:37.167 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-29 06:45:37.318 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 153.9916ms
+2025-04-29 06:45:37.785 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-29 06:45:37.859 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.8265ms
+2025-04-29 06:47:21.283 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 06:47:21.290 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-29 06:47:21.313 +00:00 [INF] HTTP POST /api/register responded 404 in 24.9929 ms
+2025-04-29 06:47:21.314 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 31.0068ms
+2025-04-29 06:47:21.377 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 06:47:21.378 +00:00 [INF] HTTP POST /api/register responded 404 in 0.2951 ms
+2025-04-29 06:47:21.378 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 1.6427ms
+2025-04-29 06:47:21.379 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 06:47:21.380 +00:00 [INF] HTTP POST /api/login responded 404 in 0.4482 ms
+2025-04-29 06:47:21.380 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.6701ms
+2025-04-29 06:47:21.410 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 06:47:21.411 +00:00 [INF] HTTP POST /api/register responded 404 in 1.4353 ms
+2025-04-29 06:47:21.411 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 1.7459ms
+2025-04-29 06:47:21.412 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 06:47:21.412 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0469 ms
+2025-04-29 06:47:21.412 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2280ms
+2025-04-29 06:47:21.416 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 06:47:21.416 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0589 ms
+2025-04-29 06:47:21.416 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.3297ms
+2025-04-29 06:47:21.416 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 06:47:21.417 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0369 ms
+2025-04-29 06:47:21.417 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2178ms
+2025-04-29 06:47:41.201 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 06:47:41.201 +00:00 [INF] HTTP POST /api/register responded 404 in 0.1060 ms
+2025-04-29 06:47:41.201 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3713ms
+2025-04-29 06:47:41.327 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 06:47:41.327 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0880 ms
+2025-04-29 06:47:41.328 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3848ms
+2025-04-29 06:47:41.331 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 06:47:41.331 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0670 ms
+2025-04-29 06:47:41.331 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.3726ms
+2025-04-29 06:47:41.361 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 06:47:41.361 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0718 ms
+2025-04-29 06:47:41.361 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.3281ms
+2025-04-29 06:47:41.363 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 06:47:41.363 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0343 ms
+2025-04-29 06:47:41.363 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1936ms
+2025-04-29 06:47:41.367 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 06:47:41.367 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0441 ms
+2025-04-29 06:47:41.367 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2336ms
+2025-04-29 06:47:41.368 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 06:47:41.368 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0303 ms
+2025-04-29 06:47:41.368 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1634ms
+2025-04-29 06:49:14.142 +00:00 [INF] Application is shutting down...
+2025-04-29 06:50:22.716 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-29 06:50:22.799 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 06:50:22.803 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 06:50:22.803 +00:00 [INF] Hosting environment: Development
+2025-04-29 06:50:22.803 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 06:50:35.788 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-29 06:50:35.940 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 155.0896ms
+2025-04-29 06:50:36.304 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-29 06:50:36.387 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 82.7873ms
+2025-04-29 06:50:56.276 +00:00 [INF] Application is shutting down...
