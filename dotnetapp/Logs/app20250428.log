@@ -1,4 +1,4 @@
-2025-04-28 10:07:04.439 +00:00 [FTL] Application startup exception
+2025-04-28 10:10:34.772 +00:00 [FTL] Application startup exception
 System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
    at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
    at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
@@ -7,7 +7,7 @@ System.InvalidOperationException: Unable to resolve service for type 'Serilog.Ex
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
    at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
    at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 10:16:36.712 +00:00 [FTL] Application startup exception
+2025-04-28 10:11:23.174 +00:00 [FTL] Application startup exception
 System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
    at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
    at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
@@ -16,196 +16,264 @@ System.InvalidOperationException: Unable to resolve service for type 'Serilog.Ex
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
    at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
    at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 10:21:02.987 +00:00 [INF] Now listening on: http://0.0.0.0:8080
-2025-04-28 10:21:03.024 +00:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-04-28 10:21:03.025 +00:00 [INF] Hosting environment: Development
-2025-04-28 10:21:03.025 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
-2025-04-28 10:21:55.362 +00:00 [INF] Application is shutting down...
-2025-04-28 10:21:59.512 +00:00 [INF] Now listening on: http://0.0.0.0:8080
-2025-04-28 10:21:59.548 +00:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-04-28 10:21:59.548 +00:00 [INF] Hosting environment: Development
-2025-04-28 10:21:59.548 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
-2025-04-28 10:22:13.571 +00:00 [INF] Application is shutting down...
-2025-04-28 10:22:17.747 +00:00 [INF] Now listening on: http://0.0.0.0:8080
-2025-04-28 10:22:17.790 +00:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-04-28 10:22:17.791 +00:00 [INF] Hosting environment: Development
-2025-04-28 10:22:17.791 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
-2025-04-28 10:23:04.076 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
-2025-04-28 10:23:04.159 +00:00 [WRN] Failed to determine the https port for redirect.
-2025-04-28 10:23:04.163 +00:00 [INF] HTTP GET / responded 404 in 7.0137 ms
-2025-04-28 10:23:04.214 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 141.8793ms
-2025-04-28 10:23:14.137 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger - -
-2025-04-28 10:23:14.140 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger - - - 301 0 - 2.2694ms
-2025-04-28 10:23:14.411 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
-2025-04-28 10:23:14.543 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 132.0222ms
-2025-04-28 10:23:14.877 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui.css - -
-2025-04-28 10:23:14.923 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
-2025-04-28 10:23:14.925 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui.css - - - 200 143632 text/css 48.0264ms
-2025-04-28 10:23:15.686 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-standalone-preset.js - -
-2025-04-28 10:23:15.772 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
-2025-04-28 10:23:15.772 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 86.1108ms
-2025-04-28 10:23:15.819 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-bundle.js - -
-2025-04-28 10:23:15.915 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
-2025-04-28 10:23:15.915 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 96.1237ms
-2025-04-28 10:23:17.331 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
-2025-04-28 10:23:17.337 +00:00 [INF] Request starting HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/favicon-32x32.png - -
-2025-04-28 10:23:17.338 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
-2025-04-28 10:23:17.338 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/favicon-32x32.png - - - 200 628 image/png 0.4849ms
-2025-04-28 10:23:17.391 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+2025-04-28 10:13:24.003 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:14:51.956 +00:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-04-28 10:37:23.693 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 10:37:23.724 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 10:37:23.724 +00:00 [INF] Hosting environment: Development
+2025-04-28 10:37:23.724 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 10:38:13.119 +00:00 [INF] Application is shutting down...
+2025-04-28 10:38:19.205 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 10:38:19.237 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 10:38:19.238 +00:00 [INF] Hosting environment: Development
+2025-04-28 10:38:19.238 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 10:38:34.956 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 10:38:35.002 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 10:38:35.005 +00:00 [INF] HTTP GET / responded 404 in 4.7551 ms
+2025-04-28 10:38:35.010 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 57.6245ms
+2025-04-28 10:38:40.455 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger - -
+2025-04-28 10:38:40.457 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger - - - 301 0 - 1.7811ms
+2025-04-28 10:38:40.725 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 10:38:40.833 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 108.3928ms
+2025-04-28 10:38:41.153 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui.css - -
+2025-04-28 10:38:41.168 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-04-28 10:38:41.169 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui.css - - - 200 143632 text/css 15.9022ms
+2025-04-28 10:38:41.894 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-bundle.js - -
+2025-04-28 10:38:41.940 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-04-28 10:38:41.940 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 46.1059ms
+2025-04-28 10:38:41.975 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-standalone-preset.js - -
+2025-04-28 10:38:41.978 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-04-28 10:38:41.978 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 2.7917ms
+2025-04-28 10:38:44.695 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 10:38:44.708 +00:00 [ERR] An unhandled exception has occurred while executing the request.
 Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
    at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
    at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
    at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
-2025-04-28 10:23:17.402 +00:00 [INF] Request finished HTTP/1.1 GET http://ide-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 70.2005ms
-2025-04-28 10:24:35.107 +00:00 [INF] Application is shutting down...
-2025-04-28 10:25:00.301 +00:00 [FTL] Application startup exception
-System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
-   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
-   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
-   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 10:35:08.413 +00:00 [FTL] Application startup exception
-System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
-   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
-   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
-   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 10:36:49.275 +00:00 [FTL] Application startup exception
-System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
-   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
-   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
-   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 10:40:22.139 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
-2025-04-28 10:40:22.169 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
-2025-04-28 10:40:22.312 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
-2025-04-28 10:40:22.337 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
-2025-04-28 10:40:22.356 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
-2025-04-28 10:40:38.112 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
-2025-04-28 10:40:38.176 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
-2025-04-28 10:40:38.320 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
-2025-04-28 10:40:39.494 +00:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT 1
-2025-04-28 10:40:39.523 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
-2025-04-28 10:40:39.527 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT 1
-2025-04-28 10:40:39.528 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
-2025-04-28 10:40:39.554 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT [MigrationId], [ProductVersion]
-FROM [__EFMigrationsHistory]
-ORDER BY [MigrationId];
-2025-04-28 10:40:39.572 +00:00 [INF] Applying migration '20250428104022_InitialSetup'.
-2025-04-28 10:40:39.657 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-CREATE TABLE [Users] (
-    [UserId] int NOT NULL IDENTITY,
-    [Email] nvarchar(max) NOT NULL,
-    [Password] nvarchar(max) NOT NULL,
-    [Username] nvarchar(50) NOT NULL,
-    [MobileNumber] nvarchar(max) NOT NULL,
-    [UserRole] nvarchar(20) NOT NULL,
-    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
-);
-2025-04-28 10:40:49.561 +00:00 [FTL] Application startup exception
-System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
-   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
-   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
-   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 10:42:22.373 +00:00 [FTL] Application startup exception
-System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
-   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
-   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
-   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-2025-04-28 12:45:46.872 +00:00 [INF] Now listening on: http://0.0.0.0:8080
-2025-04-28 12:45:46.901 +00:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-04-28 12:45:46.901 +00:00 [INF] Hosting environment: Development
-2025-04-28 12:45:46.901 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
-2025-04-28 12:46:00.318 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
-2025-04-28 12:46:00.466 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 150.9465ms
-2025-04-28 12:46:00.778 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
-2025-04-28 12:46:00.827 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+2025-04-28 10:38:44.717 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 22.4151ms
+2025-04-28 10:38:44.729 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/favicon-32x32.png - -
+2025-04-28 10:38:44.729 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-04-28 10:38:44.729 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/favicon-32x32.png - - - 200 628 image/png 0.4119ms
+2025-04-28 11:03:17.867 +00:00 [INF] Application is shutting down...
+2025-04-28 11:03:23.897 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 11:03:23.927 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 11:03:23.927 +00:00 [INF] Hosting environment: Development
+2025-04-28 11:03:23.928 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 11:03:44.167 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 11:03:44.216 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 11:03:44.219 +00:00 [INF] HTTP GET / responded 404 in 4.9710 ms
+2025-04-28 11:03:44.224 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 60.7004ms
+2025-04-28 11:03:56.662 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 11:03:56.770 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 107.8554ms
+2025-04-28 11:03:57.268 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 11:03:57.281 +00:00 [ERR] An unhandled exception has occurred while executing the request.
 Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
    at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
    at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
    at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
-2025-04-28 12:46:00.835 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 56.8107ms
-2025-04-28 12:48:51.389 +00:00 [INF] Application is shutting down...
-2025-04-28 12:48:55.870 +00:00 [INF] Now listening on: http://0.0.0.0:8080
-2025-04-28 12:48:55.898 +00:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-04-28 12:48:55.899 +00:00 [INF] Hosting environment: Development
-2025-04-28 12:48:55.899 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
-2025-04-28 12:49:01.736 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
-2025-04-28 12:49:01.880 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 146.2562ms
-2025-04-28 12:49:02.203 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
-2025-04-28 12:49:02.270 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 66.8349ms
-2025-04-28 13:00:24.241 +00:00 [INF] Application is shutting down...
-2025-04-28 13:18:27.519 +00:00 [INF] Now listening on: http://0.0.0.0:8080
-2025-04-28 13:18:27.549 +00:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-04-28 13:18:27.550 +00:00 [INF] Hosting environment: Development
-2025-04-28 13:18:27.550 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
-2025-04-28 13:19:54.263 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
-2025-04-28 13:19:54.294 +00:00 [WRN] Failed to determine the https port for redirect.
-2025-04-28 13:19:54.297 +00:00 [INF] HTTP POST /api/register responded 404 in 4.8975 ms
-2025-04-28 13:19:54.302 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 41.3849ms
-2025-04-28 13:19:54.382 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
-2025-04-28 13:19:54.382 +00:00 [INF] HTTP POST /api/register responded 404 in 0.1773 ms
-2025-04-28 13:19:54.382 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.7348ms
-2025-04-28 13:19:54.387 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
-2025-04-28 13:19:54.388 +00:00 [INF] HTTP POST /api/login responded 404 in 0.5533 ms
-2025-04-28 13:19:54.388 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 1.1492ms
-2025-04-28 13:19:54.417 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
-2025-04-28 13:19:54.417 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0191 ms
-2025-04-28 13:19:54.417 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2228ms
-2025-04-28 13:19:54.417 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
-2025-04-28 13:19:54.418 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0164 ms
-2025-04-28 13:19:54.418 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1978ms
-2025-04-28 13:19:54.421 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
-2025-04-28 13:19:54.421 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0122 ms
-2025-04-28 13:19:54.421 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1852ms
-2025-04-28 13:19:54.421 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
-2025-04-28 13:19:54.422 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0129 ms
-2025-04-28 13:19:54.422 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1792ms
-2025-04-28 13:20:15.904 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
-2025-04-28 13:20:15.904 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0645 ms
-2025-04-28 13:20:15.905 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.4362ms
-2025-04-28 13:20:15.979 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
-2025-04-28 13:20:15.980 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0309 ms
-2025-04-28 13:20:15.980 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3057ms
-2025-04-28 13:20:15.980 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
-2025-04-28 13:20:15.981 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0188 ms
-2025-04-28 13:20:15.981 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.4298ms
-2025-04-28 13:20:16.020 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
-2025-04-28 13:20:16.021 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0481 ms
-2025-04-28 13:20:16.021 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.5184ms
-2025-04-28 13:20:16.022 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
-2025-04-28 13:20:16.022 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0184 ms
-2025-04-28 13:20:16.022 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1915ms
-2025-04-28 13:20:16.026 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
-2025-04-28 13:20:16.026 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0165 ms
-2025-04-28 13:20:16.026 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1933ms
-2025-04-28 13:20:16.027 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
-2025-04-28 13:20:16.027 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0141 ms
-2025-04-28 13:20:16.027 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1553ms
-2025-04-28 13:22:14.906 +00:00 [INF] Application is shutting down...
+2025-04-28 11:03:57.289 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 21.5621ms
+2025-04-28 12:45:06.443 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 12:45:06.490 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 12:45:06.491 +00:00 [INF] Hosting environment: Development
+2025-04-28 12:45:06.491 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 12:45:17.534 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - -
+2025-04-28 12:45:17.579 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 12:45:17.581 +00:00 [INF] HTTP GET / responded 404 in 4.6167 ms
+2025-04-28 12:45:17.633 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/ - - - 404 0 - 101.7593ms
+2025-04-28 12:45:23.439 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 12:45:23.567 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 127.3040ms
+2025-04-28 12:45:23.961 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 12:45:23.980 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - dotnetapp.Controllers.Democontroller.Index (dotnetapp). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 12:45:23.993 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 31.4776ms
+2025-04-28 12:48:08.690 +00:00 [INF] Application is shutting down...
+2025-04-28 12:50:26.513 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 12:50:26.543 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 12:50:26.544 +00:00 [INF] Hosting environment: Development
+2025-04-28 12:50:26.544 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 12:50:33.628 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 12:50:33.781 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 156.3481ms
+2025-04-28 12:50:34.107 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 12:50:34.181 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.7990ms
+2025-04-28 12:54:32.196 +00:00 [INF] Application is shutting down...
+2025-04-28 12:54:59.208 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-28 12:54:59.237 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-28 12:54:59.238 +00:00 [INF] Hosting environment: Development
+2025-04-28 12:54:59.238 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-28 12:55:07.281 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - -
+2025-04-28 12:55:07.424 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 145.8909ms
+2025-04-28 12:55:07.778 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
+2025-04-28 12:55:07.847 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 68.7737ms
+2025-04-28 12:55:29.081 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction application/json 663
+2025-04-28 12:55:29.086 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-28 12:55:29.091 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-04-28 12:55:29.093 +00:00 [ERR] HTTP POST /api/Transaction responded 500 in 9.5020 ms
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-04-28 12:55:29.101 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 12:55:29.104 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction application/json 663 - 500 - text/plain;+charset=utf-8 23.3639ms
+2025-04-28 12:55:48.661 +00:00 [INF] Request starting HTTP/1.1 PUT http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/manager/1 application/json 663
+2025-04-28 12:55:48.663 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2025-04-28 12:55:48.663 +00:00 [ERR] HTTP PUT /api/Transaction/manager/1 responded 500 in 0.8012 ms
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-04-28 12:55:48.664 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 12:55:48.665 +00:00 [INF] Request finished HTTP/1.1 PUT http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/manager/1 application/json 663 - 500 - text/plain;+charset=utf-8 3.7986ms
+2025-04-28 12:55:56.681 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction application/json 663
+2025-04-28 12:55:56.683 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-04-28 12:55:56.683 +00:00 [ERR] HTTP POST /api/Transaction responded 500 in 2.1079 ms
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-04-28 12:55:56.684 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-04-28 12:55:56.684 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction application/json 663 - 500 - text/plain;+charset=utf-8 3.2368ms
+2025-04-28 12:57:50.977 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 12:57:50.978 +00:00 [INF] HTTP POST /api/register responded 404 in 0.1475 ms
+2025-04-28 12:57:50.978 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.5618ms
+2025-04-28 12:57:51.078 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 12:57:51.078 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0617 ms
+2025-04-28 12:57:51.079 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.4202ms
+2025-04-28 12:57:51.079 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:57:51.079 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0217 ms
+2025-04-28 12:57:51.079 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2419ms
+2025-04-28 12:57:51.138 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 12:57:51.139 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0352 ms
+2025-04-28 12:57:51.139 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.3400ms
+2025-04-28 12:57:51.139 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:57:51.139 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0163 ms
+2025-04-28 12:57:51.139 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2061ms
+2025-04-28 12:57:51.143 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 12:57:51.143 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0145 ms
+2025-04-28 12:57:51.143 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1812ms
+2025-04-28 12:57:51.143 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:57:51.143 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0156 ms
+2025-04-28 12:57:51.143 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2336ms
+2025-04-28 12:58:14.714 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 12:58:14.714 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0495 ms
+2025-04-28 12:58:14.715 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.4456ms
+2025-04-28 12:58:14.809 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 12:58:14.809 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0504 ms
+2025-04-28 12:58:14.809 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3095ms
+2025-04-28 12:58:14.810 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:58:14.810 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0180 ms
+2025-04-28 12:58:14.810 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1694ms
+2025-04-28 12:58:14.839 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 12:58:14.839 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0308 ms
+2025-04-28 12:58:14.839 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2907ms
+2025-04-28 12:58:14.839 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:58:14.839 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0138 ms
+2025-04-28 12:58:14.840 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1862ms
+2025-04-28 12:58:14.843 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 12:58:14.843 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0204 ms
+2025-04-28 12:58:14.843 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1996ms
+2025-04-28 12:58:14.844 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:58:14.844 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0272 ms
+2025-04-28 12:58:14.844 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1740ms
+2025-04-28 12:58:36.747 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 12:58:36.748 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0377 ms
+2025-04-28 12:58:36.748 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.5446ms
+2025-04-28 12:58:36.867 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 12:58:36.867 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0398 ms
+2025-04-28 12:58:36.867 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.2999ms
+2025-04-28 12:58:36.868 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:58:36.868 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0162 ms
+2025-04-28 12:58:36.868 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1490ms
+2025-04-28 12:58:36.922 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 12:58:36.922 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0341 ms
+2025-04-28 12:58:36.922 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2998ms
+2025-04-28 12:58:36.923 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:58:36.923 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0149 ms
+2025-04-28 12:58:36.923 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1194ms
+2025-04-28 12:58:36.927 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 12:58:36.927 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0215 ms
+2025-04-28 12:58:36.927 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1884ms
+2025-04-28 12:58:36.927 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 12:58:36.927 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0131 ms
+2025-04-28 12:58:36.927 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1484ms
+2025-04-28 13:00:35.752 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 13:00:35.752 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0858 ms
+2025-04-28 13:00:35.752 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3440ms
+2025-04-28 13:00:35.861 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-28 13:00:35.861 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0346 ms
+2025-04-28 13:00:35.861 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3344ms
+2025-04-28 13:00:35.861 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 13:00:35.862 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0240 ms
+2025-04-28 13:00:35.862 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1728ms
+2025-04-28 13:00:35.932 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 13:00:35.933 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0528 ms
+2025-04-28 13:00:35.933 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.3374ms
+2025-04-28 13:00:35.933 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 13:00:35.933 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0180 ms
+2025-04-28 13:00:35.934 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2072ms
+2025-04-28 13:00:35.938 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-28 13:00:35.938 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0232 ms
+2025-04-28 13:00:35.938 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2360ms
+2025-04-28 13:00:35.939 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-28 13:00:35.939 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0476 ms
+2025-04-28 13:00:35.939 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.2234ms

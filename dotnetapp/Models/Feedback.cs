@@ -16,7 +16,6 @@ namespace dotnetapp.Models
         [Required]
         [ForeignKey("User")]
 
-
         public int UserId {get;set;}       // References the user who gave the feedback 
 
 
