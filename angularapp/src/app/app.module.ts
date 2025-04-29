@@ -20,7 +20,7 @@ import { ManagerviewallaccountsComponent } from './components/managerviewallacco
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/registration/register.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 
 import { FormsModule } from '@angular/forms';
