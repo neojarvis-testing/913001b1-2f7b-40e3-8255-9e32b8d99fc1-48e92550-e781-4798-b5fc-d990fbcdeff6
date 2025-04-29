@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AuthguardComponent } from './components/authguard/authguard.component';
+// import { AuthguardComponent } from './components/authguard/authguard.component';
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
 import { CustomernavComponent } from './components/customernav/customernav.component';
@@ -30,7 +30,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 @NgModule({
   declarations: [
     AppComponent,
-    AuthguardComponent,
+    // AuthguardComponent,
     CustomeraddaccountComponent,
     CustomeraddfeedbackComponent,
     CustomernavComponent,
@@ -46,7 +46,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     ManagerviewfeedbackComponent,
     NavbarComponent,
     RegistrationComponent,
-    TransactionformComponent
+    TransactionformComponent 
   ],
   imports: [
     BrowserModule,
