@@ -97,3 +97,19 @@ System.InvalidOperationException: No authenticationScheme was specified, and the
 2025-04-29 06:05:11.196 +00:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-04-29 06:05:11.196 +00:00 [INF] Hosting environment: Development
 2025-04-29 06:05:11.196 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 09:04:04.843 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-29 09:04:04.876 +00:00 [INF] Creating key {849150fd-e9a3-4c67-bce7-e0270597c453} with creation date 2025-04-29 09:04:04Z, activation date 2025-04-29 09:04:04Z, and expiration date 2025-07-28 09:04:04Z.
+2025-04-29 09:04:04.885 +00:00 [WRN] No XML encryptor configured. Key {849150fd-e9a3-4c67-bce7-e0270597c453} may be persisted to storage in unencrypted form.
+2025-04-29 09:04:04.887 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-849150fd-e9a3-4c67-bce7-e0270597c453.xml'.
+2025-04-29 09:04:04.954 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 09:04:04.956 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 09:04:04.957 +00:00 [INF] Hosting environment: Development
+2025-04-29 09:04:04.957 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 09:30:23.132 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-29 09:30:23.167 +00:00 [INF] Creating key {6616476d-deb7-46f9-a16c-e3e49a10d106} with creation date 2025-04-29 09:30:23Z, activation date 2025-04-29 09:30:23Z, and expiration date 2025-07-28 09:30:23Z.
+2025-04-29 09:30:23.175 +00:00 [WRN] No XML encryptor configured. Key {6616476d-deb7-46f9-a16c-e3e49a10d106} may be persisted to storage in unencrypted form.
+2025-04-29 09:30:23.178 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-6616476d-deb7-46f9-a16c-e3e49a10d106.xml'.
+2025-04-29 09:30:23.229 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 09:30:23.232 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 09:30:23.232 +00:00 [INF] Hosting environment: Development
+2025-04-29 09:30:23.232 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/

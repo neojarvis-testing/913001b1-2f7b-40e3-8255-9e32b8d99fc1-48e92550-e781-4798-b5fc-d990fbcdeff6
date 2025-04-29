@@ -9,11 +9,7 @@ using dotnetapp.Models;
 namespace dotnetapp.Services
 {
     public interface IFeedbackService
-    {
-
-       
-        
-
+    {   
         // Retrieves all feedback records.
         Task<IEnumerable<Feedback>> GetAllFeedbacks();
  
