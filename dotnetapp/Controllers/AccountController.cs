@@ -6,11 +6,20 @@ using dotnetapp.Services;
 
 namespace dotnetapp.Controllers
 {
+    ///api/account
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class AccountController : ControllerBase
     {
         private readonly AccountService _accountService;
+
+        // private readonly IAccountService _accountService;
+
+    // public AccountController(IAccountService accountService)
+    // {
+    //     _accountService = accountService;
+    // }
+
 
         public AccountController(AccountService accountService)
         {
