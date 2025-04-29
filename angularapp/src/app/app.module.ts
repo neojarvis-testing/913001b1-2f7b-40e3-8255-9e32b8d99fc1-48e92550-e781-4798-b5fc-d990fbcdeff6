@@ -24,6 +24,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 
 import { FormsModule } from '@angular/forms';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { FormsModule } from '@angular/forms';
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
     NavbarComponent,
-    // RegisterComponent,
+    RegistrationComponent,
     TransactionformComponent
   ],
   imports: [

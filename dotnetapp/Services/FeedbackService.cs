@@ -16,8 +16,6 @@ namespace dotnetapp.Services
     public class FeedbackService : IFeedbackService
     {
 
-
-
         private readonly ApplicationDbContext _context;
        
         public FeedbackService(ApplicationDbContext context)
