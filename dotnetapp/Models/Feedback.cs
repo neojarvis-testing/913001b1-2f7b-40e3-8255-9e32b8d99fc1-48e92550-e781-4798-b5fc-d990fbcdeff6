@@ -15,9 +15,7 @@ namespace dotnetapp.Models
 
         [Required]
         [ForeignKey("User")]
-
-        public int UserId {get;set;}       // References the user who gave the feedback 
-
+        public int UserId {get;set;}
 
         [Required(ErrorMessage = "Comments are required.")]
         [StringLength(500, ErrorMessage = "Comments cannot exceed 500 characters.")]
