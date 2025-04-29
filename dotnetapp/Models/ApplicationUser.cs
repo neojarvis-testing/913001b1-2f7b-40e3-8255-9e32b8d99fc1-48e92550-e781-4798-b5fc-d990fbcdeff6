@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,10 @@ namespace dotnetapp.Models
     public class ApplicationUser : IdentityUser
     {
         [StringLength(30, ErrorMessage = "Name cannot exceed 30 characters.")]
+
         [Display(Name = "Full Name")]
         public string? Name {get;set;}   // Stores the user's full name
 
-
     }
 }
+

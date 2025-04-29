@@ -16,7 +16,7 @@ namespace dotnetapp.Controllers
             _authService = authService;
         }
 
-        // /// <summary>
+       
         // /// Login endpoint for authentication.
         // /// Accepts login requests and returns a JWT token upon successful authentication.
         // /// </summary>
@@ -52,10 +52,10 @@ namespace dotnetapp.Controllers
             }
         }
 
-        // / <summary>
+        // / 
         // / Registration endpoint for new user accounts.
         // / Accepts registration requests and creates a new user account upon success.
-        // / </summary>
+        // / 
         // / <param name="model">User object containing registration details.</param>
         // / <returns>Success message or an error message.</returns>
         [HttpPost("register")]

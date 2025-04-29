@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using dotnetapp.Models;
- 
+
+
+
 namespace dotnetapp.Services
 {
     public interface IFeedbackService
     {
+
+        Task<IEnumerable<Feedback>> GetAllFeedbacks();
+        Task<IEnumerable<Feedback>> GetFeedbacksByUserId(int userId);
+        Task<bool> AddFeedback(Feedback feedback);
+        Task<bool> DeleteFeedback(int feedbackId);   
+        
+
         // Retrieves all feedback records.
         Task<IEnumerable<Feedback>> GetAllFeedbacks();
  
@@ -19,6 +28,7 @@ namespace dotnetapp.Services
  
         // Delete a feedback entry by its unique identifier
         Task<bool> DeleteFeedback(int feedbackId);
+
     }
 }
  
