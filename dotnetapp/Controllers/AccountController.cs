@@ -49,7 +49,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Manager,Customer")]
+       [Authorize(Roles = "Manager,Customer")]
         public IActionResult CreateAccount([FromBody] Account account)
         {
             if (account.AccountType != "Savings" && account.AccountType != "Current")
