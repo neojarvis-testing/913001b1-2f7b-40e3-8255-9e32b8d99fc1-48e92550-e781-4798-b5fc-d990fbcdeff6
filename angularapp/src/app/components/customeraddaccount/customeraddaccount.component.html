@@ -1,97 +1,79 @@
 <div class="container">
-  <button class="back-button" (click)="closeForm()">Back</button>
-  <h1>Create New Account</h1>
-  <form #accountForm="ngForm" (submit)="createAccount(accountForm)">
+  <button class="back-button" (click)="navigateHome()">Back</button>
+  <h1>Add New Account</h1>
+  
+  <form [formGroup]="accountForm" (ngSubmit)="createAccount()">
     <!-- Account Holder Name -->
     <div class="form-group">
-      <label for="accountHolderName">Account Holder Name:</label>
+      <label for="accountHolderName">Account Holder Name<span class="required">*</span></label>
       <input
         id="accountHolderName"
+        formControlName="accountHolderName"
         type="text"
-        name="AccountHolderName"
-        [(ngModel)]="account.AccountHolderName"
-        required
-        #accountHolderName="ngModel"
+        class="form-control"
+        placeholder="Enter account holder name"
       />
-      <p class="error-message" *ngIf="accountHolderName.touched && accountHolderName.invalid">
+      <p class="error-message" *ngIf="accountForm.get('accountHolderName')?.invalid && accountForm.get('accountHolderName')?.touched">
         Account Holder Name is required.
       </p>
     </div>
 
     <!-- User ID -->
     <div class="form-group">
-      <label for="userId">User ID:</label>
+      <label for="userId">User ID<span class="required">*</span></label>
       <input
         id="userId"
-        type="number"
-        name="UserId"
-        [(ngModel)]="account.UserId"
-        required
-        #userId="ngModel"
+        formControlName="userId"
+        type="text"
+        class="form-control"
+        placeholder="Enter user ID"
       />
-      <p class="error-message" *ngIf="userId.touched && userId.invalid">
+      <p class="error-message" *ngIf="accountForm.get('userId')?.touched && accountForm.get('userId')?.invalid">
         User ID is required.
       </p>
     </div>
+    
 
     <!-- Account Type -->
     <div class="form-group">
-      <label for="accountType">Account Type:</label>
-      <select
-        id="accountType"
-        name="AccountType"
-        [(ngModel)]="account.AccountType"
-        required
-        #accountType="ngModel"
-      >
+      <label for="accountType">Account Type<span class="required">*</span></label>
+      <select id="accountType" formControlName="accountType" class="form-control">
         <option value="" disabled>Select Account Type</option>
-        <option *ngFor="let type of accountTypes" [value]="type">{{ type }}</option>
+        <option value="Savings">Savings</option>
+        <option value="Current">Current</option>
       </select>
-      <p class="error-message" *ngIf="accountType.touched && accountType.invalid">
+      <p class="error-message" *ngIf="accountForm.get('accountType')?.invalid && accountForm.get('accountType')?.touched">
         Account Type is required.
       </p>
     </div>
 
-    <!-- Balance -->
+    <!-- Initial Balance -->
     <div class="form-group">
-      <label for="balance">Initial Balance:</label>
+      <label for="initialBalance">Initial Balance<span class="required">*</span></label>
       <input
-        id="balance"
+        id="initialBalance"
+        formControlName="initialBalance"
         type="number"
-        name="Balance"
-        [(ngModel)]="account.Balance"
-        required
-        min="1000"
-        #balance="ngModel"
+        class="form-control"
+        placeholder="Enter initial balance"
       />
-      <p class="error-message" *ngIf="balance.touched && balance.invalid">
-        <span *ngIf="balance.errors?.required">Initial Balance is required.</span>
-        <span *ngIf="balance.errors?.min">Initial Balance must be greater than or equal to 1000.</span>
+      <p class="error-message" *ngIf="accountForm.get('initialBalance')?.invalid && accountForm.get('initialBalance')?.touched">
+        <span *ngIf="accountForm.get('initialBalance')?.errors?.required">Initial Balance is required.</span>
+        <span *ngIf="accountForm.get('initialBalance')?.errors?.min">initial Balance must be greater than 1000</span>
       </p>
     </div>
 
     <!-- Proof of Identity -->
     <div class="form-group">
-      <label for="proofOfIdentity">Proof of Identity:</label>
-      <input
-        id="proofOfIdentity"
-        type="file"
-        (change)="onFileSelected($event)"
-        required
-      />
-      <p class="error-message" *ngIf="!selectedFile">
+      <label for="proofOfIdentity">Proof of Identity<span class="required">*</span></label>
+      <input id="proofOfIdentity" type="file" (change)="onFileSelected($event)" class="form-control" />
+      <p class="error-message" *ngIf="accountForm.get('proofOfIdentity')?.invalid && accountForm.get('proofOfIdentity')?.touched">
         Proof of Identity is required.
       </p>
     </div>
 
     <!-- Submit Button -->
-    <button
-      type="submit"
-      class="submit-button"
-      [disabled]="accountForm.invalid"
-    >
-      Create Account
-    </button>
+    <button type="submit" class="btn btn-primary button" [disabled]="accountForm.invalid">Create Account</button>
   </form>
 
   <!-- Popup -->
@@ -99,7 +81,12 @@
     <div class="popup-content">
       <h2>Success</h2>
       <p>{{ successMessage }}</p>
-      <button (click)="closePopup()">OK</button>
+      <button class="btn btn-success" (click)="closePopup()">OK</button>
     </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-notification">
+    <p>{{ errorMessage }}</p>
   </div>
 </div>

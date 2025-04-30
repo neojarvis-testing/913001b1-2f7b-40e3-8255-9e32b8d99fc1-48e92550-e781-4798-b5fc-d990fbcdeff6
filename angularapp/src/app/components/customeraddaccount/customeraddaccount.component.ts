@@ -1,61 +1,69 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from 'src/app/services/account.service';
-import { Account } from 'src/app/models/account.model';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-customeraddaccount',
   templateUrl: './customeraddaccount.component.html',
   styleUrls: ['./customeraddaccount.component.css']
 })
-export class CustomeraddaccountComponent {
-  account: Account = {
-    AccountHolderName: '',
-    UserId: 0,
-    AccountType: '',
-    Balance: 0,
-    Status: '',
-    ProofOfIdentity: '',
-  };
 
-  accountTypes = ['Savings', 'Current'];
-  selectedFile: File | null = null;
+export class CustomeraddaccountComponent implements OnInit {
+  accountForm!: FormGroup;
+  errorMessage: string = '';
   successMessage: string = '';
-  showPopup: boolean = false; // Controls the popup visibility
+  showPopup: boolean = false; // Controls visibility of the popup
 
-  constructor(private accountService: AccountService, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private accountService: AccountService,
+    private router: Router
+  ) {}
 
-  onFileSelected(event: any): void {
-    this.selectedFile = event.target.files[0];
-    if (this.selectedFile) {
-      this.account.ProofOfIdentity = this.selectedFile.name; // Assign the file name
-    }
-  }
-
-  createAccount(form: any): void {
-    // Ensure the form is valid and a file is selected before proceeding
-    if (form.invalid || !this.selectedFile) {
-      return;
-    }
-
-    this.accountService.createAccount(this.account).subscribe({
-      next: (res) => {
-        this.successMessage = 'Account created successfully!';
-        this.showPopup = true; // Show popup on success
-        console.log('Account creation response:', res);
-      },
-      error: (err) => {
-        console.error('Account creation error:', err);
-      }
+  ngOnInit(): void {
+    // Initialize the form
+    this.accountForm = this.formBuilder.group({
+      accountHolderName: ['', Validators.required],
+      userId: ['0', Validators.required],
+      accountType: ['', Validators.required],
+      initialBalance: ['', [Validators.required, Validators.min(1000)]],
+      proofOfIdentity: ['', Validators.required]
     });
   }
 
-  closePopup(): void {
-    this.showPopup = false; // Hide the popup
-    this.router.navigate(['/customerviewaccount']); // Redirect to customerviewaccount
+  onFileSelected(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      this.accountForm.patchValue({ proofOfIdentity: file.name });
+    }
   }
 
-  closeForm(): void {
-    this.router.navigate(['/']); // Navigate to a different route if needed
+  createAccount(): void {
+    if (this.accountForm.valid) {
+      const accountData = this.accountForm.getRawValue(); // Retrieve form values including disabled fields
+      this.accountService.createAccount(accountData).subscribe({
+        next: (response) => {
+          this.successMessage = 'Account created successfully!';
+          this.showPopup = true; // Show success popup
+        },
+        error: (err) => {
+          this.errorMessage = err.error.message || 'An error occurred while creating the account.';
+        }
+      });
+    } else {
+      this.errorMessage = 'Please fill out all required fields correctly.';
+    }
   }
+
+  closePopup(): void {
+    this.showPopup = false; // Hide popup
+    this.router.navigate(['/customerviewaccount']); // Navigate to the customerviewaccount page
+  }
+
+  navigateHome(): void {
+    this.router.navigate(['/home']); // Adjust '/home' to your actual home page route
+  }
+  
 }

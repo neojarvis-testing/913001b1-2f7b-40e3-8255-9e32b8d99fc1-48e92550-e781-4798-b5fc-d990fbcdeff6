@@ -13,10 +13,7 @@ export class ManagernavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  logout(): void {
-    // Perform logout logic here (clear session, navigate, etc.)
-    this.router.navigate(['/login']);
-  }
+  
 
 }
 
