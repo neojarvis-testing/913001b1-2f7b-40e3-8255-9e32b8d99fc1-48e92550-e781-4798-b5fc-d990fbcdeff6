@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  

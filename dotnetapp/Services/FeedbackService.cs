@@ -7,10 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using dotnetapp.Data;
 using dotnetapp.Models;
 
-
-using dotnetapp.Models;
-using dotnetapp.Data;
-
 namespace dotnetapp.Services
 {
     public class FeedbackService : IFeedbackService
