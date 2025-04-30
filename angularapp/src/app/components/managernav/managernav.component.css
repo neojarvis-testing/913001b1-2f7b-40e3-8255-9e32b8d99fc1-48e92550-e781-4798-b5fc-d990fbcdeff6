@@ -1,0 +1,46 @@
+nav {
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+   
+  nav .brand {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+   
+  nav .nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+   
+  nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+  }
+   
+  nav .nav-links a:hover {
+    background-color: #333;
+  }
+   
+  .logout-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   
+  .logout-button:hover {
+    background-color: #c0392b;
+  }
+   
