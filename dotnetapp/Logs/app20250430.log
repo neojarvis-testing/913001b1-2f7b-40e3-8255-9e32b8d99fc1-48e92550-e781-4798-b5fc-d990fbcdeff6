@@ -2603,3 +2603,22 @@ WHERE [a].[UserId] = @__userId_0
 2025-04-30 10:38:10.573 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
 2025-04-30 10:38:10.573 +00:00 [INF] HTTP GET /api/account/user/5003 responded 200 in 11.6731 ms
 2025-04-30 10:38:10.573 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/5003 - - - 200 - application/json;+charset=utf-8 11.8643ms
+2025-04-30 10:43:42.399 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/5003 - -
+2025-04-30 10:43:42.399 +00:00 [INF] CORS policy execution successful.
+2025-04-30 10:43:42.399 +00:00 [INF] HTTP OPTIONS /api/account/user/5003 responded 204 in 0.0574 ms
+2025-04-30 10:43:42.399 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/5003 - - - 204 - - 0.2733ms
+2025-04-30 10:43:42.668 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/5003 - -
+2025-04-30 10:43:42.668 +00:00 [INF] CORS policy execution successful.
+2025-04-30 10:43:42.668 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-04-30 10:43:42.668 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-04-30 10:43:42.669 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-30 10:43:42.670 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-04-30 10:43:42.670 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-30 10:43:42.670 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.7965ms
+2025-04-30 10:43:42.670 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-04-30 10:43:42.670 +00:00 [INF] HTTP GET /api/account/user/5003 responded 200 in 2.2231 ms
+2025-04-30 10:43:42.670 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/5003 - - - 200 - application/json;+charset=utf-8 2.3842ms
+2025-04-30 10:48:47.076 +00:00 [INF] Application is shutting down...
