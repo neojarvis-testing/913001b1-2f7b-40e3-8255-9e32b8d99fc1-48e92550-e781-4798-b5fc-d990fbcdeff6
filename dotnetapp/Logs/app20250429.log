@@ -14,3 +14,78 @@
 2025-04-29 04:40:14.812 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/index.html - - - 200 - text/html;charset=utf-8 0.7181ms
 2025-04-29 04:40:15.211 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - -
 2025-04-29 04:40:15.214 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.0872ms
+2025-04-29 09:17:00.911 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 09:17:00.941 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 09:17:00.941 +00:00 [INF] Hosting environment: Development
+2025-04-29 09:17:00.941 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 13:23:17.569 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 13:23:17.599 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 13:23:17.599 +00:00 [INF] Hosting environment: Development
+2025-04-29 13:23:17.599 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 13:24:05.072 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 13:24:05.114 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-29 13:24:05.117 +00:00 [INF] HTTP POST /api/register responded 404 in 5.0742 ms
+2025-04-29 13:24:05.122 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 53.3208ms
+2025-04-29 13:24:05.186 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 13:24:05.187 +00:00 [INF] HTTP POST /api/register responded 404 in 0.1193 ms
+2025-04-29 13:24:05.187 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 1.5239ms
+2025-04-29 13:24:05.193 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 13:24:05.194 +00:00 [INF] HTTP POST /api/login responded 404 in 0.5127 ms
+2025-04-29 13:24:05.194 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 1.0786ms
+2025-04-29 13:24:05.222 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 13:24:05.222 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0222 ms
+2025-04-29 13:24:05.222 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2269ms
+2025-04-29 13:24:05.222 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 13:24:05.222 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0132 ms
+2025-04-29 13:24:05.222 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1839ms
+2025-04-29 13:24:05.225 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 13:24:05.225 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0132 ms
+2025-04-29 13:24:05.226 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1826ms
+2025-04-29 13:24:05.226 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 13:24:05.226 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0116 ms
+2025-04-29 13:24:05.226 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1353ms
+2025-04-29 13:24:28.919 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 13:24:28.919 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0459 ms
+2025-04-29 13:24:28.919 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3427ms
+2025-04-29 13:24:28.980 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-04-29 13:24:28.980 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0319 ms
+2025-04-29 13:24:28.980 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 404 0 - 0.3018ms
+2025-04-29 13:24:28.982 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 13:24:28.982 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0164 ms
+2025-04-29 13:24:28.982 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 1.1576ms
+2025-04-29 13:24:29.018 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 13:24:29.018 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0450 ms
+2025-04-29 13:24:29.018 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.2591ms
+2025-04-29 13:24:29.019 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 13:24:29.019 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0158 ms
+2025-04-29 13:24:29.019 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1259ms
+2025-04-29 13:24:29.023 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-04-29 13:24:29.023 +00:00 [INF] HTTP POST /api/register responded 404 in 0.0136 ms
+2025-04-29 13:24:29.023 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 404 0 - 0.1944ms
+2025-04-29 13:24:29.023 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-04-29 13:24:29.023 +00:00 [INF] HTTP POST /api/login responded 404 in 0.0134 ms
+2025-04-29 13:24:29.024 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 404 0 - 0.1962ms
+2025-04-29 16:38:13.010 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 16:38:13.046 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 16:38:13.046 +00:00 [INF] Hosting environment: Development
+2025-04-29 16:38:13.046 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-29 16:47:22.926 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-04-29 16:47:22.967 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-29 16:47:22.972 +00:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-04-29 16:47:22.972 +00:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-04-29 16:47:22.974 +00:00 [INF] HTTP OPTIONS /api/account responded 405 in 8.5599 ms
+2025-04-29 16:47:22.979 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 405 0 - 56.0844ms
+2025-04-29 16:51:39.251 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-04-29 16:51:39.253 +00:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-04-29 16:51:39.253 +00:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-04-29 16:51:39.253 +00:00 [INF] HTTP OPTIONS /api/account responded 405 in 0.4930 ms
+2025-04-29 16:51:39.253 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 405 0 - 2.0315ms
+2025-04-29 16:59:32.829 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-04-29 16:59:32.830 +00:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-04-29 16:59:32.830 +00:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-04-29 16:59:32.830 +00:00 [INF] HTTP OPTIONS /api/account responded 405 in 0.6953 ms
+2025-04-29 16:59:32.830 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 405 0 - 1.5712ms
+2025-04-29 18:51:23.136 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-29 18:51:23.166 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 18:51:23.167 +00:00 [INF] Hosting environment: Development
+2025-04-29 18:51:23.167 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/

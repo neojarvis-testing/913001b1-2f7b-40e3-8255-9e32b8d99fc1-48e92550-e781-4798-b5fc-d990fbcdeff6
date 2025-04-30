@@ -1,0 +1,50 @@
+/* Styling for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #676363;
+    padding: 10px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .user-role {
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  .logout-button {
+    background-color:white;
+    color: red !important;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .logout-button:hover {
+    background-color: darkred;
+    color: whitesmoke !important;
+  }
+  
