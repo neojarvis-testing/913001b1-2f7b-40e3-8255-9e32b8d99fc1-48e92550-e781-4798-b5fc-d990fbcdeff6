@@ -1,1 +1,19 @@
-<p>customerviewaccount works!</p>
+<div class="account-container">
+    <h1>Your Accounts</h1>
+
+    <div *ngFor="let account of accounts" class="account-details">
+        <p><strong>Account Name:</strong> {{ account.accountHolderName }}</p>
+        <p><strong>Account Type:</strong> {{ account.accountType }}</p>
+        <p><strong>Balance:</strong> ₹{{ account.balance.toFixed(2) }}</p>
+        <p><strong>Status:</strong> {{ account.status }}</p>
+
+        <!-- Show message if not approved -->
+        <p *ngIf="account.status !== 'Approved'" class="approval-message">Wait for Manager Approval</p>
+
+        <!-- Show buttons if approved -->
+        <div *ngIf="account.status === 'Approved'" class="transaction-buttons">
+            <button class="action-button" (click)="onDeposit(account.accountId)">Deposit</button>
+            <button class="action-button" (click)="onWithdraw(account.accountId)">Withdraw</button>
+        </div>
+    </div>
+</div>
