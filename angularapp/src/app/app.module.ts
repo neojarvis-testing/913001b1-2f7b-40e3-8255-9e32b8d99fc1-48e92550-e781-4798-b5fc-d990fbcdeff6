@@ -46,9 +46,8 @@ import { RouterModule } from '@angular/router';
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
     NavbarComponent,
-    // RegisterComponent,
-    TransactionformComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    TransactionformComponent
   ],
   imports: [
     BrowserModule,
