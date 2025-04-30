@@ -1,1 +1,23 @@
-<p>customeraddfeedback works!</p>
+<div class="container">
+  <h2>Add Feedback</h2>
+  
+  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" [class.disabled]="showSuccessPopup">
+    <div class="form-group">
+      <label for="feedback">Feedback</label><br>
+      <textarea id="feedback" formControlName="feedback" rows="5" cols="50"></textarea>
+<div *ngIf="submitted && f.feedback.errors" class="error">
+        Feedback is required
+      </div>
+    </div>
+ 
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+ 
+  <!-- Success Popup -->
+  <div *ngIf="showSuccessPopup" class="popup">
+    <div class="popup-content">
+      <p>Successfully Added!</p>
+      <button (click)="onPopupClose()" class="ok-btn">Ok</button>
+    </div>
+  </div>
+</div>

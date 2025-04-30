@@ -19,8 +19,17 @@ import { ManagerviewalltransactionsComponent } from './components/managerviewall
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+
+
+import { ReactiveFormsModule } from '@angular/forms';
+// import { CustomerViewFeedbackComponent } from './components/customerviewfeedback/customerviewfeedback.component';
+
+import { FeedbackService } from './services/feedback.service';
+import { User } from './models/user.model';
+
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +39,6 @@ import { RouterModule } from '@angular/router';
     CustomernavComponent,
     CustomermytransactionsComponent,
     CustomerviewaccountComponent,
-    CustomerviewfeedbackComponent,
     ErrorComponent,
     HomeComponent,
     LoginComponent,
@@ -38,9 +46,14 @@ import { RouterModule } from '@angular/router';
     ManagerviewallaccountsComponent,
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
+    CustomerviewfeedbackComponent,
     NavbarComponent,
     RegistrationComponent,
     TransactionformComponent,
+
+    RegistrationComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +61,11 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+
+    HttpClientModule
+
     RouterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
