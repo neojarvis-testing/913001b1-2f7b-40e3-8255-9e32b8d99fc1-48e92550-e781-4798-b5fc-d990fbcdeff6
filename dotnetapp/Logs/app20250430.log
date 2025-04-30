@@ -2603,3 +2603,31 @@ WHERE [a].[UserId] = @__userId_0
 2025-04-30 10:38:10.573 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
 2025-04-30 10:38:10.573 +00:00 [INF] HTTP GET /api/account/user/5003 responded 200 in 11.6731 ms
 2025-04-30 10:38:10.573 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/5003 - - - 200 - application/json;+charset=utf-8 11.8643ms
+2025-04-30 10:49:32.890 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-30 10:49:32.930 +00:00 [INF] Creating key {981feebf-0a84-4ac7-9d61-f79e649641ae} with creation date 2025-04-30 10:49:32Z, activation date 2025-04-30 10:49:32Z, and expiration date 2025-07-29 10:49:32Z.
+2025-04-30 10:49:32.939 +00:00 [WRN] No XML encryptor configured. Key {981feebf-0a84-4ac7-9d61-f79e649641ae} may be persisted to storage in unencrypted form.
+2025-04-30 10:49:32.944 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-981feebf-0a84-4ac7-9d61-f79e649641ae.xml'.
+2025-04-30 10:49:33.003 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-30 10:49:33.006 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 10:49:33.006 +00:00 [INF] Hosting environment: Development
+2025-04-30 10:49:33.006 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-30 12:30:40.822 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-30 12:30:40.859 +00:00 [INF] Creating key {cec89c11-8d6d-4537-bbc7-3cc68b13be45} with creation date 2025-04-30 12:30:40Z, activation date 2025-04-30 12:30:40Z, and expiration date 2025-07-29 12:30:40Z.
+2025-04-30 12:30:40.869 +00:00 [WRN] No XML encryptor configured. Key {cec89c11-8d6d-4537-bbc7-3cc68b13be45} may be persisted to storage in unencrypted form.
+2025-04-30 12:30:40.872 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-cec89c11-8d6d-4537-bbc7-3cc68b13be45.xml'.
+2025-04-30 12:30:40.938 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-30 12:30:40.964 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 12:30:40.964 +00:00 [INF] Hosting environment: Development
+2025-04-30 12:30:40.964 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-30 12:33:32.833 +00:00 [INF] Application is shutting down...
+2025-04-30 12:33:52.495 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-30 12:33:52.581 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-30 12:33:52.585 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 12:33:52.585 +00:00 [INF] Hosting environment: Development
+2025-04-30 12:33:52.585 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-30 12:36:46.507 +00:00 [INF] Application is shutting down...
+2025-04-30 12:36:51.497 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-30 12:36:51.600 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-30 12:36:51.604 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 12:36:51.604 +00:00 [INF] Hosting environment: Development
+2025-04-30 12:36:51.604 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/

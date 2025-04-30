@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+ 
 import { AppRoutingModule } from './app-routing.module'; // Corrected import
 import { AppComponent } from './app.component';
-
-
+ 
+ 
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
 import { CustomernavComponent } from './components/customernav/customernav.component';
@@ -23,11 +23,11 @@ import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/m
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
-
+import { RouterModule } from '@angular/router';
+ 
 @NgModule({
   declarations: [
     AppComponent,
-
     CustomeraddaccountComponent,
     CustomeraddfeedbackComponent,
     CustomernavComponent,
@@ -47,13 +47,15 @@ import { TransactionformComponent } from './components/transactionform/transacti
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, // Correctly imported routing module
+    AppRoutingModule,// Correctly imported routing module
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+ 
+ 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+ 
 import { LoginComponent } from './components/login/login.component';
 import { ManagernavComponent } from './components/managernav/managernav.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,7 +11,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { CustomernavComponent } from './components/customernav/customernav.component';
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomerviewaccountComponent } from './components/customerviewaccount/customerviewaccount.component';
-
+ 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'managernav',component:ManagernavComponent},
   {path:'customer/account',component:CustomeraddaccountComponent},
   {path:'customerviewaccount',component:CustomerviewaccountComponent},
-
+ 
   // Manager navigation
   {
     path: 'manager',
@@ -34,20 +34,12 @@ const routes: Routes = [
     ],
   },
 ];
-
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegistrationComponent } from './components/registration/registration.component';
-
-const routes: Routes = [
-  {path: 'home', component:HomeComponent},
-  {path: 'login', component:LoginComponent},
-  {path:'register', component:RegistrationComponent}
-];
-
-
+ 
+ 
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+ 
