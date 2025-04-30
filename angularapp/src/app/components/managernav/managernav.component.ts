@@ -11,6 +11,10 @@ export class ManagernavComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    const role = localStorage.getItem('role');
+    if (role !== 'manager') {
+      this.router.navigate(['/login']);
+    }
   }
 
   
@@ -19,6 +23,9 @@ export class ManagernavComponent implements OnInit {
 
 
 
-
-
+  logout(): void {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
+}
 
