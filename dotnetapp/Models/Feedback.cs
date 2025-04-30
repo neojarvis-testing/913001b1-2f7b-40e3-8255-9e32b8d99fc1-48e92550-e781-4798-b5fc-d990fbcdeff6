@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+    
 namespace dotnetapp.Models
 {
-     [Index(nameof(UserId) )]            //Index on UserId for faster lookups
+    [Index(nameof(UserId) )]            //Index on UserId for faster lookups
     public class Feedback
     {
         [Key]
