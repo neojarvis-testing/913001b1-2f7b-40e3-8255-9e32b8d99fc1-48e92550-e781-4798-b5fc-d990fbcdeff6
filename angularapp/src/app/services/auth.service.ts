@@ -7,17 +7,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login'; // Replace with actual API URL
+  private apiUrl = 'https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api'; // Replace with actual API URL
   private tokenKey = 'authToken'; // Set local storage key properly
 
   constructor(private http: HttpClient, private router: Router) {}
 
   login(email: string, password: string): Observable<any> {
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/json',
-    // });
-    // console.log(email)
-    return this.http.post(this.apiUrl, { email, password });
+    return this.http.post(`${this.apiUrl}/login`, { email, password });
+  }
+
+  register(user: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/register`, user);
   }
 
   storeToken(token: string): void {
@@ -46,10 +46,10 @@ export class AuthService {
     const role = this.getUserRole();
     switch (role) {
       case 'Manager':
-        this.router.navigate(['/customer']);
+        this.router.navigate(['/customernav']);
         break;
-      case 'user':
-        this.router.navigate(['/user']);
+      case 'Customer':
+        this.router.navigate(['/customernav']);
         break;
       default:
         this.router.navigate(['/login']);
