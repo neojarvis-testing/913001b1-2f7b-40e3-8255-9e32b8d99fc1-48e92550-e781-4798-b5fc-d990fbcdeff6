@@ -20,10 +20,19 @@ import { ManagerviewallaccountsComponent } from './components/managerviewallacco
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RegisterComponent } from './components/registration/register.component';
+// import { RegisterComponent } from './components/register/register.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 
 import { FormsModule } from '@angular/forms';
+import { RegistrationComponent } from './components/registration/registration.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+// import { CustomerViewFeedbackComponent } from './components/customerviewfeedback/customerviewfeedback.component';
+
+import { FeedbackService } from './services/feedback.service';
+import { User } from './models/user.model';
+
+
 
 
 @NgModule({
@@ -35,7 +44,6 @@ import { FormsModule } from '@angular/forms';
     CustomernavComponent,
     CustomermytransactionsComponent,
     CustomerviewaccountComponent,
-    CustomerviewfeedbackComponent,
     ErrorComponent,
     HomeComponent,
     LoginComponent,
@@ -43,14 +51,19 @@ import { FormsModule } from '@angular/forms';
     ManagerviewallaccountsComponent,
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
+    CustomerviewfeedbackComponent,
     NavbarComponent,
-    RegisterComponent,
-    TransactionformComponent
+    // RegisterComponent,
+    TransactionformComponent,
+    RegistrationComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
