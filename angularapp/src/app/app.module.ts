@@ -25,6 +25,7 @@ import { TransactionformComponent } from './components/transactionform/transacti
 
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -53,7 +54,9 @@ import { RegistrationComponent } from './components/registration/registration.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
