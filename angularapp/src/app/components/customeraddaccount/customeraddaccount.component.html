@@ -18,7 +18,7 @@
       </p>
     </div>
 
-    <!-- User ID -->
+    <!-- User ID (Read-Only) -->
     <div class="form-group">
       <label for="userId">User ID<span class="required">*</span></label>
       <input
@@ -26,13 +26,9 @@
         formControlName="userId"
         type="text"
         class="form-control"
-        placeholder="Enter user ID"
+        disabled
       />
-      <p class="error-message" *ngIf="accountForm.get('userId')?.touched && accountForm.get('userId')?.invalid">
-        User ID is required.
-      </p>
     </div>
-    
 
     <!-- Account Type -->
     <div class="form-group">
@@ -59,7 +55,7 @@
       />
       <p class="error-message" *ngIf="accountForm.get('initialBalance')?.invalid && accountForm.get('initialBalance')?.touched">
         <span *ngIf="accountForm.get('initialBalance')?.errors?.required">Initial Balance is required.</span>
-        <span *ngIf="accountForm.get('initialBalance')?.errors?.min">initial Balance must be greater than 1000</span>
+        <span *ngIf="accountForm.get('initialBalance')?.errors?.min">Initial Balance must be at least 1000.</span>
       </p>
     </div>
 

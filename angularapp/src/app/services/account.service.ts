@@ -11,7 +11,7 @@ export class AccountService {
     throw new Error('Method not implemented.');
   }
 
-  public apiUrl = "https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+  public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
   constructor(private http:HttpClient) 
   { 

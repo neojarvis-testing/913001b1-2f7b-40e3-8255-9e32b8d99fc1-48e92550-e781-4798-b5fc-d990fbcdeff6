@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; // Corrected import
 import { AppComponent } from './app.component';
 
-
-// import { AuthguardComponent } from './components/authguard/authguard.component';
 
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
@@ -22,13 +21,8 @@ import { ManagerviewallaccountsComponent } from './components/managerviewallacco
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-// import { RegisterComponent } from './components/register/register.component';
-import { TransactionformComponent } from './components/transactionform/transactionform.component';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { RouterModule } from '@angular/router';
-
+import { TransactionformComponent } from './components/transactionform/transactionform.component';
 
 @NgModule({
   declarations: [
@@ -49,17 +43,17 @@ import { RouterModule } from '@angular/router';
     ManagerviewfeedbackComponent,
     NavbarComponent,
     RegistrationComponent,
-    TransactionformComponent 
+    TransactionformComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
+    AppRoutingModule, // Correctly imported routing module
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
-    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
