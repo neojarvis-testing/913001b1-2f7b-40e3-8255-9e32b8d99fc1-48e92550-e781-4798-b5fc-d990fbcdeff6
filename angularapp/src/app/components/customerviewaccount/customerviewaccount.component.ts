@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Account } from 'src/app/models/account.model';
@@ -52,3 +53,4 @@ export class CustomerviewaccountComponent implements OnInit {
     this.router.navigate(['/transactionform'], { queryParams: { action: 'withdraw', accountId } });
   }
 }
+
