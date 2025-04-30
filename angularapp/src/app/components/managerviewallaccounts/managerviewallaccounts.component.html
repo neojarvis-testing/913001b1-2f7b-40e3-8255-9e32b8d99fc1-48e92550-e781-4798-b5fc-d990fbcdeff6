@@ -1,1 +1,60 @@
-<p>managerviewallaccounts works!</p>
+
+<div class="container">
+  <h3>All Accounts</h3>
+ 
+  <div class="filter-container">
+    <input type="text" placeholder="Search by Account Holder Name" [(ngModel)]="searchText" />
+    <select [(ngModel)]="filterStatus">
+      <option value="All">All</option>
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+  </div>
+ 
+  <table>
+    <thead>
+      <tr>
+        <th>S No</th>
+        <th>Account Holder Name</th>
+        <th>Account Type</th>
+        <th>Balance</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let acc of filteredAccounts; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ acc.name }}</td>
+        <td>{{ acc.type }}</td>
+        <td>{{ acc.balance }}</td>
+        <td>{{ acc.status }}</td>
+        <td>
+          <button class="btn blue" (click)="showProof(acc.proof)">Show Proof</button>
+          <button
+            class="btn green"
+            *ngIf="acc.status === 'Inactive'"
+            (click)="toggleStatus(acc)"
+          >
+            Activate
+          </button>
+          <button
+            class="btn red"
+            *ngIf="acc.status === 'Active'"
+            (click)="toggleStatus(acc)"
+          >
+            Deactivate
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+  <div class="modal" *ngIf="selectedProof">
+    <div class="modal-content">
+      <span class="close" (click)="closeProof()">&times;</span>
+      <img [src]="selectedProof" alt="Proof" />
+    </div>
+  </div>
+</div>
+ 

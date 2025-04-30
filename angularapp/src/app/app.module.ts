@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'; // Corrected import
 import { AppComponent } from './app.component';
 
+
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
 import { CustomernavComponent } from './components/customernav/customernav.component';
@@ -26,6 +27,7 @@ import { TransactionformComponent } from './components/transactionform/transacti
 @NgModule({
   declarations: [
     AppComponent,
+
     CustomeraddaccountComponent,
     CustomeraddfeedbackComponent,
     CustomernavComponent,
@@ -49,6 +51,7 @@ import { TransactionformComponent } from './components/transactionform/transacti
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
