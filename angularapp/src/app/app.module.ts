@@ -5,7 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 // import { AuthguardComponent } from './components/authguard/authguard.component';
+
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
 import { CustomernavComponent } from './components/customernav/customernav.component';
@@ -31,7 +33,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    // AuthguardComponent,
+
     CustomeraddaccountComponent,
     CustomeraddfeedbackComponent,
     CustomernavComponent,
@@ -54,9 +56,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
     RouterModule,
-
     ReactiveFormsModule
   ],
   providers: [],
