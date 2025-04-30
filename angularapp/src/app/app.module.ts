@@ -54,7 +54,9 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
     RouterModule,
+
     ReactiveFormsModule
   ],
   providers: [],

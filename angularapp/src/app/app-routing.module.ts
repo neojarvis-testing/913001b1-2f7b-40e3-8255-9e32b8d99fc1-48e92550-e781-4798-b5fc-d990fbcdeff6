@@ -28,6 +28,12 @@ const routes: Routes = [
  
 
 import { Routes, RouterModule } from '@angular/router';
+import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
+
+
+const routes: Routes = [
+  {path:"",component:CustomeraddaccountComponent}
+];
 
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
@@ -37,6 +43,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent}
 
 ];
+
 
 
 @NgModule({
