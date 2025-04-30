@@ -36,6 +36,9 @@ export class FeedbackService {
   getFeedbacks(): Observable<Feedback[]> {
     return this.http.get<Feedback[]>(this.apiUrl, { headers: this.getAuthHeaders() });
   }
+
+}
+
 }
  
- 
+

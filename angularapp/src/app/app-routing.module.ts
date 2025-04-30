@@ -1,4 +1,11 @@
 import { NgModule } from '@angular/core';
+
+import { Routes, RouterModule } from '@angular/router';
+import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
+import { CustomerviewfeedbackComponent } from './components/customerviewfeedback/customerviewfeedback.component';
+import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
+
+
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { ManagernavComponent } from './components/managernav/managernav.component';
@@ -26,6 +33,10 @@ const routes: Routes = [
   { path: 'manager/accounts', component: ManagerviewallaccountsComponent },
   { path: 'manager/transactions', component: ManagerviewalltransactionsComponent },
   { path: 'manager/feedbacks', component: ManagerviewfeedbackComponent },
+    { path: 'customeraddfeedback', component: CustomeraddfeedbackComponent},
+  { path : 'customerviewfeedback', component: CustomerviewfeedbackComponent},
+  { path : 'managerviewfeedback', component : ManagerviewfeedbackComponent}
+
 ];
 
 @NgModule({
