@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/app/models/user.model'; // Make sure the path is correct
 
 @Component({
   selector: 'app-registration',
@@ -9,13 +11,25 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class RegistrationComponent {
   registrationForm: FormGroup;
+  user: User = {
+    Email: '',
+    Password: '',
+    Username: '',
+    MobileNumber: '',
+    UserRole: ''
+  };
   isFormValid = false;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.registrationForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      Username: [this.user.Username, Validators.required],
+      Email: [this.user.Email, [Validators.required, Validators.email]],
+      Password: [this.user.Password, [Validators.required, Validators.minLength(6)]],
+      MobileNumber: [
+        this.user.MobileNumber,
+        [Validators.required, Validators.pattern('^[0-9]{10}$')]
+      ],
+      UserRole: [this.user.UserRole, Validators.required]
     });
 
     this.registrationForm.valueChanges.subscribe(() => {
@@ -25,14 +39,14 @@ export class RegistrationComponent {
 
   onRegister(): void {
     if (this.registrationForm.valid) {
-      this.authService.register(this.registrationForm.value).subscribe({
+      this.user = this.registrationForm.value; // Update the model with form values
+      this.authService.register(this.user).subscribe({
         next: () => {
           alert('Registration Successful');
-          // Navigate to login page
-          window.location.href = '/login';
+          this.router.navigate(['/login']); // Navigate to login page
         },
         error: (err) => {
-          if (err.status === 409) { // Conflict status for existing user
+          if (err.status === 409) {
             alert('User already exists');
           } else {
             console.error(err);

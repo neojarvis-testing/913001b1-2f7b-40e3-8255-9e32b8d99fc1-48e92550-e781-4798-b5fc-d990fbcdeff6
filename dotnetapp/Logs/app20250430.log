@@ -172,3 +172,69 @@ WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
 2025-04-30 04:07:22.403 +00:00 [INF] HTTP POST /api/register responded 200 in 177.6747 ms
 2025-04-30 04:07:22.403 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/register application/json 155 - 200 - application/json;+charset=utf-8 177.9485ms
 2025-04-30 04:22:20.623 +00:00 [INF] Application is shutting down...
+2025-04-30 04:46:30.722 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-30 04:46:30.809 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-04-30 04:46:30.813 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-30 04:46:30.814 +00:00 [INF] Hosting environment: Development
+2025-04-30 04:46:30.814 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-04-30 04:50:42.699 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api' - -
+2025-04-30 04:50:42.705 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api' - -
+2025-04-30 04:50:42.754 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-04-30 04:50:42.778 +00:00 [INF] HTTP GET /api' responded 404 in 25.7054 ms
+2025-04-30 04:50:42.778 +00:00 [INF] HTTP GET /api' responded 404 in 25.6863 ms
+2025-04-30 04:50:42.785 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api' - - - 404 0 - 88.1284ms
+2025-04-30 04:50:42.785 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api' - - - 404 0 - 79.3602ms
+2025-04-30 04:59:37.532 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/register - -
+2025-04-30 04:59:37.535 +00:00 [INF] CORS policy execution successful.
+2025-04-30 04:59:37.537 +00:00 [INF] HTTP OPTIONS /api/register responded 204 in 3.1844 ms
+2025-04-30 04:59:37.538 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/register - - - 204 - - 5.2647ms
+2025-04-30 04:59:38.071 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/register application/json 133
+2025-04-30 04:59:38.072 +00:00 [INF] CORS policy execution successful.
+2025-04-30 04:59:38.076 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-04-30 04:59:38.106 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-04-30 04:59:38.293 +00:00 [INF] Registration attempt for email: demotest1@gmail.com
+2025-04-30 04:59:38.296 +00:00 [INF] Registration process started for email: demotest1@gmail.com
+2025-04-30 04:59:38.761 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-30 04:59:38.761 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-30 04:59:38.883 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-30 04:59:39.381 +00:00 [INF] Executed DbCommand (43ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-04-30 04:59:39.709 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-04-30 04:59:39.745 +00:00 [INF] Registration successful for email: demotest1@gmail.com
+2025-04-30 04:59:39.745 +00:00 [INF] Registration successful for email: demotest1@gmail.com
+2025-04-30 04:59:39.748 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 04:59:39.773 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 1662.9904ms
+2025-04-30 04:59:39.774 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-04-30 04:59:39.775 +00:00 [INF] HTTP POST /api/register responded 200 in 1702.5573 ms
+2025-04-30 04:59:39.777 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/register application/json 133 - 200 - application/json;+charset=utf-8 1706.5997ms
+2025-04-30 05:27:05.378 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-04-30 05:27:05.378 +00:00 [INF] CORS policy execution successful.
+2025-04-30 05:27:05.378 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.2409 ms
+2025-04-30 05:27:05.378 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.8212ms
+2025-04-30 05:27:05.895 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 51
+2025-04-30 05:27:05.895 +00:00 [INF] CORS policy execution successful.
+2025-04-30 05:27:05.895 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-30 05:27:05.898 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-04-30 05:27:05.906 +00:00 [INF] Login attempt for email: demotest1@gmail.com
+2025-04-30 05:27:05.907 +00:00 [INF] Login process started for email: demotest1@gmail.com
+2025-04-30 05:27:05.909 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-04-30 05:27:05.955 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-04-30 05:27:06.132 +00:00 [INF] Token generated successfully.
+2025-04-30 05:27:06.196 +00:00 [INF] Login successful for email: demotest1@gmail.com
+2025-04-30 05:27:06.196 +00:00 [INF] Login successful for email: demotest1@gmail.com. Token issued.
+2025-04-30 05:27:06.197 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-30 05:27:06.197 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 299.1463ms
+2025-04-30 05:27:06.198 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-04-30 05:27:06.198 +00:00 [INF] HTTP POST /api/login responded 200 in 302.6626 ms
+2025-04-30 05:27:06.198 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 51 - 200 - application/json;+charset=utf-8 303.0004ms

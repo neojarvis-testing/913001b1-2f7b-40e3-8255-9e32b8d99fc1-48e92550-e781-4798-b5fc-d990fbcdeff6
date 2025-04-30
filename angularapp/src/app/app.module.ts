@@ -23,8 +23,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 // import { RegisterComponent } from './components/register/register.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -52,7 +53,9 @@ import { RegistrationComponent } from './components/registration/registration.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
