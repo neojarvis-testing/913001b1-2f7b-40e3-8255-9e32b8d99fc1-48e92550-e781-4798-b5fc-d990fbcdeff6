@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AuthguardComponent } from './components/authguard/authguard.component';
+// import { AuthguardComponent } from './components/authguard/authguard.component';
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
 import { CustomernavComponent } from './components/customernav/customernav.component';
@@ -23,7 +23,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 // import { RegisterComponent } from './components/register/register.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { RouterModule } from '@angular/router';
 
@@ -31,7 +31,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthguardComponent,
+    // AuthguardComponent,
     CustomeraddaccountComponent,
     CustomeraddfeedbackComponent,
     CustomernavComponent,
@@ -47,15 +47,15 @@ import { RouterModule } from '@angular/router';
     ManagerviewfeedbackComponent,
     NavbarComponent,
     RegistrationComponent,
-    TransactionformComponent
+    TransactionformComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
-
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
