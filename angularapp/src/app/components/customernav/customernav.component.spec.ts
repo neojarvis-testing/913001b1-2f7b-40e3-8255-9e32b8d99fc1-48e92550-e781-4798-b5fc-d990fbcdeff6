@@ -3,22 +3,22 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { CustomernavComponent } from './customernav.component';
+import { CustomerNavComponent } from './customernav.component';
 
 describe('CustomernavComponent', () => {
-  let component: CustomernavComponent;
-  let fixture: ComponentFixture<CustomernavComponent>;
+  let component: CustomerNavComponent;
+  let fixture: ComponentFixture<CustomerNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomernavComponent ],
+      declarations: [ CustomerNavComponent ],
       imports: [ReactiveFormsModule, RouterTestingModule, HttpClientTestingModule, FormsModule],
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomernavComponent);
+    fixture = TestBed.createComponent(CustomerNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

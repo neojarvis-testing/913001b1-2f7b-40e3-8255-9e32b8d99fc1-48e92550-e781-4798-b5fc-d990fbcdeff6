@@ -27,7 +27,7 @@ namespace dotnetapp.Services
                 Log.Information("Registration process started for email: {Email}", model.Email);
 
                 // Validate role
-                var validRoles = new[] { "Admin", "User" }; // only these roles are valid in the front end regestration part.
+                var validRoles = new[] { "Manager", "Customer" }; // only these roles are valid in the front end regestration part.
                 if (!validRoles.Contains(role))
                 {
                     Log.Warning("Invalid role specified: {Role}", role);
