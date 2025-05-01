@@ -1,1 +1,88 @@
-<p>customeraddaccount works!</p>
+<div class="container">
+  <button class="back-button" (click)="navigateHome()">Back</button>
+  <h1>Add New Account</h1>
+  
+  <form [formGroup]="accountForm" (ngSubmit)="createAccount()">
+    <!-- Account Holder Name -->
+    <div class="form-group">
+      <label for="accountHolderName">Account Holder Name<span class="required">*</span></label>
+      <input
+        id="accountHolderName"
+        formControlName="accountHolderName"
+        type="text"
+        class="form-control"
+        placeholder="Enter account holder name"
+      />
+      <p class="error-message" *ngIf="accountForm.get('accountHolderName')?.invalid && accountForm.get('accountHolderName')?.touched">
+        Account Holder Name is required.
+      </p>
+    </div>
+
+    <!-- User ID (Read-Only) -->
+    <div class="form-group">
+      <label for="userId">User ID<span class="required">*</span></label>
+      <input
+        id="userId"
+        formControlName="userId"
+        type="text"
+        class="form-control"
+        disabled
+      />
+    </div>
+
+    <!-- Account Type -->
+    <div class="form-group">
+      <label for="accountType">Account Type<span class="required">*</span></label>
+      <select id="accountType" formControlName="accountType" class="form-control">
+        <option value="" disabled>Select Account Type</option>
+        <option value="Savings">Savings</option>
+        <option value="Current">Current</option>
+      </select>
+      <p class="error-message" *ngIf="accountForm.get('accountType')?.invalid && accountForm.get('accountType')?.touched">
+        Account Type is required.
+      </p>
+    </div>
+
+    <!-- Initial Balance -->
+    <div class="form-group">
+      <label for="initialBalance">Initial Balance<span class="required">*</span></label>
+      <input
+        id="initialBalance"
+        formControlName="initialBalance"
+        type="number"
+        class="form-control"
+        placeholder="Enter initial balance"
+      />
+      <p class="error-message" *ngIf="accountForm.get('initialBalance')?.invalid && accountForm.get('initialBalance')?.touched">
+        <span *ngIf="accountForm.get('initialBalance')?.errors?.required">Initial Balance is required.</span>
+        <span *ngIf="accountForm.get('initialBalance')?.errors?.min">Initial Balance must be at least 1000.</span>
+      </p>
+    </div>
+
+    <!-- Proof of Identity -->
+    <div class="form-group">
+      <label for="proofOfIdentity">Proof of Identity<span class="required">*</span></label>
+      <input id="proofOfIdentity" type="file" (change)="onFileSelected($event)" class="form-control" />
+      <p class="error-message" *ngIf="accountForm.get('proofOfIdentity')?.invalid && accountForm.get('proofOfIdentity')?.touched">
+        Proof of Identity is required.
+      </p>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary button" [disabled]="accountForm.invalid">Create Account</button>
+  </form>
+
+  <!-- Popup -->
+  <div *ngIf="showPopup" class="popup">
+    <div class="popup-content">
+      <h2>Success</h2>
+      <p>{{ successMessage }}</p>
+      <button class="btn btn-success" (click)="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-notification">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

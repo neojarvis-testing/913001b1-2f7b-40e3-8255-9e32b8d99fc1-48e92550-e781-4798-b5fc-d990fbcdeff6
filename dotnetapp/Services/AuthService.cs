@@ -13,6 +13,7 @@ namespace dotnetapp.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
+        private  int userid_for_token;
 
         public AuthService(ApplicationDbContext context, IConfiguration configuration)
         {
@@ -64,6 +65,8 @@ namespace dotnetapp.Services
         {
             try
             {
+               
+                
                 Log.Information("Login process started for email: {Email}", model.Email);
 
                 var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
@@ -78,14 +81,20 @@ namespace dotnetapp.Services
                     Log.Warning("Invalid password for email: {Email}", model.Email);
                     return (0, "Invalid email or password.");
                 }
+                if(user !=null)
+                {
+                    userid_for_token = user.UserId;
+                }
 
                 // Generate token
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.Username),
-                    new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.UserRole)
-                };
+               var claims = new List<Claim>
+                   {
+                       new Claim(ClaimTypes.Name, user.Username),
+                      new Claim(ClaimTypes.Email, user.Email),
+                       new Claim(ClaimTypes.Role, user.UserRole),
+                        new Claim("UserId", userid_for_token.ToString()) // Use a custom claim key "UserId"
+                    };
+
 
                 var token = GenerateToken(claims);
 
