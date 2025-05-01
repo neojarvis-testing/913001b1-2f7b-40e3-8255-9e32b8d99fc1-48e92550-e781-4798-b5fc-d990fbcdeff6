@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module'; // Corrected import
+import { AppRoutingModule } from './app-routing.module'; 
 import { AppComponent } from './app.component';
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';
@@ -19,14 +19,6 @@ import { ManagerviewalltransactionsComponent } from './components/managerviewall
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-
-
-import { ReactiveFormsModule } from '@angular/forms';
-// import { CustomerViewFeedbackComponent } from './components/customerviewfeedback/customerviewfeedback.component';
-
-import { FeedbackService } from './services/feedback.service';
-import { User } from './models/user.model';
-
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 import { RouterModule } from '@angular/router';
 
@@ -50,8 +42,7 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     RegistrationComponent,
     TransactionformComponent,
-
-    RegistrationComponent,
+    RegistrationComponent
     
 
   ],
@@ -61,9 +52,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-
-    HttpClientModule
-
+    HttpClientModule,
     RouterModule
 
   ],

@@ -68,7 +68,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpDelete("{feedbackId}")]
-        [Authorize(Roles = "Customer")]
+       [Authorize(Roles = "Customer")]
         public async Task<ActionResult> DeleteFeedback(int feedbackId)
         {
             try

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedbackService } from 'src/app/services/feedback.service';
 import { Feedback } from 'src/app/models/feedback.model';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-customer-view-feedback',
@@ -8,24 +9,25 @@ import { Feedback } from 'src/app/models/feedback.model';
   styleUrls: ['./customerviewfeedback.component.css']
 })  
 export class CustomerviewfeedbackComponent implements OnInit {
-  feedbacks: Feedback[] = [];
+  feedbacks: any[] = [];
   showDeletePopup = false;
-  feedbackToDelete: string | null = null;
+  feedbackToDelete: number | null = null;
 
-  constructor(private feedbackService: FeedbackService) { }
+  constructor(private feedbackService: FeedbackService,private authserice : AuthService) { }
 
   ngOnInit() {
     this.loadFeedbacks();
   }
 
   loadFeedbacks() {
-    const userId = 'currentUserId';                                                    // Replace with actual user ID
+    const userId = +this.authserice.getUserId();                                                    // Replace with actual user ID
     this.feedbackService.getAllFeedbacksByUserId(userId).subscribe((feedbacks) => {
       this.feedbacks = feedbacks;
+      console.log(feedbacks);
     });
   }
 
-  confirmDelete(feedbackId: string) {
+  confirmDelete(feedbackId: number) {
     this.feedbackToDelete = feedbackId;
     this.showDeletePopup = true;
   }

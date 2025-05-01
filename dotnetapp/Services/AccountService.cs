@@ -18,7 +18,8 @@ namespace dotnetapp.Services
 
         public Account CreateAccount(Account account)
         {
-            Log.Information("Login successful for balance:", account.Balance);
+            // Log.Information("Login successful for balance:", account.Balance);
+            
             account.Status = "InActive";
             account.DateCreated = DateTime.Now;
             account.LastUpdated = DateTime.Now;
