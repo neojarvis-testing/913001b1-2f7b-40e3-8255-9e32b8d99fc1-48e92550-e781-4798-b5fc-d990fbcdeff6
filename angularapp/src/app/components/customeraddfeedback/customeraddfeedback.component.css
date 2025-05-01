@@ -1,76 +1,24 @@
-.container {
-  padding: 30px;
-  max-width: 600px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-}
- 
-h2 {
-  margin-bottom: 20px;
-}
- 
-.form-group {
-  margin-bottom: 15px;
-}
- 
+/* customeraddfeedback.component.css */
 textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 14px;
+  height: 150px;
 }
- 
-.error {
+
+span {
   color: red;
-  margin-top: 5px;
 }
- 
-.submit-btn {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
+
+button {
+  margin-top: 20px;
   cursor: pointer;
 }
- 
-.submit-btn:hover {
-  background-color: #218838;
+
+.success-message {
+  color: green;
+  margin-top: 10px;
 }
- 
-.popup {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-.popup-content {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
- 
-.ok-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  margin-top: 15px;
-  cursor: pointer;
-}
- 
-.ok-btn:hover {
-  background-color: #0056b3;
-}
- 
-/* Optional: Disable form interaction when popup is shown */
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
+
+.error-message {
+  color: red;
+  margin-top: 10px;
 }

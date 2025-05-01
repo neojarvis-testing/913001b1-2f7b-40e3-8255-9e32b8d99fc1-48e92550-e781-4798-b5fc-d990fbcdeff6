@@ -1,23 +1,23 @@
-<div class="container">
-  <h2>Add Feedback</h2>
-  
-  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" [class.disabled]="showSuccessPopup">
-    <div class="form-group">
-      <label for="feedback">Feedback</label><br>
-      <textarea id="feedback" formControlName="feedback" rows="5" cols="50"></textarea>
-<div *ngIf="submitted && f.feedback.errors" class="error">
-        Feedback is required
-      </div>
+<!-- customeraddfeedback.component.html -->
+<div>
+  <h1>Add Feedback</h1>
+  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <textarea 
+      formControlName="comments" 
+      placeholder="Write your feedback here"></textarea>
+    <div *ngIf="feedbackForm.controls['comments'].hasError('required') && feedbackForm.controls['comments'].touched">
+      <span>Feedback is required</span>
     </div>
- 
-    <button type="submit" class="submit-btn">Submit</button>
+    <button type="submit" [disabled]="feedbackForm.invalid">Submit</button>
   </form>
- 
-  <!-- Success Popup -->
-  <div *ngIf="showSuccessPopup" class="popup">
-    <div class="popup-content">
-      <p>Successfully Added!</p>
-      <button (click)="onPopupClose()" class="ok-btn">Ok</button>
-    </div>
+
+  <!-- Success message -->
+  <div *ngIf="showSuccessMessage" class="success-message">
+    Successfully Added!
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="showErrorMessage" class="error-message">
+    Failed to add feedback. Please try again.
   </div>
 </div>

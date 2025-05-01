@@ -3,8 +3,8 @@
     <div *ngIf="feedbacks.length === 0">Oops! No records Found</div>
     <ul>
       <li *ngFor="let feedback of feedbacks">
-        {{ feedback.text }}
-        <button (click)="confirmDelete(feedback.id)">Delete</button>
+        {{ feedback.comments }}
+        <button (click)="confirmDelete(feedback.feedbackId)">Delete</button>
       </li>
     </ul>
     <div *ngIf="showDeletePopup" class="popup">

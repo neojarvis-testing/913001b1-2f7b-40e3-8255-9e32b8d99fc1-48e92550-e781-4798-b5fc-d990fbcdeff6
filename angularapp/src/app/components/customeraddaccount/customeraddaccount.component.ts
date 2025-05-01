@@ -48,7 +48,7 @@ export class CustomeraddaccountComponent implements OnInit {
       accountHolderName: ['', Validators.required],
       userId: [{ value: userId, disabled: true }, Validators.required], // Disabled field with dynamic UserId
       accountType: ['', Validators.required],
-      initialBalance: ['', [Validators.required, Validators.min(1000)]],
+      balance: ['', [Validators.required, Validators.min(1000)]],
       proofOfIdentity: ['', Validators.required]
     });
   }
@@ -62,27 +62,29 @@ export class CustomeraddaccountComponent implements OnInit {
 
   createAccount(): void {
     if (this.accountForm.valid) {
-      const accountData : Account = {
-        ...this.accountForm.getRawValue(), // Get all form values, including disabled fields
-        userId: this.authService.getUserId() // Ensure UserId is added to the data
-       
-      };
-      console.log(accountData)
+        const accountData: any = {
+            ...this.accountForm.getRawValue(), // Get all form values, including disabled fields
+            userId: this.authService.getUserId(), // Ensure UserId is added to the data
+            initialBalance: parseFloat(this.accountForm.get('initialBalance')?.value) // Parse to a float
+        };
 
-      this.accountService.createAccount(accountData).subscribe({
-        next: (response) => {
-          console.log(accountData);
-          this.successMessage = 'Account created successfully!';
-          this.showPopup = true; // Show success popup
-        },
-        error: (err) => {
-          this.errorMessage = err.error.message || 'An error occurred while creating the account.';
-        }
-      });
+        console.log(accountData); // Verify the correct value is being sent
+
+        this.accountService.createAccount(accountData).subscribe({
+            next: (response) => {
+                console.log(response);
+                this.successMessage = 'Account created successfully!';
+                this.showPopup = true; // Show success popup
+            },
+            error: (err) => {
+                this.errorMessage = err.error.message || 'An error occurred while creating the account.';
+            }
+        });
     } else {
-      this.errorMessage = 'Please fill out all required fields correctly.';
+        this.errorMessage = 'Please fill out all required fields correctly.';
     }
-  }
+}
+
 
   closePopup(): void {
     this.showPopup = false; // Hide popup

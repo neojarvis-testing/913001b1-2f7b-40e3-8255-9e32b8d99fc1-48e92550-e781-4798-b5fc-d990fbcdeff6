@@ -1,56 +1,53 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
-import { Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FeedbackService } from 'src/app/services/feedback.service';
+import { Feedback } from 'src/app/models/feedback.model';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customeraddfeedback',
   templateUrl: './customeraddfeedback.component.html',
   styleUrls: ['./customeraddfeedback.component.css']
 })
-export class CustomeraddfeedbackComponent implements OnInit {
-  feedbackForm: FormGroup;                                          // holds form structure
-  submitted = false;                                                  // Tracks form submission state
-  showSuccessPopup = false;                                             // Controls visibility of success popup
+export class CustomeraddfeedbackComponent {
+  feedbackForm: FormGroup;
+  showSuccessMessage = false;
+  showErrorMessage = false;
 
-  // Inject FoirmBuilder and Router services
-  constructor(private fb: FormBuilder,private router : Router) {
+  constructor(
+    private fb: FormBuilder,
+    private feedbackService: FeedbackService,
+    private authservice : AuthService,
+    private router : Router
+  ) {
     this.feedbackForm = this.fb.group({
-      feedback: ['', Validators.required]
+      comments: ['', Validators.required]
     });
-   }
-
-  ngOnInit(): void {
   }
 
-  // getter for easy access to form controls in the templates
-  get f() {
-    return this.feedbackForm.controls;
-  }
- 
-  // Triggered when the form is submitted
   onSubmit(): void {
-    this.submitted = true;
- 
-    if (this.feedbackForm.invalid) {
-      return;
+    if (this.feedbackForm.valid) {
+      const feedback: Feedback = {
+        UserId : +this.authservice.getUserId(), // Replace with the actual user ID
+        Comments: this.feedbackForm.value.comments,
+        DateProvided: new Date()
+      };
+
+      this.feedbackService.sendFeedback(feedback).subscribe(
+        () => {
+          this.showSuccessMessage = true;
+          this.showErrorMessage = false;
+          this.feedbackForm.reset();
+          // this.router.navigate(['customer-view-feedback']);
+        },
+        () => {
+          this.router.navigate(['customer-view-feedback'])
+          // this.showErrorMessage = true;
+          // this.showSuccessMessage = false;
+        }
+      );
     }
- 
-    // Simulate API call success
-    this.showSuccessPopup = true;
   }
- 
-  // call when user clicks ok
-  onPopupClose(): void {
-    this.showSuccessPopup = false;
-    this.feedbackForm.reset();
-    this.submitted = false;
-    this.router.navigate(['/my-feedbacks']);              // Navigates to "My Feedbacks" page
-  }
-
 }
-
-
-

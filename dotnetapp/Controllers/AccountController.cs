@@ -52,6 +52,8 @@ namespace dotnetapp.Controllers
        [Authorize(Roles = "Manager,Customer")]
         public IActionResult CreateAccount([FromBody] Account account)
         {
+            // Console.WriteLine(JsonConvert.SerializeObject(account));
+            Log.Information("Received Account Data: {@Account}", account);
             if (account.AccountType != "Savings" && account.AccountType != "Current")
                 return BadRequest("Invalid account type. Must be 'Savings' or 'Current'.");
 
