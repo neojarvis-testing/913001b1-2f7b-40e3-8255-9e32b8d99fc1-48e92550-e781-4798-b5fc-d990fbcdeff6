@@ -154,14 +154,15 @@ export class TransactionformComponent implements OnInit {
     private router: Router,
     private accountService: AccountService,
     private transactionService: TransactionService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      this.action = params['action']; 
-      this.accountId = +params['accountId']; 
+      this.action = params['action'];
+      this.accountId = +params['accountId'];
+      
       if (this.accountId) {
-        this.fetchAccountBalance(); 
+        this.fetchAccountBalance();
       }
     });
   }
@@ -170,7 +171,7 @@ export class TransactionformComponent implements OnInit {
     if (this.accountId) {
       this.accountService.getAccountById(this.accountId).subscribe({
         next: (account: Account) => {
-          this.balance = account.Balance; 
+          this.balance = account.Balance;
         },
         error: () => {
           this.errorMessage = 'Error fetching account balance.';
@@ -197,7 +198,7 @@ export class TransactionformComponent implements OnInit {
     }
 
     let newBalance = this.balance;
-    
+
     if (this.action === 'deposit') {
       newBalance += this.amount;
       this.successMessage = `Deposited ₹${this.amount} successfully!`;
@@ -213,15 +214,23 @@ export class TransactionformComponent implements OnInit {
     this.updateAccountBalance(newBalance, () => this.logTransaction(this.action, 'Completed'));
   }
 
+  accountDetails: Account;
+
   updateAccountBalance(newBalance: number, callback: () => void): void {
+
+
+    this.accountService.getAccountByUserId(this.accountId).subscribe(data => {
+      this.accountDetails = data[0];
+    });
+
     if (this.accountId) {
-      const updatedAccount = { Balance: newBalance };
+      const updatedAccount = { ...this.accountDetails, Balance: newBalance };
 
       this.accountService.updateAccount(this.accountId, updatedAccount).subscribe({
         next: () => {
           console.log('Account balance updated successfully in the database!');
           this.balance = newBalance;
-          callback(); 
+          callback();
         },
         error: () => this.errorMessage = 'Error updating account balance.'
       });
@@ -231,7 +240,7 @@ export class TransactionformComponent implements OnInit {
   logTransaction(action: string, status: string): void {
     if (this.accountId) {
       const transaction: Transaction = {
-        TransactionId: 0, 
+        TransactionId: 0,
         AccountId: this.accountId,
         TransactionType: action,
         Amount: this.amount,
