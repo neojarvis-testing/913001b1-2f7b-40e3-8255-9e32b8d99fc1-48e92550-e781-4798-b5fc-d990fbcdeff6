@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: '', component: AppComponent },
 
+
   // Customer section with AuthGuard applied
   {
     path: 'customer',
@@ -33,6 +34,8 @@ const routes: Routes = [
       { path: 'view-account', component: CustomerviewaccountComponent },
       { path: 'add-feedback', component: CustomeraddfeedbackComponent },
       { path: 'view-feedback', component: CustomerviewfeedbackComponent },
+      { path: 'customeraddfeedback', component: CustomeraddfeedbackComponent },
+      { path: 'customerviewfeedback', component: CustomerviewfeedbackComponent }
 
       // { path: 'add-feedback', component: CustomeraddfeedbackComponent }
     ]
@@ -42,8 +45,9 @@ const routes: Routes = [
   {
     path: 'manager',
     component: ManagernavComponent,
-    canActivate: [AuthGuard], // Protect manager routes
+    canActivate: [AuthGuard],
     children: [
+      //{ path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect /manager to /manager/home
       { path: 'home', component: HomeComponent },
       { path: 'accounts', component: ManagerviewallaccountsComponent },
       { path: 'transactions', component: ManagerviewalltransactionsComponent },
@@ -57,3 +61,5 @@ const routes: Routes = [
   exports: [RouterModule]                 // Export RouterModule for use in the AppModule
 })
 export class AppRoutingModule { }
+
+

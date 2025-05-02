@@ -8,39 +8,35 @@ import { Account } from '../models/account.model';
 })
 export class AccountService {
 
+  //https://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io
 
- 
-  public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+  public apiUrl = "https://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
-  constructor(private http:HttpClient) 
-  { 
+  constructor(private http: HttpClient) {
 
   }
 
   private getAuthHeaders():
-   HttpHeaders
-    {
+    HttpHeaders {
     const token = localStorage.getItem('authToken');
-    return new HttpHeaders({Authorization: `Bearer ${token}`});
+    return new HttpHeaders({ Authorization: `Bearer ${token}` });
   }
 
-  createAccount(account : any) : Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/api/account`,account, {headers: this.getAuthHeaders()});
+  createAccount(account: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/api/account`, account, { headers: this.getAuthHeaders() });
   }
 
 
-  getAccountById(accountId:number) : Observable<Account> {
-    return this.http.get<Account>(`${this.apiUrl}/api/account/${accountId}`, {headers: this.getAuthHeaders()});
+  getAccountById(accountId: number): Observable<Account> {
+    return this.http.get<Account>(`${this.apiUrl}/api/account/${accountId}`, { headers: this.getAuthHeaders() });
   }
 
-  getAccountByUserId(userId:number) : Observable<Account[]>
-  {
-    return this.http.get<Account[]>(`${this.apiUrl}/api/account/user/${userId}`, {headers: this.getAuthHeaders()});
+  getAccountByUserId(userId: number): Observable<Account[]> {
+    return this.http.get<Account[]>(`${this.apiUrl}/api/account/user/${userId}`, { headers: this.getAuthHeaders() });
   }
 
-  getAllAccounts():Observable<Account[]>
-  {
-    return this.http.get<Account[]>(`${this.apiUrl}/api/account`, {headers:this.getAuthHeaders()});
+  getAllAccounts(): Observable<Account[]> {
+    return this.http.get<Account[]>(`${this.apiUrl}/api/account`, { headers: this.getAuthHeaders() });
   }
 
   updateAccount(accountId: number, account: Account): Observable<any> {
@@ -49,3 +45,4 @@ export class AccountService {
   }
   
 }
+
