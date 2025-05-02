@@ -12,7 +12,7 @@ import { ManagernavComponent } from './components/managernav/managernav.componen
 import { ManagerviewallaccountsComponent } from './components/managerviewallaccounts/managerviewallaccounts.component';
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
-import { AuthGuard } from './components/authguard/auth.guard'; 
+import { AuthGuard } from './components/authguard/auth.guard';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -20,20 +20,20 @@ const routes: Routes = [
   { path: '', component: NavbarComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
-  {path:'',component:AppComponent},
+  { path: '', component: AppComponent },
 
   // Customer section with AuthGuard applied
   {
     path: 'customer',
-    component: CustomernavComponent, 
+    component: CustomernavComponent,
     canActivate: [AuthGuard], // Protect customer routes
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'account', component: CustomeraddaccountComponent },
       { path: 'view-account', component: CustomerviewaccountComponent },
-       {path:'add-feedback',component:CustomeraddfeedbackComponent},
-       { path: 'view-feedback', component: CustomerviewfeedbackComponent },
-     
+      { path: 'add-feedback', component: CustomeraddfeedbackComponent },
+      { path: 'view-feedback', component: CustomerviewfeedbackComponent },
+
       // { path: 'add-feedback', component: CustomeraddfeedbackComponent }
     ]
   },
@@ -41,7 +41,7 @@ const routes: Routes = [
   // Manager section with AuthGuard applied
   {
     path: 'manager',
-    component: ManagernavComponent, 
+    component: ManagernavComponent,
     canActivate: [AuthGuard], // Protect manager routes
     children: [
       { path: 'home', component: HomeComponent },
@@ -56,4 +56,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)], // Register the routes
   exports: [RouterModule]                 // Export RouterModule for use in the AppModule
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

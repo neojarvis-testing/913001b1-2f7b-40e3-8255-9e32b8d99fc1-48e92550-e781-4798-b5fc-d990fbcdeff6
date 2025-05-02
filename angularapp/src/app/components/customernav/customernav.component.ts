@@ -14,14 +14,14 @@ export class CustomernavComponent implements OnInit {
   ngOnInit(): void {
     // Optionally check for valid login or role here
     // const role = localStorage.getItem('role');
-    const role = this.service.getUserRole();
-    console.log(role);
-    if (role !== 'Customer') {
-      this.router.navigate(['/login']);
-    }
-    else{
-      console.log("not match")
-    }
+    // const role = this.service.getUserRole();
+    // console.log(role);
+    // if (role !== 'Customer') {
+    //   this.router.navigate(['/login']);
+    // }
+    // else{
+    //   console.log("not match")
+    // }
   }
  
   logout(): void {
