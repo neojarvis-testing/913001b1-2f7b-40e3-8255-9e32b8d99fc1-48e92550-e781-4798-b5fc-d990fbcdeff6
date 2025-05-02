@@ -1,4 +1,6 @@
 <div>
+    <h1>Feedback Details</h1> <!-- Added required heading -->
+
     <nav>
         <button (click)="loadFeedbacks()">Refresh Feedbacks</button>
     </nav>
@@ -30,15 +32,14 @@
         </tbody>
     </table>
 
+    <!-- Profile Popup -->
     <div *ngIf="showProfileModal" class="modal">
         <div class="modal-content">
             <span class="close" (click)="closeProfileModal()">&times;</span>
-            <p><strong>User Details:</strong></p>
-            <p>Name: {{ selectedUser?.username }}</p>
-            <p>Email: {{ selectedUser?.email }}</p>
-            <p>Mobile: {{ selectedUser?.mobileNumber }}</p>
+            <h2>User Details</h2> <!-- Added heading inside modal -->
+            <p><strong>Name:</strong> {{ selectedUser?.username }}</p>
+            <p><strong>Email:</strong> {{ selectedUser?.email }}</p>
+            <p><strong>Mobile:</strong> {{ selectedUser?.mobileNumber }}</p>
         </div>
     </div>
 </div>
-
-

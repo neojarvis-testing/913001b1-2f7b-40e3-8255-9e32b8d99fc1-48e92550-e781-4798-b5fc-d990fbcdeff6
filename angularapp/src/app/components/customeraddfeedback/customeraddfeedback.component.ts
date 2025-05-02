@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FeedbackService } from 'src/app/services/feedback.service';;
 import { AuthService } from 'src/app/services/auth.service';
+import { Feedback } from 'src/app/models/feedback.model';
 
 @Component({
   selector: 'app-customeraddfeedback',
@@ -25,7 +26,7 @@ export class CustomeraddfeedbackComponent {
 
   onSubmit(): void {
     if (this.feedbackForm.valid) {
-      const feedback: any = {
+      const feedback: Feedback = {
         UserId: +this.authservice.getUserId(),
         Comments: this.feedbackForm.value.comments,
         DateProvided: new Date()
