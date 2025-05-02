@@ -12,30 +12,35 @@ import { ManagernavComponent } from './components/managernav/managernav.componen
 import { ManagerviewallaccountsComponent } from './components/managerviewallaccounts/managerviewallaccounts.component';
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
+import { AuthGuard } from './components/authguard/auth.guard'; 
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
 
-  // Customer section with child routes
+
+  // Customer section with AuthGuard applied
   {
     path: 'customer',
-    component: CustomernavComponent, // Customernav as the parent component
-    children:
-    [
+    component: CustomernavComponent, 
+    canActivate: [AuthGuard], // Protect customer routes
+    children: [
       { path: 'home', component: HomeComponent },
       { path: 'account', component: CustomeraddaccountComponent },
       { path: 'view-account', component: CustomerviewaccountComponent },
-      { path: 'view-feedback', component: CustomerviewfeedbackComponent },
-      { path: 'add-feedback', component: CustomeraddfeedbackComponent }
+       {path:'add-feedback',component:CustomeraddfeedbackComponent},
+       { path: 'view-feedback', component: CustomerviewfeedbackComponent },
+     
+      // { path: 'add-feedback', component: CustomeraddfeedbackComponent }
     ]
   },
 
-  // Manager section with child routes
+  // Manager section with AuthGuard applied
   {
     path: 'manager',
-    component: ManagernavComponent, // Managernav as the parent component
+    component: ManagernavComponent, 
+    canActivate: [AuthGuard], // Protect manager routes
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'accounts', component: ManagerviewallaccountsComponent },
