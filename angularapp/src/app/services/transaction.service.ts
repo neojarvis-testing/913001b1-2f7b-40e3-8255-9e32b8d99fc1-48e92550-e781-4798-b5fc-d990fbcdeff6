@@ -7,32 +7,30 @@ import { Transaction } from '../models/transaction.model';
   providedIn: 'root'
 })
 export class TransactionService {
+  public apiUrl = 'https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io';
 
-//https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io
-  public apiUrl = "https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   private getAuthHeaders(): HttpHeaders {
     const token = localStorage.getItem('authToken');
-    return new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
   }
 
   getAllTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.apiUrl, { headers: this.getAuthHeaders() });
+    return this.http.get<Transaction[]>(`${this.apiUrl}/api/transaction`, { headers: this.getAuthHeaders() });
   }
 
   addTransaction(transaction: Transaction): Observable<any> {
-    return this.http.post<any>(this.apiUrl, transaction, { headers: this.getAuthHeaders() });
+    return this.http.post(`${this.apiUrl}/api/transaction`, transaction, { headers: this.getAuthHeaders() });
   }
 
   updateTransaction(transaction: Transaction): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/manager/${transaction.TransactionId}`, transaction, { headers: this.getAuthHeaders() });
+    return this.http.put(`${this.apiUrl}/api/transaction/manager/${transaction.TransactionId}`, transaction, { headers: this.getAuthHeaders() });
   }
 
   getTransactionsByUserId(userId: number): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(`${this.apiUrl}/customer/${userId}`, { headers: this.getAuthHeaders() });
+    return this.http.get<Transaction[]>(`${this.apiUrl}/api/transaction/customer/${userId}`, { headers: this.getAuthHeaders() });
   }
 }
-
-
