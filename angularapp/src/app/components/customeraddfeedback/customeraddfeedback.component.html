@@ -1,4 +1,3 @@
-<!-- customeraddfeedback.component.html -->
 <div>
   <h1>Add Feedback</h1>
   <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
@@ -11,9 +10,12 @@
     <button type="submit" [disabled]="feedbackForm.invalid">Submit</button>
   </form>
 
-  <!-- Success message -->
-  <div *ngIf="showSuccessMessage" class="success-message">
-    Successfully Added!
+  <!-- Success message popup -->
+  <div *ngIf="showPopup" class="popup-overlay">
+    <div class="popup">
+      <p>Feedback Added Successfully!</p>
+      <button (click)="closePopup()">OK</button>
+    </div>
   </div>
 
   <!-- Error message -->

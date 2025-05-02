@@ -8,7 +8,11 @@ import { Transaction } from '../models/transaction.model';
 })
 export class TransactionService {
   // https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/1234
+<<<<<<< HEAD
   public apiUrl = 'https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction';
+=======
+  public apiUrl = "https://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction"
+>>>>>>> 8203d229d70cef770c89074aa4a0f36a1dc6d038
 
   constructor(private http: HttpClient) { }
 
