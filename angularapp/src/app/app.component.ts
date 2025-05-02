@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Transaction } from './models/transaction.model';
+import { AuthService } from './services/auth.service'; // Ensure you have an AuthService to manage roles
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { Transaction } from './models/transaction.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularapp';
+ title : "angularapp"
 }

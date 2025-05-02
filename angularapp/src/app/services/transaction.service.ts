@@ -8,7 +8,7 @@ import { Transaction } from '../models/transaction.model';
 })
 export class TransactionService {
 
-  public apiUrl = "https://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+  public apiUrl = "https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
   constructor(private http: HttpClient) { }
 
