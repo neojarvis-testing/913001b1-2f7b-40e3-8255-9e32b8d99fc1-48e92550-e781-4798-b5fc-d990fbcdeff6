@@ -23,14 +23,3 @@ export class ManagernavComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 

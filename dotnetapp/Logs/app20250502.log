@@ -11024,3 +11024,9 @@ WHERE [u].[Email] = @__model_Email_0
 2025-05-02 06:16:19.382 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
 2025-05-02 06:16:19.382 +00:00 [INF] HTTP POST /api/login responded 401 in 219.5777 ms
 2025-05-02 06:16:19.382 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 51 - 401 - application/json;+charset=utf-8 220.4888ms
+2025-05-02 06:30:43.156 +00:00 [INF] Application is shutting down...
+2025-05-02 06:30:46.237 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-05-02 06:30:46.326 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-05-02 06:30:46.330 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-02 06:30:46.330 +00:00 [INF] Hosting environment: Development
+2025-05-02 06:30:46.330 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
