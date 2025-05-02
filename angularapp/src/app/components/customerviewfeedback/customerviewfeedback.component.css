@@ -1,11 +1,98 @@
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+div {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  width: 450px;
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Error message for validation */
+span {
+  color: #d32f2f;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Submit Button */
+button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Success and Error Messages */
+.success-message,
+.error-message {
+  font-weight: bold;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.error-message {
+  background-color: #fdecea;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
