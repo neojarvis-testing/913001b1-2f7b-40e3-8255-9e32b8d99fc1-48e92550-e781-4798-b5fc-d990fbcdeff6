@@ -51,7 +51,7 @@ import { TransactionformComponent } from './components/transactionform/transacti
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
+    // RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

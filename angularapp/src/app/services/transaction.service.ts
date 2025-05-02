@@ -33,5 +33,3 @@ export class TransactionService {
     return this.http.get<Transaction[]>(`${this.apiUrl}/customer/${userId}`, { headers: this.getAuthHeaders() });
   }
 }
-
-
