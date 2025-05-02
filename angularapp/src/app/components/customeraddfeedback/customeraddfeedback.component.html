@@ -1,1 +1,23 @@
-<p>customeraddfeedback works!</p>
+<!-- customeraddfeedback.component.html -->
+<div>
+  <h1>Add Feedback</h1>
+  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <textarea 
+      formControlName="comments" 
+      placeholder="Write your feedback here"></textarea>
+    <div *ngIf="feedbackForm.controls['comments'].hasError('required') && feedbackForm.controls['comments'].touched">
+      <span>Feedback is required</span>
+    </div>
+    <button type="submit" [disabled]="feedbackForm.invalid">Submit</button>
+  </form>
+
+  <!-- Success message -->
+  <div *ngIf="showSuccessMessage" class="success-message">
+    Successfully Added!
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="showErrorMessage" class="error-message">
+    Failed to add feedback. Please try again.
+  </div>
+</div>

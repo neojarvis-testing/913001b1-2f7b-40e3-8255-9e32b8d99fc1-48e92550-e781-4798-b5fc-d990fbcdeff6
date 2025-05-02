@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using dotnetapp.Models;
 using dotnetapp.Data;
-
+using Serilog;
 namespace dotnetapp.Services
 {
     public class AccountService : IAccountService
@@ -18,10 +18,13 @@ namespace dotnetapp.Services
 
         public Account CreateAccount(Account account)
         {
+            // Log.Information("Login successful for balance:", account.Balance);
+            
             account.Status = "InActive";
             account.DateCreated = DateTime.Now;
             account.LastUpdated = DateTime.Now;
             _context.Accounts.Add(account);
+
             _context.SaveChanges();
             return account;
         }
