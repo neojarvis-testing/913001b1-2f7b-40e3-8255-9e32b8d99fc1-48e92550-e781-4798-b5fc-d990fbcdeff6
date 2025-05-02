@@ -8,7 +8,7 @@ import { Account } from '../models/account.model';
 })
 export class AccountService {
 
-
+  //https://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io
 
   public apiUrl = "https://8080-aaaecbbaabdabcdaaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
