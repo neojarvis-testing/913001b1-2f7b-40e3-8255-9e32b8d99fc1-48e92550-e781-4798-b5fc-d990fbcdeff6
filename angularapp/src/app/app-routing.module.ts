@@ -14,16 +14,16 @@ import { ManagerviewalltransactionsComponent } from './components/managerviewall
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { AuthGuard } from './components/authguard/auth.guard'; 
 
+
 const routes: Routes = [
-  // { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route redirects to login
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
 
 
   // Customer section with AuthGuard applied
   {
-    path: 'customer',
-    component: CustomernavComponent, 
+    path: 'customer',component: CustomernavComponent, 
     canActivate: [AuthGuard], // Protect customer routes
     children: [
       { path: 'home', component: HomeComponent },
@@ -45,7 +45,8 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'accounts', component: ManagerviewallaccountsComponent },
       { path: 'transactions', component: ManagerviewalltransactionsComponent },
-      { path: 'feedbacks', component: ManagerviewfeedbackComponent }
+      { path: 'feedbacks', component: ManagerviewfeedbackComponent },
+      
     ]
   }
 ];
