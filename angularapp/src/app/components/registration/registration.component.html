@@ -1,81 +1,77 @@
 <div class="registration-container">
-    <h2>Register</h2>
-    <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+  <h1>Registration</h1> <!-- Changed heading from "Register" to "Registration" -->
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
       <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          formControlName="Username"
-          [(ngModel)]="user.Username"
-          placeholder="Enter your username"
-        />
-        <small *ngIf="registrationForm.get('Username')?.invalid && registrationForm.get('Username')?.touched">
-          Username is required
-        </small>
+          <label for="username">Username</label>
+          <input
+              type="text"
+              id="username"
+              formControlName="Username"
+              [(ngModel)]="user.Username"
+              placeholder="Enter your username"
+          />
+          <small *ngIf="registrationForm.get('Username')?.invalid && registrationForm.get('Username')?.touched">
+              Username is required
+          </small>
       </div>
-  
+
       <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          formControlName="Email"
-          [(ngModel)]="user.Email"
-          placeholder="Enter your email"
-        />
-        <small *ngIf="registrationForm.get('Email')?.invalid && registrationForm.get('Email')?.touched">
-          A valid email is required
-        </small>
+          <label for="email">Email</label>
+          <input
+              type="email"
+              id="email"
+              formControlName="Email"
+              [(ngModel)]="user.Email"
+              placeholder="Enter your email"
+          />
+          <small *ngIf="registrationForm.get('Email')?.invalid && registrationForm.get('Email')?.touched">
+              A valid email is required
+          </small>
       </div>
-  
+
       <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          formControlName="Password"
-          [(ngModel)]="user.Password"
-          placeholder="Enter your password"
-        />
-        <small *ngIf="registrationForm.get('Password')?.invalid && registrationForm.get('Password')?.touched">
-          Password must be at least 6 characters and include special characters
-        </small>
+          <label for="password">Password</label>
+          <input
+              type="password"
+              id="password"
+              formControlName="Password"
+              [(ngModel)]="user.Password"
+              placeholder="Enter your password"
+          />
+          <small *ngIf="registrationForm.get('Password')?.invalid && registrationForm.get('Password')?.touched">
+              Password must be at least 6 characters and include special characters
+          </small>
       </div>
-  
+
       <div class="form-group">
-        <label for="mobileNumber">Mobile Number</label>
-        <input
-          type="text"
-          id="mobileNumber"
-          formControlName="MobileNumber"
-          [(ngModel)]="user.MobileNumber"
-          placeholder="Enter your mobile number"
-        />
-        <small *ngIf="registrationForm.get('MobileNumber')?.invalid && registrationForm.get('MobileNumber')?.touched">
-          Mobile number must be 10 digits
-        </small>
+          <label for="mobileNumber">Mobile Number</label>
+          <input
+              type="text"
+              id="mobileNumber"
+              formControlName="MobileNumber"
+              [(ngModel)]="user.MobileNumber"
+              placeholder="Enter your mobile number"
+          />
+          <small *ngIf="registrationForm.get('MobileNumber')?.invalid && registrationForm.get('MobileNumber')?.touched">
+              Mobile number must be 10 digits
+          </small>
       </div>
-  
+
       <div class="form-group">
-        <label for="userRole">User Role</label>
-        <select
-          id="userRole"
-          formControlName="UserRole"
-          [(ngModel)]="user.UserRole"
-        >
-          <option value="" disabled>Select your role</option>
-          <option value="Manager">Manager</option>
-          <option value="Customer">Customer</option>
-        </select>
-        <small *ngIf="registrationForm.get('UserRole')?.invalid && registrationForm.get('UserRole')?.touched">
-          Please select a role
-        </small>
+          <label for="userRole">User Role</label>
+          <select id="userRole" formControlName="UserRole" [(ngModel)]="user.UserRole">
+              <option value="" disabled>Select your role</option>
+              <option value="Manager">Manager</option>
+              <option value="Customer">Customer</option>
+          </select>
+          <small *ngIf="registrationForm.get('UserRole')?.invalid && registrationForm.get('UserRole')?.touched">
+              Please select a role
+          </small>
       </div>
-  
+
       <button type="submit" [disabled]="!isFormValid" class="register-btn">
-        Register
+          Register
       </button>
-    </form>
-  </div>
-  
+  </form>
+</div>
