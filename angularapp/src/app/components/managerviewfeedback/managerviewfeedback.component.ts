@@ -8,14 +8,14 @@ import { FeedbackService } from 'src/app/services/feedback.service';
     styleUrls: ['./managerviewfeedback.component.css']
 })
 export class ManagerviewfeedbackComponent implements OnInit {
-[x: string]: any;
+    [x: string]: any;
     feedbacks = []; // Array to store feedbacks
     showProfileModal = false; // Flag to control profile modal visibility
     showLogoutModal = false; // Flag to control logout modal visibility
     userDetails: any; // Object to store user details
-  userService: any;
+    userService: any;
 
-    constructor(private feedbackservice: FeedbackService) {}
+    constructor(private feedbackservice: FeedbackService) { }
 
     ngOnInit() {
         this.loadFeedbacks(); // Load feedbacks on component initialization

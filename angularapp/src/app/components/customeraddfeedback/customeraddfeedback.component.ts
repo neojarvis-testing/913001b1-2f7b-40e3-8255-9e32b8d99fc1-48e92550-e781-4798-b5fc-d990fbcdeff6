@@ -1,3 +1,39 @@
+// import { Component } from '@angular/core';
+// import { Feedback } from 'src/app/models/feedback.model';
+// import { FeedbackService } from 'src/app/services/feedback.service';
+
+// @Component({
+//   selector: 'app-customeraddfeedback',
+//   templateUrl: './customeraddfeedback.component.html',
+//   styleUrls: ['./customeraddfeedback.component.css']
+// })
+// export class CustomeraddfeedbackComponent {
+//   feedbackMessage = '';
+//   showSuccessPopup = false;
+//   userId: string = localStorage.getItem('userId') || '';
+
+//   constructor(private feedbackService: FeedbackService) { }
+
+//   submitFeedback(): void {
+//     if (!this.feedbackMessage.trim()) {
+//       alert('Feedback is required.');
+//       return;
+//     }
+
+//     const feedback: Feedback = { userId: this.userId, message: this.feedbackMessage };
+//     this.feedbackService.sendFeedback(feedback).subscribe(() => {
+//       this.showSuccessPopup = true;
+//     });
+//   }
+
+//   closePopup(): void {
+//     this.showSuccessPopup = false;
+//   }
+// }
+
+
+
+
 
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -35,8 +71,7 @@ export class CustomeraddfeedbackComponent {
         DateProvided: new Date()
       };
 
-      this.feedbackService.sendFeedback(feedback).subscribe(
-        () => {
+      this.feedbackService.sendFeedback(feedback).subscribe(() => {
           this.showSuccessMessage = true;
           this.showErrorMessage = false;
           this.feedbackForm.reset();

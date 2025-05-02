@@ -1,4 +1,5 @@
-export class Feedback {
+export class Feedback 
+{
     FeedbackId?: number;
     UserId: number;
     Comments: string;
