@@ -14,7 +14,7 @@ import { ManagerviewalltransactionsComponent } from './components/managerviewall
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
+  // { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
 
