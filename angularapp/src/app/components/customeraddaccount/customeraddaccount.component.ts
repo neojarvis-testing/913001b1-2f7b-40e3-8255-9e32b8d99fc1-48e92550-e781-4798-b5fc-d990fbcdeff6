@@ -27,7 +27,7 @@ export class CustomeraddaccountComponent implements OnInit {
 
   ngOnInit(): void {
     // Retrieve UserId from AuthService
-    const userId = +this.authService.getUserId();
+    let userId = +this.authService.getUserId();
 
     // Check if the user already has an existing account
     this.accountService.getAccountByUserId(userId).subscribe({

@@ -1,59 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedbackService } from 'src/app/services/feedback.service';
 
-
 @Component({
-    selector: 'app-managerviewfeedback',
-    templateUrl: './managerviewfeedback.component.html',
-    styleUrls: ['./managerviewfeedback.component.css']
+  selector: 'app-managerviewfeedback',
+  templateUrl: './managerviewfeedback.component.html',
+  styleUrls: ['./managerviewfeedback.component.css']
 })
 export class ManagerviewfeedbackComponent implements OnInit {
-    [x: string]: any;
-    feedbacks = []; // Array to store feedbacks
-    showProfileModal = false; // Flag to control profile modal visibility
-    showLogoutModal = false; // Flag to control logout modal visibility
-    userDetails: any; // Object to store user details
-    userService: any;
+  feedbacks: any[] = []; // Array to store feedbacks
+  showProfileModal = false; // Flag to control profile modal visibility
+  selectedUser: any = null; // Stores selected user details
 
-    constructor(private feedbackservice: FeedbackService) { }
+  constructor(private feedbackservice: FeedbackService) {}
 
-    ngOnInit() {
-        this.loadFeedbacks(); // Load feedbacks on component initialization
-    }
+  ngOnInit() {
+    this.loadFeedbacks(); // Load feedbacks on component initialization
+  }
 
-    // Method to load all feedbacks
-    loadFeedbacks() {
-        this.feedbackservice.getFeedbacks().subscribe(data => {
-            this.feedbacks = data;
-        });
-    }
+  // Load all feedbacks directly
+  loadFeedbacks() {
+    this.feedbackservice.getFeedbacks().subscribe(data => {
+      this.feedbacks = data;
+      console.log(this.feedbacks);
+    });
+  }
 
-    // Method to show user profile in a modal
-    showProfile(userId: number) {
-        this.userService.getUserDetails(userId).subscribe(data => {
-            this.userDetails = data;
-            this.showProfileModal = true;
-        });
-    }
+  // Show profile from feedback object instead of service
+  showProfile(feedback: any) {
+    console.log(feedback.user);
+    this.selectedUser = feedback.user; // Get user details from feedback
+    console.log(this.selectedUser);
+    this.showProfileModal = true;
+  }
 
-    // Method to close the profile modal
-    closeProfileModal() {
-        this.showProfileModal = false;
-    }
-
-    // Method to show the logout confirmation modal
-    logout() {
-        this.showLogoutModal = true;
-    }
-
-    // Method to confirm logout
-    confirmLogout() {
-        // Implement logout logic here
-        this.showLogoutModal = false;
-    }
-
-    // Method to close the logout confirmation modal
-    closeLogoutModal() {
-        this.showLogoutModal = false;
-    }
+  // Close profile modal
+  closeProfileModal() {
+    this.showProfileModal = false;
+  }
 }

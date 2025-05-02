@@ -7,7 +7,6 @@ import { Transaction } from '../models/transaction.model';
   providedIn: 'root'
 })
 export class TransactionService {
-  // https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/1234
   public apiUrl = "https://8080-ecdfcdadbbadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction";
 
   constructor(private http: HttpClient) { }
