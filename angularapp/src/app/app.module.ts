@@ -52,13 +52,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-<<<<<<< HEAD
-    // RouterModule,
-=======
     HttpClientModule,
     RouterModule
 
->>>>>>> 53773a2a223158b980469ffe0758737f25a20f12
   ],
   providers: [],
   bootstrap: [AppComponent],

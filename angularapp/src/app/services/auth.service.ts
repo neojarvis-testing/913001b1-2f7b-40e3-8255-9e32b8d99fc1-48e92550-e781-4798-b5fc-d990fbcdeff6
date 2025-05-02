@@ -7,7 +7,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api'; // Replace with actual API URL
+  private apiUrl = 'https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api'; // Replace with actual API URL
   private tokenKey = 'authToken'; // Set local storage key properly
   private role = '';
   private loggedIn$ = new BehaviorSubject<boolean>(false);

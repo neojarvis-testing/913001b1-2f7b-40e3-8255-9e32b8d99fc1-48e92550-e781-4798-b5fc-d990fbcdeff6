@@ -7,13 +7,8 @@ import { Account } from '../models/account.model';
   providedIn: 'root'
 })
 export class AccountService {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 53773a2a223158b980469ffe0758737f25a20f12
  
-  public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+  public apiUrl = 'https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io';
 
   constructor(private http:HttpClient) 
   { 
