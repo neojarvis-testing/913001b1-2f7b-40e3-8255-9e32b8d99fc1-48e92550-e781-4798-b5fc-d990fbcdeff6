@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedbackService } from 'src/app/services/feedback.service';
-import { User } from 'src/app/models/user.model';
+
 
 @Component({
     selector: 'app-managerviewfeedback',
