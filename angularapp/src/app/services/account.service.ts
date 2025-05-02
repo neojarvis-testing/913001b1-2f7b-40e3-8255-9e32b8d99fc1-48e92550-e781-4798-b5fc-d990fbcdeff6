@@ -7,6 +7,11 @@ import { Account } from '../models/account.model';
   providedIn: 'root'
 })
 export class AccountService {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 53773a2a223158b980469ffe0758737f25a20f12
  
   public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
@@ -15,12 +20,14 @@ export class AccountService {
 
   }
 
-  private getAuthHeaders(): HttpHeaders {
+  private getAuthHeaders():
+   HttpHeaders
+    {
     const token = localStorage.getItem('authToken');
     return new HttpHeaders({Authorization: `Bearer ${token}`});
   }
 
-  createAccount(account : Account) : Observable<any> {
+  createAccount(account : any) : Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/api/account`,account, {headers: this.getAuthHeaders()});
   }
 

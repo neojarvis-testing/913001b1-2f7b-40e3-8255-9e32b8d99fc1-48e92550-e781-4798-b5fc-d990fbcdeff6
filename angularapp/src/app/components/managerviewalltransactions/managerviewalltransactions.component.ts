@@ -1,52 +1,84 @@
-import { Component } from '@angular/core';
- 
+import { Component, OnInit } from '@angular/core';
+import { TransactionService } from '../../services/transaction.service';
+import { Transaction } from '../../models/transaction.model';
+import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-managerviewalltransactions',
   templateUrl: './managerviewalltransactions.component.html',
   styleUrls: ['./managerviewalltransactions.component.css']
 })
-export class ManagerviewalltransactionsComponent {
-  filterStatus: string = 'All';
- 
-  transactions = [
-    { id: 1, accountId: 13, type: 'Deposit', amount: 500, status: 'Completed', date: '02/10/2024' },
-    { id: 2, accountId: 13, type: 'Deposit', amount: 500, status: 'Completed', date: '02/10/2024' },
-    { id: 3, accountId: 13, type: 'Withdraw', amount: 1500, status: 'Completed', date: '02/10/2024' },
-    { id: 4, accountId: 13, type: 'Withdraw', amount: 4000, status: 'Completed', date: '02/10/2024' },
-    { id: 5, accountId: 13, type: 'Withdraw', amount: 1000, status: 'Completed', date: '02/10/2024' },
-    { id: 6, accountId: 13, type: 'Withdraw', amount: 2000, status: 'Rejected', date: '02/10/2024' },
-    { id: 7, accountId: 14, type: 'Deposit', amount: 1000, status: 'Completed', date: '02/10/2024' },
-    { id: 8, accountId: 14, type: 'Withdraw', amount: 1000, status: 'Completed', date: '02/10/2024' },
-    { id: 9, accountId: 14, type: 'Deposit', amount: 3000, status: 'Processing', date: '03/10/2024' }
-  ];
- 
-  selectedTransaction: any = null;
- 
-  get filteredTransactions() {
-    return this.transactions.filter(tx =>
-      this.filterStatus === 'All' || tx.status === this.filterStatus
-    );
+export class ManagerviewalltransactionsComponent implements OnInit {
+  filterStatus: string = 'All'; // Default filter status
+  transactions: Transaction[] = []; // Store transactions from API
+  selectedTransaction: Transaction | null = null; // For displaying detailed account info
+  userId: number; // Store user ID from local storage
+
+  constructor(private transactionService: TransactionService,private authserice : AuthService) {}
+
+  ngOnInit(): void {
+    this.userId = +this.authserice.getUserId(); // Retrieve userId from local storage
+    this.loadTransactionsByUserId(); // Load transactions for the logged-in user
   }
- 
-  showAccountDetails(tx: any) {
-    this.selectedTransaction = {
-      accountId: tx.accountId,
-      accountHolder: `Customer ${tx.accountId}`,
-      accountNumber: `AC${tx.accountId}0099`
-    };
+
+  // Load transactions from the API
+  loadTransactionsByUserId(): void {
+    if (this.userId) {
+      this.transactionService.getTransactionsByUserId(this.userId).subscribe(
+        (data: Transaction[]) => {
+          this.transactions = data; // Assign retrieved transactions
+        },
+        (error) => {
+          console.error('Error fetching transactions:', error);
+        }
+      );
+    } else {
+      console.error('User ID not found in local storage.');
+    }
   }
- 
-  closePopup() {
+
+  // Show account details of a specific transaction
+  showAccountDetails(tx: Transaction): void {
+    this.selectedTransaction = tx; // Account details are included in the transaction object
+  }
+
+  // Close the modal
+  closePopup(): void {
     this.selectedTransaction = null;
   }
- 
-  proceed(tx: any) {
-    tx.status = 'Completed';
-    alert('Transaction proceeded.');
+
+  // Proceed the transaction
+  proceed(tx: Transaction): void {
+    tx.Status = 'Completed';
+    this.transactionService.updateTransaction(tx).subscribe(
+      () => {
+        alert('Transaction proceeded.');
+        this.loadTransactionsByUserId(); // Refresh the transactions
+      },
+      (error) => {
+        console.error('Error proceeding transaction:', error);
+      }
+    );
   }
- 
-  reject(tx: any) {
-    tx.status = 'Rejected';
-    alert('Transaction rejected.');
+
+  // Reject the transaction
+  reject(tx: Transaction): void {
+    tx.Status = 'Rejected';
+    this.transactionService.updateTransaction(tx).subscribe(
+      () => {
+        alert('Transaction rejected.');
+        this.loadTransactionsByUserId(); // Refresh the transactions
+      },
+      (error) => {
+        console.error('Error rejecting transaction:', error);
+      }
+    );
+  }
+
+  // Filter transactions based on status
+  get filteredTransactions(): Transaction[] {
+    return this.transactions.filter(tx =>
+      this.filterStatus === 'All' || tx.Status === this.filterStatus
+    );
   }
 }

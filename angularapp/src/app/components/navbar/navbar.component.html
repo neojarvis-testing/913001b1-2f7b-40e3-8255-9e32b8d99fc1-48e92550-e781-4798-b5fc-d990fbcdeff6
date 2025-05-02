@@ -1,7 +1,10 @@
-<nav class="navbar">
+
+
+  <nav class="navbar" *ngIf="isLoggedIn">
     <div class="logo">BTMS</div>
     <div class="links">
-      <a routerLink="/register" routerLinkActive="active">Register</a>
-      <a routerLink="/login" routerLinkActive="active">Login</a>
+      <a routerLink="/manager/home" routerLinkActive="active">Manager Home</a>
+      <a routerLink="/customer/home" routerLinkActive="active">Customer Home</a>
+      <button (click)="onLogout()">Logout</button>
     </div>
   </nav>
