@@ -12,10 +12,10 @@ export class ManagernavComponent implements OnInit {
  
   ngOnInit(): void {
     //const role = localStorage.getItem('role');
-    const role = this.service.getUserRole();
-    if (role !== 'Manager') {
-      this.router.navigate(['/login']);
-    }
+    // const role = this.service.getUserRole();
+    // if (role !== 'Manager') {
+    //   this.router.navigate(['/login']);
+    // }
   }
  
   logout(): void {

@@ -1,7 +1,6 @@
 <div>
     <nav>
-        <button (click)="navigateToFeedbacks()">Feedbacks</button>
-        <button (click)="logout()">Logout</button>
+        <button (click)="loadFeedbacks()">Refresh Feedbacks</button>
     </nav>
 
     <div *ngIf="feedbacks.length === 0">
@@ -11,17 +10,21 @@
     <table *ngIf="feedbacks.length > 0">
         <thead>
             <tr>
-                <th>User</th>
+                <th>S.No.</th>
+                <th>Username</th>
                 <th>Feedback</th>
+                <th>Posted Date</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let feedback of feedbacks">
-                <td>{{ feedback.userName }}</td>
-                <td>{{ feedback.content }}</td>
+            <tr *ngFor="let feedback of feedbacks; let i = index">
+                <td>{{ i + 1 }}</td> <!-- Serial Number -->
+                <td>{{ feedback.user?.username }}</td> <!-- Get Username from Feedback.User -->
+                <td>{{ feedback.comments }}</td>
+                <td>{{ feedback.dateProvided | date:'dd-MM-yyyy' }}</td> <!-- Format Date -->
                 <td>
-                    <button (click)="showProfile(feedback.userId)">Show Profile</button>
+                    <button (click)="showProfile(feedback)">Show Profile</button>
                 </td>
             </tr>
         </tbody>
@@ -30,15 +33,12 @@
     <div *ngIf="showProfileModal" class="modal">
         <div class="modal-content">
             <span class="close" (click)="closeProfileModal()">&times;</span>
-            <p>User Details: {{ userDetails }}</p>
-        </div>
-    </div>
-
-    <div *ngIf="showLogoutModal" class="modal">
-        <div class="modal-content">
-            <p>Are you sure you want to logout?</p>
-            <button (click)="confirmLogout()">Yes, Logout</button>
-            <button (click)="closeLogoutModal()">Cancel</button>
+            <p><strong>User Details:</strong></p>
+            <p>Name: {{ selectedUser?.username }}</p>
+            <p>Email: {{ selectedUser?.email }}</p>
+            <p>Mobile: {{ selectedUser?.mobileNumber }}</p>
         </div>
     </div>
 </div>
+
+

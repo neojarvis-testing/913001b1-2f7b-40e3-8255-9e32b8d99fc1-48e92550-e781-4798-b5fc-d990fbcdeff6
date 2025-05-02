@@ -10,11 +10,15 @@
     <li class="dropdown">
       <a href="#">Feedback</a>
       <ul class="dropdown-content">
-        <li><button (click)="navigateToPostFeedback()">Post Feedback</button></li>
-        <li><button (click)="navigateToMyFeedbacks()">My Feedbacks</button></li>
+        <li><a routerLink="/customer/customeraddfeedback"><button>Post Feedback</button></a></li>
+        <li><a routerLink="/customer/customerviewfeedback"><button>My Feedbacks</button></a></li>
       </ul>
     </li>
+
+
+
 
     <li><button (click)="logout()">Logout</button></li>
   </ul>
 </nav>
+<router-outlet> </router-outlet>

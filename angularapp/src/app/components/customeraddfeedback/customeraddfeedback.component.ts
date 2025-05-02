@@ -1,10 +1,7 @@
-
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FeedbackService } from 'src/app/services/feedback.service';
-import { Feedback } from 'src/app/models/feedback.model';
+import { FeedbackService } from 'src/app/services/feedback.service';;
 import { AuthService } from 'src/app/services/auth.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customeraddfeedback',
@@ -13,14 +10,13 @@ import { Router } from '@angular/router';
 })
 export class CustomeraddfeedbackComponent {
   feedbackForm: FormGroup;
-  showSuccessMessage = false;
+  showPopup = false; // Controls the popup visibility
   showErrorMessage = false;
 
   constructor(
     private fb: FormBuilder,
     private feedbackService: FeedbackService,
-    private authservice : AuthService,
-    private router : Router
+    private authservice: AuthService
   ) {
     this.feedbackForm = this.fb.group({
       comments: ['', Validators.required]
@@ -29,25 +25,28 @@ export class CustomeraddfeedbackComponent {
 
   onSubmit(): void {
     if (this.feedbackForm.valid) {
-      const feedback: Feedback = {
-        UserId : +this.authservice.getUserId(), // Replace with the actual user ID
+      const feedback: any = {
+        UserId: +this.authservice.getUserId(),
         Comments: this.feedbackForm.value.comments,
         DateProvided: new Date()
       };
+      console.log(feedback)
 
       this.feedbackService.sendFeedback(feedback).subscribe(
         () => {
-          this.showSuccessMessage = true;
+          this.showPopup = true; // Show success popup
           this.showErrorMessage = false;
           this.feedbackForm.reset();
-          // this.router.navigate(['customer-view-feedback']);
         },
         () => {
-          this.router.navigate(['view-feedback'])
-          // this.showErrorMessage = true;
-          // this.showSuccessMessage = false;
+          this.showErrorMessage = true;
+          this.showPopup = false;
         }
       );
     }
+  }
+
+  closePopup(): void {
+    this.showPopup = false; // Close popup when clicking "OK"
   }
 }

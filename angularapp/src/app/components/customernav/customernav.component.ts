@@ -13,15 +13,15 @@ export class CustomernavComponent implements OnInit {
 
   ngOnInit(): void {
     // Optionally check for valid login or role here
-    const role = this.service.getUserRole();
-    console.log(role);
-
-    if (role !== 'Customer') {
-      console.log("Role mismatch, redirecting to login...");
-      this.router.navigate(['/login']);
-    } else {
-      console.log("Role match");
-    }
+    // const role = localStorage.getItem('role');
+    // const role = this.service.getUserRole();
+    // console.log(role);
+    // if (role !== 'Customer') {
+    //   this.router.navigate(['/login']);
+    // }
+    // else{
+    //   console.log("not match")
+    // }
   }
 
   logout(): void {
@@ -32,11 +32,11 @@ export class CustomernavComponent implements OnInit {
 
   // Navigate to the Post Feedback page
   navigateToPostFeedback(): void {
-    this.router.navigate(['/customer/addfeedback']);
+    this.router.navigate(['/customer/customeraddfeedback']);
   }
 
   // Navigate to the My Feedbacks page
   navigateToMyFeedbacks(): void {
-    this.router.navigate(['/customer/viewfeedback']);
+    this.router.navigate(['/customer/customerviewfeedback']);
   }
 }
