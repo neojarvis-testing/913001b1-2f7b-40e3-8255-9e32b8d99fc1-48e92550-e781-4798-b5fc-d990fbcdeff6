@@ -1,16 +1,22 @@
-
 <div class="container">
   <h3>All Accounts</h3>
- 
+
   <div class="filter-container">
-    <input type="text" placeholder="Search by Account Holder Name" [(ngModel)]="searchText" />
-    <select [(ngModel)]="filterStatus">
+    <!-- Search input for account holder name -->
+    <input
+      type="text"
+      placeholder="Search by Account Holder Name"
+      [(ngModel)]="searchText"
+      (input)="applyFilters()" />
+
+    <!-- Dropdown for account status filter -->
+    <select [(ngModel)]="filterStatus" (change)="applyFilters()">
       <option value="All">All</option>
       <option value="Active">Active</option>
       <option value="Inactive">Inactive</option>
     </select>
   </div>
- 
+
   <table>
     <thead>
       <tr>
@@ -23,38 +29,39 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let acc of filteredAccounts; let i = index">
+      <!-- Loop through filtered accounts -->
+      <tr *ngFor="let account of filteredAccounts; let i = index">
         <td>{{ i + 1 }}</td>
-        <td>{{ acc.name }}</td>
-        <td>{{ acc.type }}</td>
-        <td>{{ acc.balance }}</td>
-        <td>{{ acc.status }}</td>
+        <td>{{ account.accountHolderName }}</td>
+        <td>{{ account.accountType }}</td>
+        <td>{{ account.balance }}</td>
+        <td>{{ account.status }}</td>
         <td>
-          <button class="btn blue" (click)="showProof(acc.proof)">Show Proof</button>
+          <!-- Button to show proof of identity -->
+          <button class="btn blue" (click)="showProof(account.proofOfIdentity)">Show Proof</button>
+          <!-- Buttons to toggle status -->
           <button
             class="btn green"
-            *ngIf="acc.status === 'Inactive'"
-            (click)="toggleStatus(acc)"
-          >
+            *ngIf="account.status === 'Inactive'"
+            (click)="toggleStatus(account)">
             Activate
           </button>
           <button
             class="btn red"
-            *ngIf="acc.status === 'Active'"
-            (click)="toggleStatus(acc)"
-          >
+            *ngIf="account.status === 'Active'"
+            (click)="toggleStatus(account)">
             Deactivate
           </button>
         </td>
       </tr>
     </tbody>
   </table>
- 
+
+  <!-- Modal to display proof of identity -->
   <div class="modal" *ngIf="selectedProof">
     <div class="modal-content">
       <span class="close" (click)="closeProof()">&times;</span>
-      <img [src]="selectedProof" alt="Proof" />
+      <img [src]="selectedProof" alt="Proof of Identity" />
     </div>
   </div>
 </div>
- 
