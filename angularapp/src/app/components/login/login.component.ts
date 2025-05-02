@@ -3,8 +3,8 @@ import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html', // Points to the external template file
-  styleUrls: ['./login.component.css'], // Points to the external CSS file
+  templateUrl: './login.component.html', // External template
+  styleUrls: ['./login.component.css'], // External CSS
 })
 export class LoginComponent {
   email = '';
