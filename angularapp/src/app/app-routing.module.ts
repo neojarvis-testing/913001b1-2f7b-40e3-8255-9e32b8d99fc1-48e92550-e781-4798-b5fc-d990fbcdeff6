@@ -42,7 +42,7 @@ const routes: Routes = [
     component: ManagernavComponent, 
     canActivate: [AuthGuard], 
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect /manager to /manager/home
+      //{ path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect /manager to /manager/home
       { path: 'home', component: HomeComponent },
       { path: 'accounts', component: ManagerviewallaccountsComponent },
       { path: 'transactions', component: ManagerviewalltransactionsComponent },
