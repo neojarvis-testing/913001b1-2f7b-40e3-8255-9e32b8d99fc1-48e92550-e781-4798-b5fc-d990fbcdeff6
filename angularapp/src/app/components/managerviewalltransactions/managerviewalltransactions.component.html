@@ -1,62 +1,43 @@
-<div class="container">
-  <h2>Transaction Details</h2>
-
-  <!-- Filter Dropdown -->
-  <label>Filter by Status:</label>
-  <select [(ngModel)]="filterStatus">
-    <option value="All">All</option>
-    <option value="Completed">Completed</option>
-    <option value="Rejected">Rejected</option>
-    <option value="Processing">Processing</option>
-  </select>
-
-  <!-- Transaction Table -->
+<div class="transaction-container">
+  <h2>All Transactions</h2>
   <table>
     <thead>
       <tr>
-        <th>S.No</th>
+        <th>Transaction ID</th>
         <th>Account ID</th>
-        <th>Transaction Type</th>
+        <th>Date</th>
+        <th>Type</th>
         <th>Amount</th>
         <th>Status</th>
-        <th>Transaction Date</th>
-        <th>Action</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tx of filteredTransactions; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ tx.Account?.AccountId }}</td>
-        <td>{{ tx.TransactionType }}</td>
-        <td>{{ tx.Amount | currency }}</td>
-        <td>{{ tx.Status }}</td>
-        <td>{{ tx.TransactionDate | date:'MM/dd/yyyy' }}</td>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.transactionId }}</td>
+        <td>{{ transaction.accountId }}</td>
+        <td>{{ transaction.transactionDate | date }}</td>
+        <td>{{ transaction.transactionType }}</td>
+        <td>{{ transaction.amount | currency }}</td>
+        <td>{{ transaction.status }}</td>
         <td>
-          <ng-container *ngIf="tx.Status === 'Processing'; else noAction">
-            <button class="btn blue" (click)="showAccountDetails(tx)">Show Account</button>
-            <button class="btn green" (click)="proceed(tx)">Proceed</button>
-            <button class="btn red" (click)="reject(tx)">Reject</button>
-          </ng-container>
-          <ng-template #noAction>No Action Available</ng-template>
+          <button (click)="showAccountDetails(transaction.account)">Show Account</button>
+          <button (click)="proceedTransaction(transaction)">Proceed</button>
+          <button (click)="rejectTransaction(transaction)">Reject</button>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
 
-  <!-- Account Details Modal -->
-  <div class="popup" *ngIf="selectedTransaction">
-    <div class="popup-content">
-      <h3>Account Details</h3>
-      <p><strong>Account ID:</strong> {{ selectedTransaction.Account?.AccountId }}</p>
-      <p><strong>User ID:</strong> {{ selectedTransaction.Account?.UserId }}</p>
-      <p><strong>Account Holder Name:</strong> {{ selectedTransaction.Account?.AccountHolderName }}</p>
-      <p><strong>Account Type:</strong> {{ selectedTransaction.Account?.AccountType }}</p>
-      <p><strong>Balance:</strong> {{ selectedTransaction.Account?.Balance | currency }}</p>
-      <p><strong>Status:</strong> {{ selectedTransaction.Account?.Status }}</p>
-      <p><strong>Proof of Identity:</strong> {{ selectedTransaction.Account?.ProofOfIdentity }}</p>
-      <p><strong>Date Created:</strong> {{ selectedTransaction.Account?.DateCreated | date:'yyyy-MM-dd' }}</p>
-      <p><strong>Last Updated:</strong> {{ selectedTransaction.Account?.LastUpdated | date:'yyyy-MM-dd' }}</p>
-      <button class="btn close" (click)="closePopup()">Close</button>
-    </div>
+<!-- Account Details Popup -->
+<div class="popup" *ngIf="showPopup">
+  <div class="popup-content">
+    <h3>Account Details</h3>
+    <p><strong>Account Holder:</strong> {{ selectedAccount?.accountHolderName }}</p>
+    <p><strong>Account Type:</strong> {{ selectedAccount?.accountType }}</p>
+    <p><strong>Balance:</strong> {{ selectedAccount?.balance | currency }}</p>
+    <p><strong>Status:</strong> {{ selectedAccount?.status }}</p>
+    <button (click)="closePopup()">Close</button>
   </div>
 </div>

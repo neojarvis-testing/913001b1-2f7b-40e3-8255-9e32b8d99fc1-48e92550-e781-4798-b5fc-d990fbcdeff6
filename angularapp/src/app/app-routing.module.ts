@@ -12,14 +12,16 @@ import { ManagernavComponent } from './components/managernav/managernav.componen
 import { ManagerviewallaccountsComponent } from './components/managerviewallaccounts/managerviewallaccounts.component';
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
-import { AuthGuard } from './components/authguard/auth.guard';
- 
+import { AuthGuard } from './components/authguard/auth.guard'; 
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
+  { path: '', component: NavbarComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
- 
- 
+  {path:'',component:AppComponent},
+
   // Customer section with AuthGuard applied
   {
     path: 'customer',
