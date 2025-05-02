@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module'; // Corrected import
 import { AppComponent } from './app.component';
-
+import { RouterModule } from '@angular/router';
 
 import { CustomeraddaccountComponent } from './components/customeraddaccount/customeraddaccount.component';
 import { CustomeraddfeedbackComponent } from './components/customeraddfeedback/customeraddfeedback.component';

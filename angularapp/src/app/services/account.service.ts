@@ -10,7 +10,7 @@ export class AccountService {
 
 
  
-  public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+  public apiUrl = 'https://8080-fcfcacacacacadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io';
 
   constructor(private http:HttpClient) 
   { 
