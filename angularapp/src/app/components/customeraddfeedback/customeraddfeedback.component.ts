@@ -43,7 +43,7 @@ export class CustomeraddfeedbackComponent {
           // this.router.navigate(['customer-view-feedback']);
         },
         () => {
-          this.router.navigate(['customer-view-feedback'])
+          this.router.navigate(['view-feedback'])
           // this.showErrorMessage = true;
           // this.showSuccessMessage = false;
         }
