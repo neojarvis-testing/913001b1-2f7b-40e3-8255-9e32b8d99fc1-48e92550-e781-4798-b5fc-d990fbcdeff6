@@ -513,6 +513,1168 @@ RolesAuthorizationRequirement:User.IsInRole must be true for one of the followin
 2025-05-02 03:38:29.505 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
 2025-05-02 03:38:29.505 +00:00 [INF] HTTP GET /api/account responded 401 in 0.4139 ms
 2025-05-02 03:38:29.505 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 401 0 - 0.5820ms
+2025-05-02 03:58:13.246 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-05-02 03:58:13.283 +00:00 [INF] Creating key {06df98c8-907f-4108-94e6-42ab4eb710e1} with creation date 2025-05-02 03:58:13Z, activation date 2025-05-02 03:58:13Z, and expiration date 2025-07-31 03:58:13Z.
+2025-05-02 03:58:13.293 +00:00 [WRN] No XML encryptor configured. Key {06df98c8-907f-4108-94e6-42ab4eb710e1} may be persisted to storage in unencrypted form.
+2025-05-02 03:58:13.296 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-06df98c8-907f-4108-94e6-42ab4eb710e1.xml'.
+2025-05-02 03:58:13.364 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-05-02 03:58:13.368 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-02 03:58:13.369 +00:00 [INF] Hosting environment: Development
+2025-05-02 03:58:13.369 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-05-02 03:58:32.348 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:58:32.428 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-05-02 03:58:32.571 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:32.616 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:32.897 +00:00 [INF] Registration attempt for email: abcd89154b93-4761-415f-81c9-0121c9d60905@gmail.com
+2025-05-02 03:58:32.902 +00:00 [INF] Registration process started for email: abcd89154b93-4761-415f-81c9-0121c9d60905@gmail.com
+2025-05-02 03:58:33.395 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-02 03:58:33.395 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-02 03:58:33.511 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:34.174 +00:00 [INF] Executed DbCommand (46ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:34.617 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:58:34.656 +00:00 [INF] Registration successful for email: abcd89154b93-4761-415f-81c9-0121c9d60905@gmail.com
+2025-05-02 03:58:34.657 +00:00 [INF] Registration successful for email: abcd89154b93-4761-415f-81c9-0121c9d60905@gmail.com
+2025-05-02 03:58:34.659 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:34.688 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 2066.4168ms
+2025-05-02 03:58:34.689 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:34.692 +00:00 [INF] HTTP POST /api/register responded 200 in 2265.4171 ms
+2025-05-02 03:58:34.699 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 2354.5025ms
+2025-05-02 03:58:34.729 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:58:34.731 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:34.731 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:34.737 +00:00 [INF] Registration attempt for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:34.737 +00:00 [INF] Registration process started for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:34.738 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:34.744 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:34.920 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:58:34.925 +00:00 [INF] Registration successful for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:34.926 +00:00 [INF] Registration successful for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:34.926 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:34.926 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 194.9279ms
+2025-05-02 03:58:34.926 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:34.927 +00:00 [INF] HTTP POST /api/register responded 200 in 196.1283 ms
+2025-05-02 03:58:34.927 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 198.1478ms
+2025-05-02 03:58:34.931 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:58:34.934 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:58:34.937 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:34.943 +00:00 [INF] Login attempt for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:34.945 +00:00 [INF] Login process started for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:35.002 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:35.004 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:35.201 +00:00 [INF] Token generated successfully.
+2025-05-02 03:58:35.298 +00:00 [INF] Login successful for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com
+2025-05-02 03:58:35.299 +00:00 [INF] Login successful for email: abcd0f685f60-37c6-4cd5-bfb2-e75c7ecb34b8@gmail.com. Token issued.
+2025-05-02 03:58:35.299 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:35.300 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 361.9498ms
+2025-05-02 03:58:35.300 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:58:35.300 +00:00 [INF] HTTP POST /api/login responded 200 in 368.0901 ms
+2025-05-02 03:58:35.300 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 368.8719ms
+2025-05-02 03:58:35.328 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:58:35.328 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:35.328 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:35.328 +00:00 [INF] Registration attempt for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.328 +00:00 [INF] Registration process started for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.329 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:35.330 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:35.501 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:58:35.506 +00:00 [INF] Registration successful for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.506 +00:00 [INF] Registration successful for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.506 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:35.506 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 178.3908ms
+2025-05-02 03:58:35.506 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:35.506 +00:00 [INF] HTTP POST /api/register responded 200 in 178.6974 ms
+2025-05-02 03:58:35.506 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 178.9762ms
+2025-05-02 03:58:35.507 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:58:35.507 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:58:35.507 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:35.508 +00:00 [INF] Login attempt for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.508 +00:00 [INF] Login process started for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.509 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:35.510 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:35.681 +00:00 [INF] Token generated successfully.
+2025-05-02 03:58:35.681 +00:00 [INF] Login successful for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com
+2025-05-02 03:58:35.681 +00:00 [INF] Login successful for email: abcd73147462-7d11-4e98-b967-bcd70b26d99e@gmail.com. Token issued.
+2025-05-02 03:58:35.681 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:35.682 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 174.093ms
+2025-05-02 03:58:35.682 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:58:35.682 +00:00 [INF] HTTP POST /api/login responded 200 in 174.3777 ms
+2025-05-02 03:58:35.682 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 174.5821ms
+2025-05-02 03:58:35.740 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:58:35.797 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:58:35.798 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 03:58:35.799 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:35.812 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 03:58:35.833 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 03:58:35.850 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 51.4388ms
+2025-05-02 03:58:35.850 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:58:35.850 +00:00 [INF] HTTP GET /api/account responded 200 in 103.3381 ms
+2025-05-02 03:58:35.850 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 200 - application/json;+charset=utf-8 109.7529ms
+2025-05-02 03:58:35.854 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:58:35.855 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:35.855 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:35.855 +00:00 [INF] Registration attempt for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:35.855 +00:00 [INF] Registration process started for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:35.856 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:35.857 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:36.028 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:58:36.033 +00:00 [INF] Registration successful for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:36.033 +00:00 [INF] Registration successful for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:36.033 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:36.033 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 178.6522ms
+2025-05-02 03:58:36.033 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:58:36.033 +00:00 [INF] HTTP POST /api/register responded 200 in 179.0065 ms
+2025-05-02 03:58:36.034 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 179.2782ms
+2025-05-02 03:58:36.034 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:58:36.034 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:58:36.035 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:58:36.035 +00:00 [INF] Login attempt for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:36.035 +00:00 [INF] Login process started for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:36.036 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:58:36.037 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:58:36.217 +00:00 [INF] Token generated successfully.
+2025-05-02 03:58:36.217 +00:00 [INF] Login successful for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com
+2025-05-02 03:58:36.217 +00:00 [INF] Login successful for email: abcd488828ed-7dfc-4d89-b7a8-ae16be7973ce@gmail.com. Token issued.
+2025-05-02 03:58:36.217 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:58:36.217 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 182.5592ms
+2025-05-02 03:58:36.217 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:58:36.217 +00:00 [INF] HTTP POST /api/login responded 200 in 182.9720 ms
+2025-05-02 03:58:36.217 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 183.2704ms
+2025-05-02 03:58:36.218 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:58:36.219 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2025-05-02 03:58:36.222 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-02 03:58:36.222 +00:00 [INF] HTTP GET /api/account responded 401 in 3.8000 ms
+2025-05-02 03:58:36.222 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 401 0 - 4.1161ms
+2025-05-02 04:03:17.161 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:03:17.162 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:03:17.163 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 1.8234 ms
+2025-05-02 04:03:17.164 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 2.1603ms
+2025-05-02 04:03:17.774 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59
+2025-05-02 04:03:17.775 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:03:17.775 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:03:17.775 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:03:17.776 +00:00 [INF] Login attempt for email: DemoTestcustomer@gmail.com
+2025-05-02 04:03:17.776 +00:00 [INF] Login process started for email: DemoTestcustomer@gmail.com
+2025-05-02 04:03:17.776 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:03:17.779 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:03:17.947 +00:00 [INF] Token generated successfully.
+2025-05-02 04:03:17.947 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com
+2025-05-02 04:03:17.947 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com. Token issued.
+2025-05-02 04:03:17.948 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:03:17.949 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 173.8433ms
+2025-05-02 04:03:17.949 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:03:17.949 +00:00 [INF] HTTP POST /api/login responded 200 in 174.5264 ms
+2025-05-02 04:03:17.949 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59 - 200 - application/json;+charset=utf-8 174.7708ms
+2025-05-02 04:08:02.393 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:08:02.393 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:08:02.393 +00:00 [INF] HTTP OPTIONS /api/account/user/4003 responded 204 in 0.1450 ms
+2025-05-02 04:08:02.393 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 204 - - 0.5078ms
+2025-05-02 04:08:02.678 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:08:02.678 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:08:02.679 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:08:02.681 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:08:02.683 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:08:02.690 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:08:02.690 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:08:02.690 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 9.0311ms
+2025-05-02 04:08:02.690 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:08:02.690 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 12.0704 ms
+2025-05-02 04:08:02.691 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 12.4269ms
+2025-05-02 04:08:05.511 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:08:05.511 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:08:05.511 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0820 ms
+2025-05-02 04:08:05.511 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.3796ms
+2025-05-02 04:08:06.049 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59
+2025-05-02 04:08:06.049 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:08:06.049 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:08:06.049 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:08:06.050 +00:00 [INF] Login attempt for email: DemoTestcustomer@gmail.com
+2025-05-02 04:08:06.050 +00:00 [INF] Login process started for email: DemoTestcustomer@gmail.com
+2025-05-02 04:08:06.050 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:08:06.051 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:08:06.219 +00:00 [INF] Token generated successfully.
+2025-05-02 04:08:06.220 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com
+2025-05-02 04:08:06.220 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com. Token issued.
+2025-05-02 04:08:06.220 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:08:06.220 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.6742ms
+2025-05-02 04:08:06.220 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:08:06.220 +00:00 [INF] HTTP POST /api/login responded 200 in 171.1353 ms
+2025-05-02 04:08:06.220 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59 - 200 - application/json;+charset=utf-8 171.7019ms
+2025-05-02 04:10:56.434 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:10:56.434 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:10:56.434 +00:00 [INF] HTTP OPTIONS /api/account/user/4003 responded 204 in 0.0854 ms
+2025-05-02 04:10:56.434 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 204 - - 0.3499ms
+2025-05-02 04:10:56.691 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:10:56.691 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:10:56.691 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:10:56.691 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:10:56.693 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:10:56.694 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:10:56.694 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:10:56.694 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 2.8959ms
+2025-05-02 04:10:56.694 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:10:56.694 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 3.5821 ms
+2025-05-02 04:10:56.695 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 3.9926ms
+2025-05-02 04:10:57.104 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:10:57.104 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:10:57.104 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:10:57.105 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:10:57.105 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:10:57.106 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:10:57.106 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:10:57.107 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 2.0175ms
+2025-05-02 04:10:57.107 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:10:57.107 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 2.6361 ms
+2025-05-02 04:10:57.107 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 2.8663ms
+2025-05-02 04:11:00.579 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - -
+2025-05-02 04:11:00.579 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:11:00.579 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/4003 responded 204 in 0.0836 ms
+2025-05-02 04:11:00.579 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - - - 204 - - 0.3695ms
+2025-05-02 04:11:00.836 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - -
+2025-05-02 04:11:00.836 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:11:00.836 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:11:00.839 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:11:00.842 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:11:00.852 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:11:00.853 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:11:00.855 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 15.3582ms
+2025-05-02 04:11:00.855 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:11:00.855 +00:00 [INF] HTTP GET /api/Feedback/user/4003 responded 200 in 19.2199 ms
+2025-05-02 04:11:00.855 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - - - 200 - application/json;+charset=utf-8 19.4945ms
+2025-05-02 04:11:01.901 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:11:01.902 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:11:01.904 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:11:01.904 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:11:01.905 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:11:01.906 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:11:01.906 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:11:01.906 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 2.206ms
+2025-05-02 04:11:01.906 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:11:01.906 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 4.5038 ms
+2025-05-02 04:11:01.906 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 4.7340ms
+2025-05-02 04:11:05.067 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - -
+2025-05-02 04:11:05.067 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:11:05.068 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:11:05.068 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:11:05.069 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:11:05.070 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:11:05.070 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:11:05.070 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 2.378ms
+2025-05-02 04:11:05.070 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:11:05.070 +00:00 [INF] HTTP GET /api/Feedback/user/4003 responded 200 in 3.0807 ms
+2025-05-02 04:11:05.070 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - - - 200 - application/json;+charset=utf-8 3.3385ms
+2025-05-02 04:11:10.949 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:11:10.949 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:11:10.950 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0817 ms
+2025-05-02 04:11:10.950 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.3323ms
+2025-05-02 04:11:11.577 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50
+2025-05-02 04:11:11.577 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:11:11.577 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:11:11.577 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:11:11.578 +00:00 [INF] Login attempt for email: Manager@gmail.com
+2025-05-02 04:11:11.578 +00:00 [INF] Login process started for email: Manager@gmail.com
+2025-05-02 04:11:11.578 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:11:11.580 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:11:11.749 +00:00 [INF] Token generated successfully.
+2025-05-02 04:11:11.750 +00:00 [INF] Login successful for email: Manager@gmail.com
+2025-05-02 04:11:11.750 +00:00 [INF] Login successful for email: Manager@gmail.com. Token issued.
+2025-05-02 04:11:11.750 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:11:11.750 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 172.4774ms
+2025-05-02 04:11:11.750 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:11:11.750 +00:00 [INF] HTTP POST /api/login responded 200 in 172.8364 ms
+2025-05-02 04:11:11.750 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50 - 200 - application/json;+charset=utf-8 173.0978ms
+2025-05-02 04:23:48.443 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:23:48.443 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:23:48.443 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.1042 ms
+2025-05-02 04:23:48.443 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.3289ms
+2025-05-02 04:23:49.037 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50
+2025-05-02 04:23:49.037 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:23:49.038 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:23:49.038 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:23:49.038 +00:00 [INF] Login attempt for email: Manager@gmail.com
+2025-05-02 04:23:49.038 +00:00 [INF] Login process started for email: Manager@gmail.com
+2025-05-02 04:23:49.039 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:23:49.080 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:23:49.251 +00:00 [INF] Token generated successfully.
+2025-05-02 04:23:49.251 +00:00 [INF] Login successful for email: Manager@gmail.com
+2025-05-02 04:23:49.251 +00:00 [INF] Login successful for email: Manager@gmail.com. Token issued.
+2025-05-02 04:23:49.251 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:23:49.252 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 213.8939ms
+2025-05-02 04:23:49.252 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:23:49.252 +00:00 [INF] HTTP POST /api/login responded 200 in 214.2542 ms
+2025-05-02 04:23:49.252 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50 - 200 - application/json;+charset=utf-8 214.5255ms
+2025-05-02 04:24:00.615 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:24:00.615 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:00.615 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.2461 ms
+2025-05-02 04:24:00.615 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.4839ms
+2025-05-02 04:24:01.213 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59
+2025-05-02 04:24:01.214 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:01.214 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:24:01.214 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:24:01.214 +00:00 [INF] Login attempt for email: DemoTestcustomer@gmail.com
+2025-05-02 04:24:01.214 +00:00 [INF] Login process started for email: DemoTestcustomer@gmail.com
+2025-05-02 04:24:01.215 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:24:01.216 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:24:01.385 +00:00 [INF] Token generated successfully.
+2025-05-02 04:24:01.386 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com
+2025-05-02 04:24:01.386 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com. Token issued.
+2025-05-02 04:24:01.386 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:24:01.386 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 171.8612ms
+2025-05-02 04:24:01.386 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:24:01.386 +00:00 [INF] HTTP POST /api/login responded 200 in 172.2319 ms
+2025-05-02 04:24:01.386 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59 - 200 - application/json;+charset=utf-8 172.4889ms
+2025-05-02 04:24:04.345 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:24:04.346 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:04.346 +00:00 [INF] HTTP OPTIONS /api/account/user/4003 responded 204 in 0.4584 ms
+2025-05-02 04:24:04.346 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 204 - - 0.9048ms
+2025-05-02 04:24:04.626 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:24:04.626 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:04.628 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:24:04.628 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:24:04.630 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:24:04.632 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:24:04.632 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:24:04.632 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 4.4596ms
+2025-05-02 04:24:04.632 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:24:04.632 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 6.4766 ms
+2025-05-02 04:24:04.633 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 6.8946ms
+2025-05-02 04:24:05.435 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:24:05.435 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:05.436 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:24:05.436 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:24:05.436 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:24:05.437 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:24:05.438 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:24:05.438 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.9516ms
+2025-05-02 04:24:05.438 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:24:05.438 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 2.5190 ms
+2025-05-02 04:24:05.438 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 2.7800ms
+2025-05-02 04:24:06.732 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - -
+2025-05-02 04:24:06.732 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:06.732 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/4003 responded 204 in 0.0715 ms
+2025-05-02 04:24:06.732 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - - - 204 - - 0.2828ms
+2025-05-02 04:24:06.988 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - -
+2025-05-02 04:24:06.988 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:06.992 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:24:06.992 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:24:06.994 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:24:06.996 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:24:06.996 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:24:06.997 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 4.5707ms
+2025-05-02 04:24:06.997 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:24:06.997 +00:00 [INF] HTTP GET /api/Feedback/user/4003 responded 200 in 8.6956 ms
+2025-05-02 04:24:06.997 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/4003 - - - 200 - application/json;+charset=utf-8 8.9586ms
+2025-05-02 04:24:49.708 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:24:49.708 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:49.708 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0794 ms
+2025-05-02 04:24:49.708 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2587ms
+2025-05-02 04:24:50.265 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59
+2025-05-02 04:24:50.266 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:24:50.266 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:24:50.266 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:24:50.267 +00:00 [INF] Login attempt for email: DemoTestcustomer@gmail.com
+2025-05-02 04:24:50.267 +00:00 [INF] Login process started for email: DemoTestcustomer@gmail.com
+2025-05-02 04:24:50.267 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:24:50.268 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:24:50.438 +00:00 [INF] Token generated successfully.
+2025-05-02 04:24:50.438 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com
+2025-05-02 04:24:50.438 +00:00 [INF] Login successful for email: DemoTestcustomer@gmail.com. Token issued.
+2025-05-02 04:24:50.438 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:24:50.439 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 172.6822ms
+2025-05-02 04:24:50.439 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:24:50.439 +00:00 [INF] HTTP POST /api/login responded 200 in 173.0658 ms
+2025-05-02 04:24:50.439 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 59 - 200 - application/json;+charset=utf-8 173.4965ms
+2025-05-02 04:25:00.330 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:25:00.330 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:00.330 +00:00 [INF] HTTP OPTIONS /api/account/user/4003 responded 204 in 0.0736 ms
+2025-05-02 04:25:00.330 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 204 - - 0.2727ms
+2025-05-02 04:25:00.646 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - -
+2025-05-02 04:25:00.646 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:00.646 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:25:00.647 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:25:00.647 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:25:00.648 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:25:00.648 +00:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-02 04:25:00.648 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.8309ms
+2025-05-02 04:25:00.648 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:25:00.648 +00:00 [INF] HTTP GET /api/account/user/4003 responded 404 in 2.4490 ms
+2025-05-02 04:25:00.648 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/4003 - - - 404 - text/plain;+charset=utf-8 2.9025ms
+2025-05-02 04:25:05.059 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:25:05.059 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:05.059 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.3055 ms
+2025-05-02 04:25:05.059 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.5001ms
+2025-05-02 04:25:05.579 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:25:05.580 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:05.581 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:25:05.582 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:25:05.582 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:25:05.582 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:25:05.582 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:25:05.584 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:25:05.754 +00:00 [INF] Token generated successfully.
+2025-05-02 04:25:05.754 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:25:05.754 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:25:05.754 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:25:05.754 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 172.5597ms
+2025-05-02 04:25:05.754 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:25:05.754 +00:00 [INF] HTTP POST /api/login responded 200 in 174.6509 ms
+2025-05-02 04:25:05.754 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 174.8715ms
+2025-05-02 04:25:07.303 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:25:07.304 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:07.304 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.1436 ms
+2025-05-02 04:25:07.304 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.3444ms
+2025-05-02 04:25:07.628 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:25:07.628 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:07.629 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:25:07.629 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:25:07.630 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:25:07.631 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:25:07.631 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:25:07.631 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 2.5691ms
+2025-05-02 04:25:07.631 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:25:07.631 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 3.1556 ms
+2025-05-02 04:25:07.632 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 3.3573ms
+2025-05-02 04:25:08.998 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:25:08.998 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:08.998 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:25:08.999 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:25:08.999 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:25:09.000 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:25:09.000 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:25:09.000 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.8498ms
+2025-05-02 04:25:09.001 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:25:09.001 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.4333 ms
+2025-05-02 04:25:09.001 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.6622ms
+2025-05-02 04:25:11.279 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:25:11.279 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:11.279 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 0.1649 ms
+2025-05-02 04:25:11.279 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 0.3696ms
+2025-05-02 04:25:11.624 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:25:11.624 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:25:11.625 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:25:11.625 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:25:11.625 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:25:11.627 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:25:11.627 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:25:11.627 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 2.0424ms
+2025-05-02 04:25:11.627 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:25:11.627 +00:00 [INF] HTTP GET /api/Feedback/user/7005 responded 200 in 2.6226 ms
+2025-05-02 04:25:11.627 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 200 - application/json;+charset=utf-8 2.8206ms
+2025-05-02 04:28:57.745 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:28:57.745 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:28:57.745 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0712 ms
+2025-05-02 04:28:57.745 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2848ms
+2025-05-02 04:28:58.284 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:28:58.284 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:28:58.284 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:28:58.284 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:28:58.285 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:28:58.285 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:28:58.285 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:28:58.286 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:28:58.455 +00:00 [INF] Token generated successfully.
+2025-05-02 04:28:58.455 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:28:58.455 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:28:58.455 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:28:58.455 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.948ms
+2025-05-02 04:28:58.455 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:28:58.455 +00:00 [INF] HTTP POST /api/login responded 200 in 171.2883 ms
+2025-05-02 04:28:58.455 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 171.5591ms
+2025-05-02 04:29:52.504 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:29:52.504 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:29:52.504 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0662 ms
+2025-05-02 04:29:52.504 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2912ms
+2025-05-02 04:29:53.038 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:29:53.038 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:29:53.038 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:29:53.038 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:29:53.038 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:29:53.038 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:29:53.039 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:29:53.040 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:29:53.210 +00:00 [INF] Token generated successfully.
+2025-05-02 04:29:53.210 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:29:53.211 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:29:53.211 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:29:53.211 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 172.8046ms
+2025-05-02 04:29:53.211 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:29:53.211 +00:00 [INF] HTTP POST /api/login responded 200 in 173.2080 ms
+2025-05-02 04:29:53.211 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 173.4052ms
+2025-05-02 04:29:55.910 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:29:55.910 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:29:55.910 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0624 ms
+2025-05-02 04:29:55.910 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.3078ms
+2025-05-02 04:29:56.205 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:29:56.205 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:29:56.206 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:29:56.206 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:29:56.207 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:29:56.208 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:29:56.208 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:29:56.208 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 2.1247ms
+2025-05-02 04:29:56.208 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:29:56.208 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.7264 ms
+2025-05-02 04:29:56.208 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.9414ms
+2025-05-02 04:30:04.350 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:30:04.350 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:30:04.350 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0622 ms
+2025-05-02 04:30:04.350 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2746ms
+2025-05-02 04:30:04.982 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50
+2025-05-02 04:30:04.983 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:30:04.983 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:30:04.983 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:30:04.983 +00:00 [INF] Login attempt for email: Manager@gmail.com
+2025-05-02 04:30:04.983 +00:00 [INF] Login process started for email: Manager@gmail.com
+2025-05-02 04:30:04.984 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:30:04.985 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:30:05.152 +00:00 [INF] Token generated successfully.
+2025-05-02 04:30:05.153 +00:00 [INF] Login successful for email: Manager@gmail.com
+2025-05-02 04:30:05.153 +00:00 [INF] Login successful for email: Manager@gmail.com. Token issued.
+2025-05-02 04:30:05.153 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:30:05.153 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.1373ms
+2025-05-02 04:30:05.153 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:30:05.153 +00:00 [INF] HTTP POST /api/login responded 200 in 170.4059 ms
+2025-05-02 04:30:05.153 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50 - 200 - application/json;+charset=utf-8 170.6443ms
+2025-05-02 04:30:08.089 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-05-02 04:30:08.089 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:30:08.089 +00:00 [INF] HTTP OPTIONS /api/account responded 204 in 0.0646 ms
+2025-05-02 04:30:08.089 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 204 - - 0.2750ms
+2025-05-02 04:30:08.373 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-05-02 04:30:08.373 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:30:08.374 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 04:30:08.374 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:30:08.374 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:30:08.375 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 04:30:08.376 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:30:08.376 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 2.2358ms
+2025-05-02 04:30:08.376 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 04:30:08.376 +00:00 [INF] HTTP GET /api/account responded 200 in 2.9690 ms
+2025-05-02 04:30:08.376 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 200 - application/json;+charset=utf-8 3.2191ms
+2025-05-02 04:30:28.723 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/customer/7002 - -
+2025-05-02 04:30:28.723 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:30:28.724 +00:00 [INF] HTTP OPTIONS /api/Transaction/customer/7002 responded 204 in 0.0767 ms
+2025-05-02 04:30:28.724 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/customer/7002 - - - 204 - - 0.3653ms
+2025-05-02 04:30:29.063 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/customer/7002 - -
+2025-05-02 04:30:29.064 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:30:29.065 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.TransactionController.GetTransactionsByUserId (dotnetapp)'
+2025-05-02 04:30:29.067 +00:00 [INF] Route matched with {action = "GetTransactionsByUserId", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionsByUserId(Int32) on controller dotnetapp.Controllers.TransactionController (dotnetapp).
+2025-05-02 04:30:29.070 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:30:29.111 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TransactionId], [t].[AccountId], [t].[Amount], [t].[Description], [t].[Status], [t].[TransactionDate], [t].[TransactionType], [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Transactions] AS [t]
+INNER JOIN [Accounts] AS [a] ON [t].[AccountId] = [a].[AccountId]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:30:29.112 +00:00 [ERR] Error retrieving transactions for UserId: 7002
+System.Exception: No transactions found for user ID 7002.
+   at dotnetapp.Services.TransactionService.GetTransactionsByUserId(Int32 userId) in /home/coder/project/workspace/dotnetapp/Services/TransactionService.cs:line 49
+   at dotnetapp.Controllers.TransactionController.GetTransactionsByUserId(Int32 userId) in /home/coder/project/workspace/dotnetapp/Controllers/TransactionController.cs:line 84
+2025-05-02 04:30:29.153 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-05-02 04:30:29.153 +00:00 [INF] Executed action dotnetapp.Controllers.TransactionController.GetTransactionsByUserId (dotnetapp) in 86.3533ms
+2025-05-02 04:30:29.153 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.TransactionController.GetTransactionsByUserId (dotnetapp)'
+2025-05-02 04:30:29.153 +00:00 [ERR] HTTP GET /api/Transaction/customer/7002 responded 500 in 89.1536 ms
+2025-05-02 04:30:29.154 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Transaction/customer/7002 - - - 500 - text/plain;+charset=utf-8 90.1369ms
+2025-05-02 04:37:36.050 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:37:36.050 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:37:36.051 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0679 ms
+2025-05-02 04:37:36.051 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.3993ms
+2025-05-02 04:37:36.646 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50
+2025-05-02 04:37:36.646 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:37:36.646 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:37:36.646 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:37:36.646 +00:00 [INF] Login attempt for email: Manager@gmail.com
+2025-05-02 04:37:36.646 +00:00 [INF] Login process started for email: Manager@gmail.com
+2025-05-02 04:37:36.647 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:37:36.683 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:37:36.854 +00:00 [INF] Token generated successfully.
+2025-05-02 04:37:36.854 +00:00 [INF] Login successful for email: Manager@gmail.com
+2025-05-02 04:37:36.854 +00:00 [INF] Login successful for email: Manager@gmail.com. Token issued.
+2025-05-02 04:37:36.854 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:37:36.854 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 208.6623ms
+2025-05-02 04:37:36.854 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:37:36.855 +00:00 [INF] HTTP POST /api/login responded 200 in 208.9010 ms
+2025-05-02 04:37:36.855 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50 - 200 - application/json;+charset=utf-8 209.0913ms
+2025-05-02 04:37:42.475 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-05-02 04:37:42.475 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:37:42.475 +00:00 [INF] HTTP OPTIONS /api/account responded 204 in 0.0622 ms
+2025-05-02 04:37:42.475 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 204 - - 0.2650ms
+2025-05-02 04:37:42.723 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-05-02 04:37:42.723 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:37:42.723 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 04:37:42.723 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:37:42.724 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:37:42.725 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 04:37:42.725 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:37:42.725 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 1.7637ms
+2025-05-02 04:37:42.725 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 04:37:42.725 +00:00 [INF] HTTP GET /api/account responded 200 in 2.2491 ms
+2025-05-02 04:37:42.725 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 200 - application/json;+charset=utf-8 2.4332ms
+2025-05-02 04:39:20.344 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-05-02 04:39:20.345 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:20.345 +00:00 [INF] HTTP OPTIONS /api/account responded 204 in 0.0588 ms
+2025-05-02 04:39:20.345 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 204 - - 0.2742ms
+2025-05-02 04:39:20.596 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - -
+2025-05-02 04:39:20.596 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:20.596 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 04:39:20.596 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:39:20.596 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:39:20.597 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 04:39:20.597 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:39:20.598 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 1.5477ms
+2025-05-02 04:39:20.598 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 04:39:20.598 +00:00 [INF] HTTP GET /api/account responded 200 in 1.9792 ms
+2025-05-02 04:39:20.598 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account - - - 200 - application/json;+charset=utf-8 2.1619ms
+2025-05-02 04:39:27.876 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:39:27.876 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:27.876 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0461 ms
+2025-05-02 04:39:27.876 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2152ms
+2025-05-02 04:39:28.397 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50
+2025-05-02 04:39:28.397 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:28.398 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:39:28.398 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:39:28.398 +00:00 [INF] Login attempt for email: Manager@gmail.com
+2025-05-02 04:39:28.398 +00:00 [INF] Login process started for email: Manager@gmail.com
+2025-05-02 04:39:28.399 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:39:28.400 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:39:28.568 +00:00 [INF] Token generated successfully.
+2025-05-02 04:39:28.568 +00:00 [INF] Login successful for email: Manager@gmail.com
+2025-05-02 04:39:28.568 +00:00 [INF] Login successful for email: Manager@gmail.com. Token issued.
+2025-05-02 04:39:28.568 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:39:28.568 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.3485ms
+2025-05-02 04:39:28.568 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:39:28.568 +00:00 [INF] HTTP POST /api/login responded 200 in 170.8678 ms
+2025-05-02 04:39:28.568 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50 - 200 - application/json;+charset=utf-8 171.0731ms
+2025-05-02 04:39:42.380 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:39:42.380 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:42.380 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.2888 ms
+2025-05-02 04:39:42.380 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.4911ms
+2025-05-02 04:39:42.917 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50
+2025-05-02 04:39:42.917 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:42.917 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:39:42.917 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:39:42.917 +00:00 [INF] Login attempt for email: Manager@gmail.com
+2025-05-02 04:39:42.917 +00:00 [INF] Login process started for email: Manager@gmail.com
+2025-05-02 04:39:42.918 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:39:42.919 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:39:43.087 +00:00 [INF] Token generated successfully.
+2025-05-02 04:39:43.087 +00:00 [INF] Login successful for email: Manager@gmail.com
+2025-05-02 04:39:43.087 +00:00 [INF] Login successful for email: Manager@gmail.com. Token issued.
+2025-05-02 04:39:43.087 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:39:43.087 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.444ms
+2025-05-02 04:39:43.087 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:39:43.087 +00:00 [INF] HTTP POST /api/login responded 200 in 170.6742 ms
+2025-05-02 04:39:43.087 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 50 - 200 - application/json;+charset=utf-8 170.8696ms
+2025-05-02 04:39:54.707 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:39:54.707 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:54.707 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0556 ms
+2025-05-02 04:39:54.707 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2388ms
+2025-05-02 04:39:55.274 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:39:55.274 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:39:55.276 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:39:55.276 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:39:55.276 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:39:55.276 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:39:55.276 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:39:55.278 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:39:55.446 +00:00 [INF] Token generated successfully.
+2025-05-02 04:39:55.446 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:39:55.446 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:39:55.446 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:39:55.446 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.5531ms
+2025-05-02 04:39:55.446 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:39:55.446 +00:00 [INF] HTTP POST /api/login responded 200 in 172.4703 ms
+2025-05-02 04:39:55.446 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 172.6712ms
+2025-05-02 04:41:21.473 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:41:21.473 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:41:21.473 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0470 ms
+2025-05-02 04:41:21.473 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2161ms
+2025-05-02 04:41:22.015 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:41:22.015 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:41:22.015 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:41:22.015 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:41:22.015 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:41:22.016 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:41:22.016 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:41:22.017 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:41:22.185 +00:00 [INF] Token generated successfully.
+2025-05-02 04:41:22.186 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:41:22.186 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:41:22.186 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:41:22.186 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.8279ms
+2025-05-02 04:41:22.186 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:41:22.186 +00:00 [INF] HTTP POST /api/login responded 200 in 171.0265 ms
+2025-05-02 04:41:22.186 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 171.2168ms
+2025-05-02 04:41:24.761 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:41:24.761 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:41:24.761 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 0.0479 ms
+2025-05-02 04:41:24.761 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 0.2259ms
+2025-05-02 04:41:25.029 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:41:25.029 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:41:25.029 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:41:25.029 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:41:25.030 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:41:25.031 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:41:25.032 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:41:25.032 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 2.4374ms
+2025-05-02 04:41:25.032 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:41:25.032 +00:00 [INF] HTTP GET /api/Feedback/user/7005 responded 200 in 2.9629 ms
+2025-05-02 04:41:25.032 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 200 - application/json;+charset=utf-8 3.1946ms
+2025-05-02 04:44:17.778 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:44:17.778 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:44:17.778 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 0.0972 ms
+2025-05-02 04:44:17.778 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 0.2995ms
+2025-05-02 04:44:18.031 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:44:18.031 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:44:18.032 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:44:18.032 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:44:18.033 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:44:18.034 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:44:18.034 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:44:18.034 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 2.4893ms
+2025-05-02 04:44:18.034 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:44:18.034 +00:00 [INF] HTTP GET /api/Feedback/user/7005 responded 200 in 2.9392 ms
+2025-05-02 04:44:18.034 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 200 - application/json;+charset=utf-8 3.1568ms
+2025-05-02 04:44:25.868 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:44:25.868 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:44:25.868 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0603 ms
+2025-05-02 04:44:25.869 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2435ms
+2025-05-02 04:44:26.945 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:44:26.945 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:44:26.945 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:44:26.945 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:44:26.946 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:44:26.946 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:44:26.946 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:44:26.947 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:44:27.116 +00:00 [INF] Token generated successfully.
+2025-05-02 04:44:27.116 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:44:27.116 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:44:27.116 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:44:27.116 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.9554ms
+2025-05-02 04:44:27.116 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:44:27.116 +00:00 [INF] HTTP POST /api/login responded 200 in 171.1868 ms
+2025-05-02 04:44:27.116 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 171.3903ms
+2025-05-02 04:44:28.349 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:44:28.349 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:44:28.350 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 0.0567 ms
+2025-05-02 04:44:28.350 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 0.2471ms
+2025-05-02 04:44:28.632 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:44:28.632 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:44:28.632 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:44:28.632 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:44:28.633 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:44:28.634 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:44:28.634 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:44:28.634 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 1.7814ms
+2025-05-02 04:44:28.634 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:44:28.634 +00:00 [INF] HTTP GET /api/Feedback/user/7005 responded 200 in 2.1989 ms
+2025-05-02 04:44:28.634 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 200 - application/json;+charset=utf-8 2.4034ms
+2025-05-02 04:45:04.632 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:45:04.632 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:45:04.633 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0540 ms
+2025-05-02 04:45:04.633 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2211ms
+2025-05-02 04:45:05.171 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:45:05.171 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:45:05.171 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:45:05.171 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:45:05.172 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:45:05.172 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:45:05.172 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:45:05.173 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:45:05.348 +00:00 [INF] Token generated successfully.
+2025-05-02 04:45:05.348 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:45:05.348 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:45:05.348 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:45:05.348 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 176.8897ms
+2025-05-02 04:45:05.348 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:45:05.348 +00:00 [INF] HTTP POST /api/login responded 200 in 177.1574 ms
+2025-05-02 04:45:05.348 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 177.3431ms
+2025-05-02 04:45:09.374 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:45:09.374 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:45:09.374 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0484 ms
+2025-05-02 04:45:09.374 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2246ms
+2025-05-02 04:45:09.700 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:45:09.700 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:45:09.702 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:45:09.702 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:45:09.703 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:45:09.704 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:45:09.704 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:45:09.704 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.6778ms
+2025-05-02 04:45:09.704 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:45:09.704 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 3.6553 ms
+2025-05-02 04:45:09.704 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 3.8767ms
+2025-05-02 04:45:09.822 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:45:09.822 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:45:09.823 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0501 ms
+2025-05-02 04:45:09.823 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2267ms
+2025-05-02 04:45:10.074 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:45:10.075 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:45:10.075 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:45:10.075 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:45:10.075 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:45:10.076 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:45:10.076 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:45:10.077 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.687ms
+2025-05-02 04:45:10.077 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:45:10.077 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.1287 ms
+2025-05-02 04:45:10.077 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.3311ms
+2025-05-02 04:46:00.664 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:00.664 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:00.664 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0511 ms
+2025-05-02 04:46:00.664 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2329ms
+2025-05-02 04:46:00.914 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:00.914 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:00.914 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:00.914 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:00.915 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:00.916 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:00.916 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:00.916 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.6146ms
+2025-05-02 04:46:00.916 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:00.916 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.0592 ms
+2025-05-02 04:46:00.916 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.2473ms
+2025-05-02 04:46:06.935 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:06.935 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:06.935 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0582 ms
+2025-05-02 04:46:06.935 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2387ms
+2025-05-02 04:46:07.183 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:07.183 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:07.183 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:07.183 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:07.184 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:07.185 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:07.185 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:07.185 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.5819ms
+2025-05-02 04:46:07.185 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:07.185 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.0266 ms
+2025-05-02 04:46:07.185 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.2015ms
+2025-05-02 04:46:37.197 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:37.197 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:37.197 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0593 ms
+2025-05-02 04:46:37.197 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2636ms
+2025-05-02 04:46:37.462 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:37.462 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:37.463 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:37.463 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:37.463 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:37.464 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:37.464 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:37.464 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.7443ms
+2025-05-02 04:46:37.464 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:37.464 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.2092 ms
+2025-05-02 04:46:37.464 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.3925ms
+2025-05-02 04:46:43.866 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:46:43.866 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:43.866 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 0.0493 ms
+2025-05-02 04:46:43.866 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 0.2181ms
+2025-05-02 04:46:45.421 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:45.421 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:45.421 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0512 ms
+2025-05-02 04:46:45.421 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2427ms
+2025-05-02 04:46:45.672 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:45.672 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:45.673 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:45.673 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:45.673 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:45.674 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:45.674 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:45.674 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.6174ms
+2025-05-02 04:46:45.674 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:45.674 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.0709 ms
+2025-05-02 04:46:45.674 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.2528ms
+2025-05-02 04:46:47.023 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:47.023 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:47.023 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:47.023 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:47.024 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:47.025 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:47.025 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:47.025 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.6472ms
+2025-05-02 04:46:47.025 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:47.025 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.1946 ms
+2025-05-02 04:46:47.025 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.3946ms
+2025-05-02 04:46:48.559 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:48.559 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:48.559 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:48.559 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:48.560 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:48.561 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:48.561 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:48.561 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.5474ms
+2025-05-02 04:46:48.561 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:48.561 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.1754 ms
+2025-05-02 04:46:48.561 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.3965ms
+2025-05-02 04:46:49.064 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:46:49.065 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:46:49.065 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:49.065 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:46:49.065 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:46:49.066 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:46:49.066 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:46:49.067 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.5543ms
+2025-05-02 04:46:49.067 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:46:49.067 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.0163 ms
+2025-05-02 04:46:49.067 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.1958ms
+2025-05-02 04:47:21.034 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:47:21.034 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:47:21.034 +00:00 [INF] HTTP OPTIONS /api/account/user/7005 responded 204 in 0.0575 ms
+2025-05-02 04:47:21.035 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 204 - - 0.2159ms
+2025-05-02 04:47:21.379 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - -
+2025-05-02 04:47:21.380 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:47:21.380 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:47:21.380 +00:00 [INF] Route matched with {action = "GetAccountsByUserId", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAccountsByUserId(Int32) on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 04:47:21.380 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:47:21.381 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-05-02 04:47:21.381 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:47:21.382 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp) in 1.7117ms
+2025-05-02 04:47:21.382 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAccountsByUserId (dotnetapp)'
+2025-05-02 04:47:21.382 +00:00 [INF] HTTP GET /api/account/user/7005 responded 200 in 2.0962 ms
+2025-05-02 04:47:21.382 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account/user/7005 - - - 200 - application/json;+charset=utf-8 2.2858ms
+2025-05-02 04:47:22.425 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:47:22.425 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:47:22.426 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 1.7056 ms
+2025-05-02 04:47:22.426 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 1.8939ms
+2025-05-02 04:47:22.689 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:47:22.689 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:47:22.689 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:47:22.689 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:47:22.690 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:47:22.691 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:47:22.691 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:47:22.691 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 1.9218ms
+2025-05-02 04:47:22.691 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:47:22.691 +00:00 [INF] HTTP GET /api/Feedback/user/7005 responded 200 in 2.3993 ms
+2025-05-02 04:47:22.691 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 200 - application/json;+charset=utf-8 2.5630ms
+2025-05-02 04:48:45.330 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - -
+2025-05-02 04:48:45.331 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:48:45.331 +00:00 [INF] HTTP OPTIONS /api/login responded 204 in 0.0500 ms
+2025-05-02 04:48:45.331 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login - - - 204 - - 0.2227ms
+2025-05-02 04:48:45.881 +00:00 [INF] Request starting HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62
+2025-05-02 04:48:45.882 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:48:45.882 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:48:45.882 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 04:48:45.882 +00:00 [INF] Login attempt for email: testforcurrent1@gmail.com
+2025-05-02 04:48:45.882 +00:00 [INF] Login process started for email: testforcurrent1@gmail.com
+2025-05-02 04:48:45.882 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:48:45.883 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 04:48:46.051 +00:00 [INF] Token generated successfully.
+2025-05-02 04:48:46.051 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com
+2025-05-02 04:48:46.052 +00:00 [INF] Login successful for email: testforcurrent1@gmail.com. Token issued.
+2025-05-02 04:48:46.052 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 04:48:46.052 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 169.9985ms
+2025-05-02 04:48:46.052 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 04:48:46.052 +00:00 [INF] HTTP POST /api/login responded 200 in 170.2359 ms
+2025-05-02 04:48:46.052 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 62 - 200 - application/json;+charset=utf-8 170.4261ms
+2025-05-02 04:48:47.208 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:48:47.208 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:48:47.208 +00:00 [INF] HTTP OPTIONS /api/Feedback/user/7005 responded 204 in 0.0527 ms
+2025-05-02 04:48:47.209 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 204 - - 0.2397ms
+2025-05-02 04:48:47.459 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - -
+2025-05-02 04:48:47.459 +00:00 [INF] CORS policy execution successful.
+2025-05-02 04:48:47.460 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:48:47.460 +00:00 [INF] Route matched with {action = "GetFeedbacksByUserId", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[dotnetapp.Models.Feedback]]] GetFeedbacksByUserId(Int32) on controller dotnetapp.Controllers.FeedbackController (dotnetapp).
+2025-05-02 04:48:47.460 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 04:48:47.461 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FeedbackId], [f].[Comments], [f].[DateProvided], [f].[UserId]
+FROM [Feedbacks] AS [f]
+WHERE [f].[UserId] = @__userId_0
+2025-05-02 04:48:47.461 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Feedback, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 04:48:47.461 +00:00 [INF] Executed action dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp) in 1.6696ms
+2025-05-02 04:48:47.461 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.FeedbackController.GetFeedbacksByUserId (dotnetapp)'
+2025-05-02 04:48:47.462 +00:00 [INF] HTTP GET /api/Feedback/user/7005 responded 200 in 2.0934 ms
+2025-05-02 04:48:47.462 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Feedback/user/7005 - - - 200 - application/json;+charset=utf-8 2.2850ms
+2025-05-02 04:49:30.651 +00:00 [INF] Application is shutting down...
 2025-05-02 04:02:35.542 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
 2025-05-02 04:02:35.628 +00:00 [INF] Now listening on: http://0.0.0.0:8080
 2025-05-02 04:02:35.632 +00:00 [INF] Application started. Press Ctrl+C to shut down.

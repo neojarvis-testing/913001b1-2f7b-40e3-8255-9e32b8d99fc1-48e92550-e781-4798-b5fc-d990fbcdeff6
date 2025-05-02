@@ -2,11 +2,11 @@
   <div class="logo">BTMS</div>
   <ul class="nav-links">
     <div class="role">Customer</div>
-    <a routerLink="/customer/home">Home</a>
-    <a routerLink="/customer/account">Account</a>
-    <a routerLink="/customer/view-account">View Account</a>
-    <a routerLink="/customer/view-feedback">Feedback</a>
-    <button (click)="logout()">Logout</button>
+    <li><a routerLink="/customer/home">Home</a></li>
+    <li><a routerLink="/customer/account">Account</a></li>
+    <li><a routerLink="/customer/view-account">View Account</a></li>
+    <li><a routerLink="/customer/add-feedback">Feedback</a></li>
+    <li><button (click)="logout()">Logout</button></li>
   </ul>
 </nav>
 <router-outlet></router-outlet> <!-- Displays customer-specific child components -->
