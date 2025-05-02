@@ -45,10 +45,10 @@ export class CustomerviewaccountComponent implements OnInit {
   }
 
   onDeposit(accountId: number): void {
-    this.router.navigate(['customer/transactionform'], { queryParams: { action: 'deposit', accountId } });
+    this.router.navigate(['/customer/transactionform'], { queryParams: { action: 'Deposit', accountId } });
   }
 
   onWithdraw(accountId: number): void {
-    this.router.navigate(['customer/transactionform'], { queryParams: { action: 'withdraw', accountId } });
+    this.router.navigate(['/customer/transactionform'], { queryParams: { action: 'Withdrawal', accountId } });
   }
 }

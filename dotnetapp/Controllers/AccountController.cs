@@ -78,7 +78,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Manager")]
+        [Authorize(Roles = "Manager,Customer")]
         public IActionResult UpdateAccount(int id, [FromBody] Account account)
         {
             try

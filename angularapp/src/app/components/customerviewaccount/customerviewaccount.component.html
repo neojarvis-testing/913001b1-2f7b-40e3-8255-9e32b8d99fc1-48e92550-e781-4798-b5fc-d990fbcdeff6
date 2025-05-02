@@ -19,8 +19,8 @@
 
       <!-- Transaction Buttons if approved -->
       <div *ngIf="account.status === 'Active'" class="transaction-buttons">
-        <button class="action-button" (click)="onDeposit(account.AccountId)">Deposit</button>
-        <button class="action-button" (click)="onWithdraw(account.AccountId)">Withdraw</button>
+        <button class="action-button" (click)="onDeposit(account.accountId)">Deposit</button>
+        <button class="action-button" (click)="onWithdraw(account.accountId)">Withdraw</button>
       </div>
     </div>
   </div>

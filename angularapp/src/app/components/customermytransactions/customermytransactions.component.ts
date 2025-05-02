@@ -1,53 +1,60 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionService } from 'src/app/services/transaction.service';
+// import { Transaction } from 'src/app/models/transaction.model';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-customermytransactions',
   templateUrl: './customermytransactions.component.html',
   styleUrls: ['./customermytransactions.component.css']
 })
-export class CustomermytransactionsComponent implements OnInit {
-  transactions: any[] = []; // List of all transactions
-  filteredTransactions: any[] = []; // Filtered transactions
-  filterStatus: string = ''; // Filter by status
-  selectedAccountDetails: any = null; // Holds the selected account details
-  showAccountModal: boolean = false; // Controls the custom modal visibility
+export class CustomermytransactionsComponent implements OnInit{
+  transactions: any[] = []; // Stores all transactions
+  filteredTransactions: any[] = []; // Filtered transactions for display
+  filterStatus: string = ''; // Selected filter status
+  userId: number | null = null; // Holds logged-in user's ID
+  showAccountModal: boolean = false;
+  selectedAccountDetails: any = null;
 
-  constructor(private transactionService: TransactionService) {}
+  constructor(
+    private transactionService: TransactionService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
-    this.getTransactions(); // Fetch transactions when the component is initialized
-  }
-
-  getTransactions(): void {
-    this.transactionService.getAllTransactions().subscribe({
-      next: (data) => {
-        this.transactions = data; // Assign fetched transactions
-        this.filteredTransactions = [...this.transactions]; // Initially display all transactions
-      },
-      error: (err) => {
-        console.error('Error fetching transactions:', err);
-      }
-    });
-  }
-
-  filterTransactions(): void {
-    if (this.filterStatus) {
-      this.filteredTransactions = this.transactions.filter(
-        (transaction) => transaction.status === this.filterStatus
-      );
-    } else {
-      this.filteredTransactions = [...this.transactions];
+    // Get the logged-in user's ID from AuthService
+    this.userId = +this.authService.getUserId();
+    if (this.userId) {
+      this.fetchTransactionsByUser(); // Fetch transactions for the user
     }
   }
 
+  fetchTransactionsByUser(): void {
+    if (this.userId) {
+      this.transactionService.getTransactionsByUserId(this.userId).subscribe({
+        next: (transactions: any[]) => {
+          this.transactions = transactions;
+          this.filteredTransactions = transactions; // Default view
+        },
+        error: (err) => {
+          console.error('Error fetching transactions:', err);
+        }
+      });
+    }
+  }
+
+  filterTransactions(): void {
+    this.filteredTransactions = this.filterStatus
+      ? this.transactions.filter(t => t.status === this.filterStatus)
+      : this.transactions;
+  }
+
   showAccountDetails(transaction: any): void {
-    this.selectedAccountDetails = transaction; // Set the selected transaction
-    this.showAccountModal = true; // Display the modal
+    this.selectedAccountDetails = transaction.account;
+    this.showAccountModal = true;
   }
 
   closeAccountModal(): void {
-    this.showAccountModal = false; // Hide the modal
-    this.selectedAccountDetails = null; // Clear the selected account details
+    this.showAccountModal = false;
   }
 }

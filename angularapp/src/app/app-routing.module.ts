@@ -16,6 +16,7 @@ import { AuthGuard } from './components/authguard/auth.guard';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
+import { CustomermytransactionsComponent } from './components/customermytransactions/customermytransactions.component';
 
 const routes: Routes = [
   { path: '', component: NavbarComponent },
@@ -38,7 +39,8 @@ const routes: Routes = [
       { path: 'customeraddfeedback', component: CustomeraddfeedbackComponent },
       { path: 'customerviewfeedback', component: CustomerviewfeedbackComponent },
       {path:'transactionform', component: TransactionformComponent},
-
+      {path:'mytransactions',component:CustomermytransactionsComponent},
+      // {path:'mytransactions/:id',component:CustomermytransactionsComponent},
       // { path: 'add-feedback', component: CustomeraddfeedbackComponent }
     ]
   },
