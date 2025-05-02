@@ -1,1 +1,54 @@
-<p>managerviewalltransactions works!</p>
+<div class="container">
+    <h2>Transaction Details</h2>
+    
+    <label>Filter by Status:</label>
+    <select [(ngModel)]="filterStatus">
+      <option value="All">All</option>
+      <option value="Completed">Completed</option>
+      <option value="Rejected">Rejected</option>
+      <option value="Processing">Processing</option>
+    </select>
+   
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Account ID</th>
+          <th>Transaction Type</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Transaction Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tx of filteredTransactions; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ tx.accountId }}</td>
+          <td>{{ tx.type }}</td>
+          <td>{{ tx.amount }}</td>
+          <td>{{ tx.status }}</td>
+  <td>{{ tx.date }}</td>
+          <td>
+            <ng-container *ngIf="tx.status === 'Processing'; else noAction">
+              <button class="btn blue" (click)="showAccountDetails(tx)">Show Account</button>
+              <button class="btn green" (click)="proceed(tx)">Proceed</button>
+              <button class="btn red" (click)="reject(tx)">Reject</button>
+            </ng-container>
+            <ng-template #noAction>No Action Available</ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+    <!-- Pop-up Modal -->
+    <div class="popup" *ngIf="selectedTransaction">
+      <div class="popup-content">
+        <h3>Account Details</h3>
+        <p><strong>Account ID:</strong> {{ selectedTransaction.accountId }}</p>
+        <p><strong>Account Holder:</strong> {{ selectedTransaction.accountHolder }}</p>
+        <p><strong>Account Number:</strong> {{ selectedTransaction.accountNumber }}</p>
+        <button class="btn close" (click)="closePopup()">Close</button>
+      </div>
+    </div>
+  </div>

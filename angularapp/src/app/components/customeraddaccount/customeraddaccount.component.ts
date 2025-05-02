@@ -1,15 +1,17 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from 'src/app/services/account.service';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { Account } from 'src/app/models/account.model';
 
 @Component({
   selector: 'app-customeraddaccount',
   templateUrl: './customeraddaccount.component.html',
   styleUrls: ['./customeraddaccount.component.css']
 })
-
 export class CustomeraddaccountComponent implements OnInit {
   accountForm!: FormGroup;
   errorMessage: string = '';
@@ -19,16 +21,34 @@ export class CustomeraddaccountComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private accountService: AccountService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService // To fetch UserId from the token
   ) {}
 
   ngOnInit(): void {
+    // Retrieve UserId from AuthService
+    const userId = +this.authService.getUserId();
+
+    // Check if the user already has an existing account
+    this.accountService.getAccountByUserId(userId).subscribe({
+      next: (accountExists) => {
+        if (accountExists) {
+          // If an account already exists, navigate to the view account component
+          this.router.navigate(['/customerviewaccount']);
+        }
+      },
+      error: (err) => {
+        console.error('Error checking existing account:', err);
+        this.errorMessage = 'Unable to verify existing account. Please try again.';
+      }
+    });
+
     // Initialize the form
     this.accountForm = this.formBuilder.group({
       accountHolderName: ['', Validators.required],
-      userId: ['0', Validators.required],
+      userId: [{ value: userId, disabled: true }, Validators.required], // Disabled field with dynamic UserId
       accountType: ['', Validators.required],
-      initialBalance: ['', [Validators.required, Validators.min(1000)]],
+      balance: ['', [Validators.required, Validators.min(1000)]],
       proofOfIdentity: ['', Validators.required]
     });
   }
@@ -42,20 +62,29 @@ export class CustomeraddaccountComponent implements OnInit {
 
   createAccount(): void {
     if (this.accountForm.valid) {
-      const accountData = this.accountForm.getRawValue(); // Retrieve form values including disabled fields
-      this.accountService.createAccount(accountData).subscribe({
-        next: (response) => {
-          this.successMessage = 'Account created successfully!';
-          this.showPopup = true; // Show success popup
-        },
-        error: (err) => {
-          this.errorMessage = err.error.message || 'An error occurred while creating the account.';
-        }
-      });
+        const accountData: any = {
+            ...this.accountForm.getRawValue(), // Get all form values, including disabled fields
+            userId: this.authService.getUserId(), // Ensure UserId is added to the data
+            initialBalance: parseFloat(this.accountForm.get('initialBalance')?.value) // Parse to a float
+        };
+
+        console.log(accountData); // Verify the correct value is being sent
+
+        this.accountService.createAccount(accountData).subscribe({
+            next: (response) => {
+                console.log(response);
+                this.successMessage = 'Account created successfully!';
+                this.showPopup = true; // Show success popup
+            },
+            error: (err) => {
+                this.errorMessage = err.error.message || 'An error occurred while creating the account.';
+            }
+        });
     } else {
-      this.errorMessage = 'Please fill out all required fields correctly.';
+        this.errorMessage = 'Please fill out all required fields correctly.';
     }
-  }
+}
+
 
   closePopup(): void {
     this.showPopup = false; // Hide popup
@@ -65,5 +94,4 @@ export class CustomeraddaccountComponent implements OnInit {
   navigateHome(): void {
     this.router.navigate(['/home']); // Adjust '/home' to your actual home page route
   }
-  
 }

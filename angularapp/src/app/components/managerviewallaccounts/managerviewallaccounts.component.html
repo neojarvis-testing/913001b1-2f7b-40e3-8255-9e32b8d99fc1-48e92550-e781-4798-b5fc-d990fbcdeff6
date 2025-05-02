@@ -1,1 +1,67 @@
-<p>managerviewallaccounts works!</p>
+<div class="container">
+  <h3>All Accounts</h3>
+
+  <div class="filter-container">
+    <!-- Search input for account holder name -->
+    <input
+      type="text"
+      placeholder="Search by Account Holder Name"
+      [(ngModel)]="searchText"
+      (input)="applyFilters()" />
+
+    <!-- Dropdown for account status filter -->
+    <select [(ngModel)]="filterStatus" (change)="applyFilters()">
+      <option value="All">All</option>
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>S No</th>
+        <th>Account Holder Name</th>
+        <th>Account Type</th>
+        <th>Balance</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through filtered accounts -->
+      <tr *ngFor="let account of filteredAccounts; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ account.accountHolderName }}</td>
+        <td>{{ account.accountType }}</td>
+        <td>{{ account.balance }}</td>
+        <td>{{ account.status }}</td>
+        <td>
+          <!-- Button to show proof of identity -->
+          <button class="btn blue" (click)="showProof(account.proofOfIdentity)">Show Proof</button>
+          <!-- Buttons to toggle status -->
+          <button
+            class="btn green"
+            *ngIf="account.status === 'Inactive'"
+            (click)="toggleStatus(account)">
+            Activate
+          </button>
+          <button
+            class="btn red"
+            *ngIf="account.status === 'Active'"
+            (click)="toggleStatus(account)">
+            Deactivate
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal to display proof of identity -->
+  <div class="modal" *ngIf="selectedProof">
+    <div class="modal-content">
+      <span class="close" (click)="closeProof()">&times;</span>
+      <img [src]="selectedProof" alt="Proof of Identity" />
+    </div>
+  </div>
+</div>

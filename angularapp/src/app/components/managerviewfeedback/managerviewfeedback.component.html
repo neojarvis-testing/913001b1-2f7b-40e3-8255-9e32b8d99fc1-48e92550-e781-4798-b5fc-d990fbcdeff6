@@ -1,1 +1,44 @@
-<p>managerviewfeedback works!</p>
+<div>
+    <nav>
+        <button (click)="navigateToFeedbacks()">Feedbacks</button>
+        <button (click)="logout()">Logout</button>
+    </nav>
+
+    <div *ngIf="feedbacks.length === 0">
+        <p>Oops! No records Found</p>
+    </div>
+
+    <table *ngIf="feedbacks.length > 0">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Feedback</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let feedback of feedbacks">
+                <td>{{ feedback.userName }}</td>
+                <td>{{ feedback.content }}</td>
+                <td>
+                    <button (click)="showProfile(feedback.userId)">Show Profile</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="showProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" (click)="closeProfileModal()">&times;</span>
+            <p>User Details: {{ userDetails }}</p>
+        </div>
+    </div>
+
+    <div *ngIf="showLogoutModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to logout?</p>
+            <button (click)="confirmLogout()">Yes, Logout</button>
+            <button (click)="closeLogoutModal()">Cancel</button>
+        </div>
+    </div>
+</div>
