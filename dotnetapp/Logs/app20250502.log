@@ -1,0 +1,515 @@
+2025-05-02 03:35:31.165 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-05-02 03:35:31.225 +00:00 [INF] Creating key {486ef1e3-3963-4c64-8a34-c0867b6c4ae8} with creation date 2025-05-02 03:35:31Z, activation date 2025-05-02 03:35:31Z, and expiration date 2025-07-31 03:35:31Z.
+2025-05-02 03:35:31.236 +00:00 [WRN] No XML encryptor configured. Key {486ef1e3-3963-4c64-8a34-c0867b6c4ae8} may be persisted to storage in unencrypted form.
+2025-05-02 03:35:31.239 +00:00 [INF] Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-486ef1e3-3963-4c64-8a34-c0867b6c4ae8.xml'.
+2025-05-02 03:35:31.291 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-05-02 03:35:31.295 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-02 03:35:31.295 +00:00 [INF] Hosting environment: Development
+2025-05-02 03:35:31.295 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-05-02 03:36:29.260 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:36:29.350 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-05-02 03:36:29.540 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:29.571 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:30.068 +00:00 [INF] Registration attempt for email: abcd23bf7501-d3c5-4ae2-864a-208876191b34@gmail.com
+2025-05-02 03:36:30.075 +00:00 [INF] Registration process started for email: abcd23bf7501-d3c5-4ae2-864a-208876191b34@gmail.com
+2025-05-02 03:36:31.128 +00:00 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-02 03:36:31.128 +00:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-02 03:36:31.342 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:32.131 +00:00 [INF] Executed DbCommand (46ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:32.560 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:36:32.604 +00:00 [INF] Registration successful for email: abcd23bf7501-d3c5-4ae2-864a-208876191b34@gmail.com
+2025-05-02 03:36:32.604 +00:00 [INF] Registration successful for email: abcd23bf7501-d3c5-4ae2-864a-208876191b34@gmail.com
+2025-05-02 03:36:32.607 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:32.643 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 3066.4281ms
+2025-05-02 03:36:32.644 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:32.648 +00:00 [INF] HTTP POST /api/register responded 200 in 3300.8617 ms
+2025-05-02 03:36:32.655 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 3398.4482ms
+2025-05-02 03:36:32.746 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:36:32.748 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:32.748 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:32.757 +00:00 [INF] Registration attempt for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:32.757 +00:00 [INF] Registration process started for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:32.766 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:32.821 +00:00 [INF] Executed DbCommand (52ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:33.146 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:36:33.149 +00:00 [INF] Registration successful for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:33.149 +00:00 [INF] Registration successful for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:33.150 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:33.150 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 401.686ms
+2025-05-02 03:36:33.150 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:33.150 +00:00 [INF] HTTP POST /api/register responded 200 in 402.9574 ms
+2025-05-02 03:36:33.150 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 404.7669ms
+2025-05-02 03:36:33.153 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:36:33.155 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:36:33.159 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:33.163 +00:00 [INF] Login attempt for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:33.165 +00:00 [INF] Login process started for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:33.260 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:33.263 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:33.567 +00:00 [INF] Token generated successfully.
+2025-05-02 03:36:33.728 +00:00 [INF] Login successful for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com
+2025-05-02 03:36:33.728 +00:00 [INF] Login successful for email: abcd69e3e985-4d03-46ae-b849-4633641221c2@gmail.com. Token issued.
+2025-05-02 03:36:33.728 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:33.729 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 570.5705ms
+2025-05-02 03:36:33.729 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:36:33.729 +00:00 [INF] HTTP POST /api/login responded 200 in 575.5803 ms
+2025-05-02 03:36:33.730 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 576.2124ms
+2025-05-02 03:36:33.771 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:36:33.771 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:33.771 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:33.771 +00:00 [INF] Registration attempt for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:33.771 +00:00 [INF] Registration process started for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:33.772 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:33.773 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:34.144 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:36:34.147 +00:00 [INF] Registration successful for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:34.147 +00:00 [INF] Registration successful for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:34.147 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:34.147 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 376.0653ms
+2025-05-02 03:36:34.147 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:34.147 +00:00 [INF] HTTP POST /api/register responded 200 in 376.3269 ms
+2025-05-02 03:36:34.147 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 376.5968ms
+2025-05-02 03:36:34.148 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:36:34.148 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:36:34.149 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:34.149 +00:00 [INF] Login attempt for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:34.149 +00:00 [INF] Login process started for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:34.150 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:34.151 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:34.426 +00:00 [INF] Token generated successfully.
+2025-05-02 03:36:34.427 +00:00 [INF] Login successful for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com
+2025-05-02 03:36:34.427 +00:00 [INF] Login successful for email: abcdd74dcacf-f4c9-4dc8-a597-38641f1c1b2f@gmail.com. Token issued.
+2025-05-02 03:36:34.427 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:34.427 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 278.5034ms
+2025-05-02 03:36:34.427 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:36:34.427 +00:00 [INF] HTTP POST /api/login responded 200 in 278.9526 ms
+2025-05-02 03:36:34.428 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 279.2830ms
+2025-05-02 03:36:34.490 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:36:34.569 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:36:34.570 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 03:36:34.572 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:34.584 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 03:36:34.609 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 03:36:34.631 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 60.4865ms
+2025-05-02 03:36:34.631 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:36:34.631 +00:00 [INF] HTTP GET /api/account responded 200 in 109.7038 ms
+2025-05-02 03:36:34.631 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 200 - application/json;+charset=utf-8 141.1821ms
+2025-05-02 03:36:34.637 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:36:34.637 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:34.637 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:34.637 +00:00 [INF] Registration attempt for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:34.638 +00:00 [INF] Registration process started for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:34.638 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:34.640 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:34.816 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:36:34.818 +00:00 [INF] Registration successful for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:34.819 +00:00 [INF] Registration successful for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:34.819 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:34.819 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 181.8408ms
+2025-05-02 03:36:34.819 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:36:34.819 +00:00 [INF] HTTP POST /api/register responded 200 in 182.1248 ms
+2025-05-02 03:36:34.819 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 182.3602ms
+2025-05-02 03:36:34.819 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:36:34.820 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:36:34.820 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:36:34.820 +00:00 [INF] Login attempt for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:34.820 +00:00 [INF] Login process started for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:34.821 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:36:34.821 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:36:35.049 +00:00 [INF] Token generated successfully.
+2025-05-02 03:36:35.049 +00:00 [INF] Login successful for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com
+2025-05-02 03:36:35.049 +00:00 [INF] Login successful for email: abcd20458d9f-de81-476a-91e4-7663704f4d01@gmail.com. Token issued.
+2025-05-02 03:36:35.049 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:36:35.049 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 229.6622ms
+2025-05-02 03:36:35.049 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:36:35.049 +00:00 [INF] HTTP POST /api/login responded 200 in 229.8934 ms
+2025-05-02 03:36:35.050 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 230.1418ms
+2025-05-02 03:36:35.050 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:36:35.051 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2025-05-02 03:36:35.054 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-02 03:36:35.054 +00:00 [INF] HTTP GET /api/account responded 401 in 3.5571 ms
+2025-05-02 03:36:35.054 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 401 0 - 3.8492ms
+2025-05-02 03:38:01.702 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:38:01.703 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:01.703 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:01.704 +00:00 [INF] Registration attempt for email: abcd188989e9-d80b-4d35-8141-c6565d1befb1@gmail.com
+2025-05-02 03:38:01.704 +00:00 [INF] Registration process started for email: abcd188989e9-d80b-4d35-8141-c6565d1befb1@gmail.com
+2025-05-02 03:38:01.704 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:01.706 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:01.878 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:01.881 +00:00 [INF] Registration successful for email: abcd188989e9-d80b-4d35-8141-c6565d1befb1@gmail.com
+2025-05-02 03:38:01.881 +00:00 [INF] Registration successful for email: abcd188989e9-d80b-4d35-8141-c6565d1befb1@gmail.com
+2025-05-02 03:38:01.881 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:01.881 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 178.0299ms
+2025-05-02 03:38:01.881 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:01.881 +00:00 [INF] HTTP POST /api/register responded 200 in 178.4032 ms
+2025-05-02 03:38:01.881 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 178.7117ms
+2025-05-02 03:38:01.921 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:38:01.921 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:01.921 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:01.922 +00:00 [INF] Registration attempt for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:01.922 +00:00 [INF] Registration process started for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:01.922 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:01.923 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:02.095 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:02.098 +00:00 [INF] Registration successful for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:02.098 +00:00 [INF] Registration successful for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:02.098 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:02.098 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 177.4585ms
+2025-05-02 03:38:02.099 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:02.099 +00:00 [INF] HTTP POST /api/register responded 200 in 177.7784 ms
+2025-05-02 03:38:02.099 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 178.0099ms
+2025-05-02 03:38:02.100 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:38:02.100 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:02.100 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:02.101 +00:00 [INF] Login attempt for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:02.101 +00:00 [INF] Login process started for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:02.101 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:02.102 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:02.275 +00:00 [INF] Token generated successfully.
+2025-05-02 03:38:02.276 +00:00 [INF] Login successful for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com
+2025-05-02 03:38:02.276 +00:00 [INF] Login successful for email: abcd76b2a2bb-928a-4048-bf4e-fdd455a762f7@gmail.com. Token issued.
+2025-05-02 03:38:02.276 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:02.276 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 175.6556ms
+2025-05-02 03:38:02.276 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:02.276 +00:00 [INF] HTTP POST /api/login responded 200 in 175.9493 ms
+2025-05-02 03:38:02.276 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 176.1355ms
+2025-05-02 03:38:02.306 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:38:02.306 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:02.306 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:02.307 +00:00 [INF] Registration attempt for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.307 +00:00 [INF] Registration process started for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.307 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:02.308 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:02.481 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:02.484 +00:00 [INF] Registration successful for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.484 +00:00 [INF] Registration successful for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.484 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:02.484 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 177.6208ms
+2025-05-02 03:38:02.484 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:02.484 +00:00 [INF] HTTP POST /api/register responded 200 in 177.9095 ms
+2025-05-02 03:38:02.484 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 178.2400ms
+2025-05-02 03:38:02.487 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:38:02.487 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:02.487 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:02.487 +00:00 [INF] Login attempt for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.487 +00:00 [INF] Login process started for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.488 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:02.489 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:02.659 +00:00 [INF] Token generated successfully.
+2025-05-02 03:38:02.659 +00:00 [INF] Login successful for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com
+2025-05-02 03:38:02.659 +00:00 [INF] Login successful for email: abcdb3890271-993e-4794-95a4-fe1372237a2b@gmail.com. Token issued.
+2025-05-02 03:38:02.659 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:02.659 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 172.1715ms
+2025-05-02 03:38:02.659 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:02.659 +00:00 [INF] HTTP POST /api/login responded 200 in 172.4177 ms
+2025-05-02 03:38:02.659 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 172.6489ms
+2025-05-02 03:38:02.716 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:38:02.717 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:38:02.717 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 03:38:02.718 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:02.719 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 03:38:02.719 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 03:38:02.720 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 2.0959ms
+2025-05-02 03:38:02.720 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:38:02.720 +00:00 [INF] HTTP GET /api/account responded 200 in 3.2515 ms
+2025-05-02 03:38:02.720 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 200 - application/json;+charset=utf-8 3.4865ms
+2025-05-02 03:38:02.723 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:38:02.723 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:02.723 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:02.724 +00:00 [INF] Registration attempt for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:02.724 +00:00 [INF] Registration process started for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:02.724 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:02.725 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:02.895 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:02.898 +00:00 [INF] Registration successful for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:02.898 +00:00 [INF] Registration successful for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:02.898 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:02.898 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 175.1593ms
+2025-05-02 03:38:02.898 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:02.898 +00:00 [INF] HTTP POST /api/register responded 200 in 175.4399 ms
+2025-05-02 03:38:02.899 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 175.6253ms
+2025-05-02 03:38:02.899 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:38:02.899 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:02.899 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:02.900 +00:00 [INF] Login attempt for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:02.900 +00:00 [INF] Login process started for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:02.900 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:02.901 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:03.070 +00:00 [INF] Token generated successfully.
+2025-05-02 03:38:03.070 +00:00 [INF] Login successful for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com
+2025-05-02 03:38:03.070 +00:00 [INF] Login successful for email: abcd9c2c04c1-ed24-4ebb-9f53-684e06262dd8@gmail.com. Token issued.
+2025-05-02 03:38:03.070 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:03.070 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 170.8621ms
+2025-05-02 03:38:03.070 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:03.070 +00:00 [INF] HTTP POST /api/login responded 200 in 171.1548 ms
+2025-05-02 03:38:03.071 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 171.4231ms
+2025-05-02 03:38:03.071 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:38:03.071 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2025-05-02 03:38:03.071 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-02 03:38:03.071 +00:00 [INF] HTTP GET /api/account responded 401 in 0.4205 ms
+2025-05-02 03:38:03.071 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 401 0 - 0.6201ms
+2025-05-02 03:38:28.136 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:38:28.136 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:28.136 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:28.136 +00:00 [INF] Registration attempt for email: abcde847cfa2-4a57-4694-9049-e3928a046427@gmail.com
+2025-05-02 03:38:28.137 +00:00 [INF] Registration process started for email: abcde847cfa2-4a57-4694-9049-e3928a046427@gmail.com
+2025-05-02 03:38:28.137 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:28.138 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:28.311 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:28.313 +00:00 [INF] Registration successful for email: abcde847cfa2-4a57-4694-9049-e3928a046427@gmail.com
+2025-05-02 03:38:28.313 +00:00 [INF] Registration successful for email: abcde847cfa2-4a57-4694-9049-e3928a046427@gmail.com
+2025-05-02 03:38:28.313 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:28.313 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 177.4707ms
+2025-05-02 03:38:28.314 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:28.314 +00:00 [INF] HTTP POST /api/register responded 200 in 177.7537 ms
+2025-05-02 03:38:28.314 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 178.0642ms
+2025-05-02 03:38:28.351 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198
+2025-05-02 03:38:28.351 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:28.351 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:28.351 +00:00 [INF] Registration attempt for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.351 +00:00 [INF] Registration process started for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.352 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:28.353 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:28.529 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:28.532 +00:00 [INF] Registration successful for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.532 +00:00 [INF] Registration successful for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.532 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:28.532 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 181.4244ms
+2025-05-02 03:38:28.532 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:28.532 +00:00 [INF] HTTP POST /api/register responded 200 in 181.6856 ms
+2025-05-02 03:38:28.533 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 198 - 200 - application/json;+charset=utf-8 181.8748ms
+2025-05-02 03:38:28.534 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:38:28.534 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:28.534 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:28.534 +00:00 [INF] Login attempt for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.534 +00:00 [INF] Login process started for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.535 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:28.535 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:28.705 +00:00 [INF] Token generated successfully.
+2025-05-02 03:38:28.706 +00:00 [INF] Login successful for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com
+2025-05-02 03:38:28.706 +00:00 [INF] Login successful for email: abcdca2919aa-fdf6-49a2-ad99-04978d76dee5@gmail.com. Token issued.
+2025-05-02 03:38:28.706 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:28.706 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 171.9838ms
+2025-05-02 03:38:28.706 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:28.706 +00:00 [INF] HTTP POST /api/login responded 200 in 172.2826 ms
+2025-05-02 03:38:28.706 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 172.5478ms
+2025-05-02 03:38:28.733 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:38:28.733 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:28.733 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:28.734 +00:00 [INF] Registration attempt for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:28.734 +00:00 [INF] Registration process started for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:28.734 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:28.735 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:28.906 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:28.909 +00:00 [INF] Registration successful for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:28.909 +00:00 [INF] Registration successful for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:28.909 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:28.909 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 175.9661ms
+2025-05-02 03:38:28.909 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:28.909 +00:00 [INF] HTTP POST /api/register responded 200 in 176.2471 ms
+2025-05-02 03:38:28.910 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 176.4812ms
+2025-05-02 03:38:28.913 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:38:28.913 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:28.913 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:28.913 +00:00 [INF] Login attempt for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:28.913 +00:00 [INF] Login process started for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:28.914 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:28.915 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:29.088 +00:00 [INF] Token generated successfully.
+2025-05-02 03:38:29.088 +00:00 [INF] Login successful for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com
+2025-05-02 03:38:29.088 +00:00 [INF] Login successful for email: abcd6e86967a-dc0f-4e27-baf5-3469c774ab45@gmail.com. Token issued.
+2025-05-02 03:38:29.089 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:29.089 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 176.1752ms
+2025-05-02 03:38:29.089 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:29.089 +00:00 [INF] HTTP POST /api/login responded 200 in 176.5046 ms
+2025-05-02 03:38:29.090 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 176.8971ms
+2025-05-02 03:38:29.144 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:38:29.146 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:38:29.146 +00:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller dotnetapp.Controllers.AccountController (dotnetapp).
+2025-05-02 03:38:29.147 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:29.149 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AccountId], [a].[AccountHolderName], [a].[AccountType], [a].[Balance], [a].[DateCreated], [a].[LastUpdated], [a].[ProofOfIdentity], [a].[Status], [a].[UserId]
+FROM [Accounts] AS [a]
+2025-05-02 03:38:29.149 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[dotnetapp.Models.Account, dotnetapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-02 03:38:29.149 +00:00 [INF] Executed action dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp) in 3.3779ms
+2025-05-02 03:38:29.149 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AccountController.GetAllAccounts (dotnetapp)'
+2025-05-02 03:38:29.149 +00:00 [INF] HTTP GET /api/account responded 200 in 4.6279 ms
+2025-05-02 03:38:29.149 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 200 - application/json;+charset=utf-8 5.0274ms
+2025-05-02 03:38:29.153 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197
+2025-05-02 03:38:29.153 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:29.154 +00:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(dotnetapp.Models.User) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:29.155 +00:00 [INF] Registration attempt for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.155 +00:00 [INF] Registration process started for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.155 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:29.157 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:29.328 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 254), @p1='?' (Size = 15), @p2='?' (Size = 100), @p3='?' (Size = 20), @p4='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [MobileNumber], [Password], [UserRole], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();
+2025-05-02 03:38:29.331 +00:00 [INF] Registration successful for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.331 +00:00 [INF] Registration successful for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.331 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:29.331 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Register (dotnetapp) in 177.9354ms
+2025-05-02 03:38:29.332 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Register (dotnetapp)'
+2025-05-02 03:38:29.332 +00:00 [INF] HTTP POST /api/register responded 200 in 178.1893 ms
+2025-05-02 03:38:29.332 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/register application/json;+charset=utf-8 197 - 200 - application/json;+charset=utf-8 178.3655ms
+2025-05-02 03:38:29.332 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88
+2025-05-02 03:38:29.332 +00:00 [INF] Executing endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:29.332 +00:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(dotnetapp.Models.LoginModel) on controller dotnetapp.Controllers.AuthenticationController (dotnetapp).
+2025-05-02 03:38:29.333 +00:00 [INF] Login attempt for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.333 +00:00 [INF] Login process started for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.333 +00:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2025-05-02 03:38:29.334 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 254)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[MobileNumber], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-02 03:38:29.503 +00:00 [INF] Token generated successfully.
+2025-05-02 03:38:29.503 +00:00 [INF] Login successful for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com
+2025-05-02 03:38:29.503 +00:00 [INF] Login successful for email: abcd631cd60b-182b-4443-a99e-37cdec898b98@gmail.com. Token issued.
+2025-05-02 03:38:29.503 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-02 03:38:29.503 +00:00 [INF] Executed action dotnetapp.Controllers.AuthenticationController.Login (dotnetapp) in 171.0692ms
+2025-05-02 03:38:29.504 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
+2025-05-02 03:38:29.504 +00:00 [INF] HTTP POST /api/login responded 200 in 171.3078 ms
+2025-05-02 03:38:29.504 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/login application/json;+charset=utf-8 88 - 200 - application/json;+charset=utf-8 171.4940ms
+2025-05-02 03:38:29.504 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/account - -
+2025-05-02 03:38:29.505 +00:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2025-05-02 03:38:29.505 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-02 03:38:29.505 +00:00 [INF] HTTP GET /api/account responded 401 in 0.4139 ms
+2025-05-02 03:38:29.505 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/account - - - 401 0 - 0.5820ms
