@@ -7,8 +7,10 @@ import { Account } from '../models/account.model';
   providedIn: 'root'
 })
 export class AccountService {
-                  //https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Account
-  public apiUrl = "https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+
+
+ 
+  public apiUrl = "https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io";
 
   constructor(private http: HttpClient) {
 
@@ -37,10 +39,11 @@ export class AccountService {
     return this.http.get<Account[]>(`${this.apiUrl}/api/Account`, { headers: this.getAuthHeaders() });
   }
 
-  updateAccount(accountId: number, account: Account): Observable<any> {
+  updateAccount(accountId: number, account: any): Observable<any> {
     
     return this.http.put<any>(`${this.apiUrl}/api/Account/${accountId}`, account, { headers: this.getAuthHeaders() });
   }
+
   
 }
 

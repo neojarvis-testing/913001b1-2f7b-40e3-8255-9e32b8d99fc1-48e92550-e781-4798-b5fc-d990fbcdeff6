@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2025-04-30 06:11:57.763 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
 2025-04-30 06:11:57.859 +00:00 [INF] Now listening on: http://0.0.0.0:8080
 2025-04-30 06:11:57.863 +00:00 [INF] Application started. Press Ctrl+C to shut down.
@@ -2806,3 +2807,5 @@ CREATE INDEX [IX_Transaction_AccountId] ON [Transactions] ([AccountId]);
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
 VALUES (N'20250430132145_InitialSetup', N'6.0.0');
 >>>>>>> 8203d229d70cef770c89074aa4a0f36a1dc6d038
+=======
+>>>>>>> 82e52876f34cf728d00afd25b1b65478accaad2b

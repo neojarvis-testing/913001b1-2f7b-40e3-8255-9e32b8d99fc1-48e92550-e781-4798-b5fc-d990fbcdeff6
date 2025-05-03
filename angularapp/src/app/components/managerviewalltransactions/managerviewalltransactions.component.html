@@ -21,9 +21,16 @@
         <td>{{ transaction.amount | currency }}</td>
         <td>{{ transaction.status }}</td>
         <td>
-          <button (click)="showAccountDetails(transaction.account)">Show Account</button>
-          <button (click)="proceedTransaction(transaction)">Proceed</button>
-          <button (click)="rejectTransaction(transaction)">Reject</button>
+          <!-- Only show actions if the transaction is NOT completed -->
+          <ng-container *ngIf="transaction.status !== 'Completed'; else noActionTemplate">
+            <button (click)="showAccountDetails(transaction.account)">Show Account</button>
+            <button (click)="proceedTransaction(transaction)">Proceed</button>
+            <button (click)="rejectTransaction(transaction)">Reject</button>
+          </ng-container>
+          <!-- If transaction is completed, show "No action required" -->
+          <ng-template #noActionTemplate>
+            <span>No action required</span>
+          </ng-template>
         </td>
       </tr>
     </tbody>

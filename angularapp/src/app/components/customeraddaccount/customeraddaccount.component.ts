@@ -34,7 +34,7 @@ export class CustomeraddaccountComponent implements OnInit {
       next: (accountExists) => {
         if (accountExists) {
           // If an account already exists, navigate to the view account component
-          this.router.navigate(['/customerviewaccount']);
+          this.router.navigate(['customer/view-account']);
         }
       },
       error: (err) => {
@@ -88,7 +88,7 @@ export class CustomeraddaccountComponent implements OnInit {
 
   closePopup(): void {
     this.showPopup = false; // Hide popup
-    this.router.navigate(['/customerviewaccount']); // Navigate to the customerviewaccount page
+    this.router.navigate(['customer/view-account']); // Navigate to the customerviewaccount page
   }
 
   navigateHome(): void {
