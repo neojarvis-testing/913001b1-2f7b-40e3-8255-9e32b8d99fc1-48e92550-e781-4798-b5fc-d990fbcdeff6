@@ -69,6 +69,7 @@ namespace dotnetapp.Services
         // Creates a new transaction after validation
         public Transaction CreateTransaction(Transaction transaction)
         {
+            
             var account = _context.Accounts.FirstOrDefault(a => a.AccountId == transaction.AccountId);
  
             if (account == null)

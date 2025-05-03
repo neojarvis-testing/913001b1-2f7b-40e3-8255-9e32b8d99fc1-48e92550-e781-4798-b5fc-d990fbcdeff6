@@ -11,7 +11,6 @@ using dotnetapp.Services;
 using Serilog;
  
  
- 
 var MyAllowSpecificOrigins = "urls";
 var builder = WebApplication.CreateBuilder(args);
  

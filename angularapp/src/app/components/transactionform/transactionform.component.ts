@@ -65,15 +65,14 @@ export class TransactionformComponent implements OnInit {
       if (this.action === 'Deposit') {
         this.action = "Deposit";
       this.logTransaction(this.action, 'Processing');
-
+      return;
       }
       if (this.action === 'Withdrawal') {
         this.action = "Withdrawal";
         console.log(this.action);
       this.logTransaction(this.action, 'Processing');
-      }
-      
-      
+      return;
+      }      
     }
 
     let newBalance = this.balance;
