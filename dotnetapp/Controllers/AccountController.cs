@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using dotnetapp.Models;
 using dotnetapp.Services;
+using Serilog;
 
 namespace dotnetapp.Controllers
 {
@@ -77,7 +78,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Manager")]
+        [Authorize(Roles = "Manager,Customer")]
         public IActionResult UpdateAccount(int id, [FromBody] Account account)
         {
             try

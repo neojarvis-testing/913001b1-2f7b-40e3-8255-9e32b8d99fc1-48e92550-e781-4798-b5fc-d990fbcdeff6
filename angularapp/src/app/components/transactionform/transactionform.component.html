@@ -1,0 +1,37 @@
+<div class="transaction-container">
+  <h2>{{ action | titlecase }} Money</h2>
+
+  <form (ngSubmit)="submitTransaction()" class="transaction-form">
+    <div class="form-group">
+      <label for="amount">Enter Amount *</label>
+      <input
+        id="amount"
+        type="number"
+        [(ngModel)]="amount"
+        name="amount"
+        required
+        class="form-control"
+        placeholder="Enter amount"
+      />
+    </div>
+
+    <!-- Show approval message when amount exceeds ₹10,000 -->
+    <div *ngIf="requiresApproval" class="approval-message">
+      <strong>Transaction requires managerial approval!</strong> 
+      <p>It will not reflect in your account balance until approved.</p>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelTransaction()">Cancel</button>
+  </form>
+
+  <!-- Display Success Message -->
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+
+  <!-- Display Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

@@ -9,7 +9,7 @@ import { Account } from 'src/app/models/account.model';
   styleUrls: ['./managerviewalltransactions.component.css']
 })
 export class ManagerviewalltransactionsComponent implements OnInit {
-  transactions: Transaction[] = [];
+  transactions: any[] = [];
   selectedAccount: Account | null = null; // To store selected account details
   errorMessage: string = '';
   showPopup: boolean = false; // Controls popup visibility
@@ -24,6 +24,7 @@ export class ManagerviewalltransactionsComponent implements OnInit {
     this.transactionService.getAllTransactions().subscribe({
       next: (data) => {
         this.transactions = data;
+        console.log(this.transactions);
       },
       error: (err) => {
         this.errorMessage = 'Error fetching transactions. Please try again later.';
@@ -42,8 +43,9 @@ export class ManagerviewalltransactionsComponent implements OnInit {
     this.selectedAccount = null;
   }
 
-  proceedTransaction(transaction: Transaction): void {
-    transaction.Status = 'Processed';
+  proceedTransaction(transaction: any): void {
+    console.log(transaction)
+    transaction.status = 'Completed';
     this.transactionService.updateTransaction(transaction).subscribe({
       next: () => this.getAllTransactions(),
       error: (err) => console.error('Error processing transaction:', err)

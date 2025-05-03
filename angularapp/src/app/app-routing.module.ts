@@ -12,7 +12,11 @@ import { ManagernavComponent } from './components/managernav/managernav.componen
 import { ManagerviewallaccountsComponent } from './components/managerviewallaccounts/managerviewallaccounts.component';
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
-import { AuthGuard } from './components/authguard/auth.guard'; 
+import { AuthGuard } from './components/authguard/auth.guard';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TransactionformComponent } from './components/transactionform/transactionform.component';
+import { CustomermytransactionsComponent } from './components/customermytransactions/customermytransactions.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
@@ -33,8 +37,10 @@ const routes: Routes = [
       { path: 'add-feedback', component: CustomeraddfeedbackComponent },
       { path: 'view-feedback', component: CustomerviewfeedbackComponent },
       { path: 'customeraddfeedback', component: CustomeraddfeedbackComponent },
-      { path: 'customerviewfeedback', component: CustomerviewfeedbackComponent }
-
+      { path: 'customerviewfeedback', component: CustomerviewfeedbackComponent },
+      {path:'transactionform', component: TransactionformComponent},
+      {path:'mytransactions',component:CustomermytransactionsComponent},
+      // {path:'mytransactions/:id',component:CustomermytransactionsComponent},
       // { path: 'add-feedback', component: CustomeraddfeedbackComponent }
     ]
   },
