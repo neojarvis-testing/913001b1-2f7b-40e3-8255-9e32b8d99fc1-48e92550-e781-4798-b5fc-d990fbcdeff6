@@ -45,7 +45,7 @@ export class ManagerviewalltransactionsComponent implements OnInit {
 
   proceedTransaction(transaction: any): void {
     console.log(transaction)
-    transaction.status = 'Completed';
+    transaction.status = 'Approved';
     this.transactionService.updateTransaction(transaction).subscribe({
       next: () => this.getAllTransactions(),
       error: (err) => console.error('Error processing transaction:', err)
