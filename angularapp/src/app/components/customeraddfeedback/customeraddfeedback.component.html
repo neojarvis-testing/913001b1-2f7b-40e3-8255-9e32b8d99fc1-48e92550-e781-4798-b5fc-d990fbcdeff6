@@ -1,12 +1,15 @@
-<div>
+<div class="feedback-container">
   <h1>Add Feedback</h1>
   <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
     <textarea 
       formControlName="comments" 
       placeholder="Write your feedback here"></textarea>
-    <div *ngIf="feedbackForm.controls['comments'].hasError('required') && feedbackForm.controls['comments'].touched">
+    
+    <!-- Validation Message -->
+    <div *ngIf="feedbackForm.controls['comments'].hasError('required') && feedbackForm.controls['comments'].touched" class="error-text">
       <span>Feedback is required</span>
     </div>
+    
     <button type="submit" [disabled]="feedbackForm.invalid">Submit</button>
   </form>
 
@@ -20,6 +23,7 @@
 
   <!-- Error message -->
   <div *ngIf="showErrorMessage" class="error-message">
-    Failed to add feedback. Please try again.
+    <p>Failed to add feedback. Please try again.</p>
   </div>
 </div>
+
