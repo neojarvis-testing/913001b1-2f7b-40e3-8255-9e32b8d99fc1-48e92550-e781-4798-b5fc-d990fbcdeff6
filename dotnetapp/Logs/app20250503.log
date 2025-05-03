@@ -3073,3 +3073,4 @@ WHERE [u].[Email] = @__model_Email_0
 2025-05-03 13:30:13.557 +00:00 [INF] Executed endpoint 'dotnetapp.Controllers.AuthenticationController.Login (dotnetapp)'
 2025-05-03 13:30:13.557 +00:00 [INF] HTTP POST /api/login responded 200 in 171.2987 ms
 2025-05-03 13:30:13.557 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-fcfcacacacacadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/login application/json 60 - 200 - application/json;+charset=utf-8 171.5386ms
+2025-05-03 13:32:49.815 +00:00 [INF] Application is shutting down...
