@@ -35,7 +35,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Customer")]
+        [Authorize(Roles = "Customer,Manager")]
         public IActionResult CreateTransaction([FromBody] Transaction transaction)
         {
             try
@@ -54,7 +54,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpPut("manager/{id}")]
-        [Authorize(Roles = "Manager")]
+        [Authorize(Roles = "Manager,Customer")]
         public IActionResult UpdateTransactionByManager(int id, [FromBody] Transaction updatedTransaction)
         {
             try
@@ -74,6 +74,7 @@ namespace dotnetapp.Controllers
                 return StatusCode(500, "Internal Server Error");
             }
         }
+
 
         [HttpGet("customer/{userId}")]
         [Authorize(Roles = "Customer,Manager")]

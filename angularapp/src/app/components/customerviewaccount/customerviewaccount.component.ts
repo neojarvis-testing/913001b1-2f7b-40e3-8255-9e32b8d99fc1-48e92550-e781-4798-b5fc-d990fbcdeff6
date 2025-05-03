@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Account } from 'src/app/models/account.model';
@@ -27,7 +26,7 @@ export class CustomerviewaccountComponent implements OnInit {
   getCustomerAccounts(): void {
     // Retrieve UserId from the AuthService
     const userId = +this.authService.getUserId(); // Convert string to number
-    if (!userId) {
+    if (!userId || isNaN(userId)) {
       this.errorMessage = 'Unable to fetch user information.';
       return;
     }
@@ -46,11 +45,10 @@ export class CustomerviewaccountComponent implements OnInit {
   }
 
   onDeposit(accountId: number): void {
-    this.router.navigate(['/transactionform'], { queryParams: { action: 'deposit', accountId } });
+    this.router.navigate(['/customer/transactionform'], { queryParams: { action: 'Deposit', accountId } });
   }
 
   onWithdraw(accountId: number): void {
-    this.router.navigate(['/transactionform'], { queryParams: { action: 'withdraw', accountId } });
+    this.router.navigate(['/customer/transactionform'], { queryParams: { action: 'Withdrawal', accountId } });
   }
 }
-

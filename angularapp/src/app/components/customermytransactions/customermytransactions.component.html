@@ -1,80 +1,107 @@
-<div class="transactions-container">
-    <h2>My Transactions</h2>
-    
-    <div class="filters-container">
-      <div class="filter-group">
-        <label for="filterType">Filter by: </label>
-        <select id="filterType" [(ngModel)]="filterType" (change)="onFilterChange(filterType)">
-          <option value="all">All</option>
-          <option value="deposit">Deposit</option>
-          <option value="withdrawal">Withdrawal</option>
-        </select>
-      </div>
-      
-      <div class="search-group">
-        <input type="text" placeholder="Search transactions..." [(ngModel)]="searchTerm" (keyup.enter)="onSearch()">
-        <button class="search-btn" (click)="onSearch()">Search</button>
-      </div>
+<div class="container">
+    <h1>Transaction Details</h1>
+  
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <label for="filterStatus">Filter by Status:</label>
+      <select id="filterStatus" [(ngModel)]="filterStatus" (change)="filterTransactions()">
+        <option value="">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Processing">Proces<div class="container">
+          <h1>Transaction Details</h1>
+        
+          <!-- Filter Section -->
+          <div class="filter-section">
+            <label for="filterStatus">Filter by Status:</label>
+            <select id="filterStatus" [(ngModel)]="filterStatus" (change)="filterTransactions()">
+              <option value="">All</option>
+              <option value="Completed">Completed</option>
+              <option value="Processing">Processing</option>
+            </select>
+          </div>
+        
+          <!-- Transactions Table -->
+          <table class="transactions-table">
+            <thead>
+              <tr>
+                <th>SNO</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th>Transaction Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let transaction of filteredTransactions; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ transaction.transactionType }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.transactionDate | date: 'dd/MM/yyyy' }}</td>
+                <td>{{ transaction.status }}</td>
+                <td>
+                  <button class="action-button" (click)="showAccountDetails(transaction)">
+                    Show Account
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+          <!-- Custom Account Details Modal -->
+          <div class="modal-backdrop" *ngIf="showAccountModal">
+            <div class="modal-content">
+              <h2>Account Details</h2>
+              <p><strong>Account Holder Name:</strong> {{ selectedAccountDetails?.accountHolderName }}</p>
+              <p><strong>Account Type:</strong> {{ selectedAccountDetails?.accountType }}</p>
+              <p><strong>Balance:</strong> {{ selectedAccountDetails?.balance }}</p>
+              <p><strong>Status:</strong> {{ selectedAccountDetails?.status }}</p>
+              <button class="modal-close-button" (click)="closeAccountModal()">Close</button>
+            </div>
+          </div>
+        </div>
+        sing</option>
+      </select>
     </div>
-    
-    <div *ngIf="loading" class="loading">
-      <p>Loading transactions...</p>
-    </div>
-    
-    <div *ngIf="error" class="error-message">
-      <p>{{ error }}</p>
-    </div>
-    
-    <div *ngIf="!loading && !error">
-      <div *ngIf="filteredTransactions.length === 0" class="no-records">
-        <p>Oops! No records Found</p>
-      </div>
-      
-      <table *ngIf="filteredTransactions.length > 0" class="transactions-table">
-        <thead>
-          <tr>
-            <th>Transaction ID</th>
-            <th>Date</th>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Status</th>
-            <th>Description</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let transaction of filteredTransactions">
-            <td>{{ transaction.TransactionId }}</td>
-            <td>{{ formatDate(transaction.TransactionDate) }}</td>
-            <td>{{ transaction.TransactionType }}</td>
-            <td>₹{{ transaction.Amount.toFixed(2) }}</td>
-            <td [class]="getStatusClass(transaction.Status)">{{ transaction.Status }}</td>
-            <td>{{ transaction.Description || 'No description' }}</td>
-            <td>
-              <button class="btn-show-account" (click)="showAccount(transaction)">Show Account</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-   
-    <!-- Account Details Modal -->
-    <div *ngIf="showAccountModal" class="modal">
+  
+    <!-- Transactions Table -->
+    <table class="transactions-table">
+      <thead>
+        <tr>
+          <th>SNO</th>
+          <th>Transaction Type</th>
+          <th>Amount</th>
+          <th>Transaction Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of filteredTransactions; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ transaction.transactionType }}</td>
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.transactionDate | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ transaction.status }}</td>
+          <td>
+            <button class="action-button" (click)="showAccountDetails(transaction)">
+              Show Account
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Custom Account Details Modal -->
+    <div class="modal-backdrop" *ngIf="showAccountModal">
       <div class="modal-content">
-        <span class="close" (click)="closeAccountModal()">&times;</span>
-        <h3>Account Details</h3>
-        <div *ngIf="selectedAccount" class="account-details">
-          <p><strong>Account ID:</strong> {{ selectedAccount.AccountId }}</p>
-          <p><strong>Account Holder:</strong> {{ selectedAccount.AccountHolderName }}</p>
-          <p><strong>Account Type:</strong> {{ selectedAccount.AccountType }}</p>
-          <p><strong>Balance:</strong> ₹{{ selectedAccount.Balance.toFixed(2) }}</p>
-          <p><strong>Status:</strong> {{ selectedAccount.Status }}</p>
-          <p><strong>Created On:</strong> {{ formatDate(selectedAccount.DateCreated || '') }}</p>
-          <p><strong>Last Updated:</strong> {{ formatDate(selectedAccount.LastUpdated || '') }}</p>
-        </div>
-        <div class="modal-footer">
-          <button class="btn-close" (click)="closeAccountModal()">Close</button>
-        </div>
+        <h2>Account Details</h2>
+        <p><strong>Account Holder Name:</strong> {{ selectedAccountDetails?.accountHolderName }}</p>
+        <p><strong>Account Type:</strong> {{ selectedAccountDetails?.accountType }}</p>
+        <p><strong>Balance:</strong> {{ selectedAccountDetails?.balance }}</p>
+        <p><strong>Status:</strong> {{ selectedAccountDetails?.status }}</p>
+        <button class="modal-close-button" (click)="closeAccountModal()">Close</button>
       </div>
     </div>
   </div>
+  

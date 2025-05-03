@@ -1,224 +1,119 @@
-.transactions-container {
-    margin: 20px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-   
-  h2 {
-    color: #343a40;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 24px;
-  }
-   
-  .filters-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-  }
-   
-  .filter-group, .search-group {
-    display: flex;
-    align-items: center;
-  }
-   
-  .filter-group label {
-    margin-right: 10px;
-    font-weight: bold;
-  }
-   
-  select, input {
-    padding: 8px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-   
-  select {
-    cursor: pointer;
-    min-width: 120px;
-  }
-   
-  input {
-    min-width: 250px;
-  }
-   
-  .search-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-   
-  .search-btn:hover {
-    background-color: #0069d9;
-  }
-   
-  .loading, .error-message, .no-records {
-    text-align: center;
+.container {
+    max-width: 900px;
+    margin: 20px auto;
     padding: 20px;
-    font-size: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-   
-  .error-message {
-    color: #dc3545;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
   }
-   
-  .no-records {
-    color: #6c757d;
-    font-style: italic;
+  
+  .filter-section {
+    margin-bottom: 20px;
+    text-align: right;
   }
-   
+  
+  .filter-section label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .filter-section select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
   .transactions-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
   }
-   
-  .transactions-table th, .transactions-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
+  
+  .transactions-table th,
+  .transactions-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
   }
-   
+  
   .transactions-table th {
-    background-color: #343a40;
+    background-color: #4caf50;
     color: white;
     font-weight: bold;
   }
-   
+  
   .transactions-table tr:nth-child(even) {
     background-color: #f2f2f2;
   }
-   
+  
   .transactions-table tr:hover {
-    background-color: #e2e6ea;
+    background-color: #ddd;
   }
-   
-  .btn-show-account {
-    background-color: #17a2b8;
+  
+  .action-button {
+    background-color: #4caf50;
     color: white;
     border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
   }
-   
-  .btn-show-account:hover {
-    background-color: #138496;
+  
+  .action-button:hover {
+    background-color: #45a049;
   }
-   
-  .status-completed {
-    color: #28a745;
-    font-weight: bold;
-  }
-   
-  .status-processing {
-    color: #ffc107;
-    font-weight: bold;
-  }
-   
-  .status-rejected {
-    color: #dc3545;
-    font-weight: bold;
-  }
-   
-  /* Modal styles */
-  .modal {
-    display: block;
+  
+  .modal-backdrop {
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
   }
-   
+  
   .modal-content {
     background-color: white;
-    margin: 10% auto;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 60%;
-    max-width: 600px;
-    position: relative;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
   }
-   
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  
+  .modal-content h2 {
+    margin-bottom: 10px;
+    color: #333;
   }
-   
-  .close:hover {
-    color: black;
+  
+  .modal-content p {
+    margin-bottom: 10px;
   }
-   
-  .account-details {
-    margin: 20px 0;
-    line-height: 1.6;
-  }
-   
-  .account-details p {
-    margin: 10px 0;
-  }
-   
-  .modal-footer {
-    margin-top: 20px;
-    text-align: right;
-  }
-   
-  .btn-close {
-    background-color: #6c757d;
+  
+  .modal-close-button {
+    background-color: #4caf50;
     color: white;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
   }
-   
-  .btn-close:hover {
-    background-color: #5a6268;
+  
+  .modal-close-button:hover {
+    background-color: #45a049;
   }
-   
-  @media (max-width: 768px) {
-    .filters-container {
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .filter-group, .search-group {
-      width: 100%;
-    }
-    
-    .search-group {
-      justify-content: space-between;
-    }
-    
-    .modal-content {
-      width: 90%;
-      margin: 20% auto;
-    }
-    
-    .transactions-table {
-      display: block;
-      overflow-x: auto;
-    }
-  }
+  
