@@ -7,13 +7,8 @@ import { Account } from '../models/account.model';
   providedIn: 'root'
 })
 export class AccountService {
-<<<<<<< HEAD
- 
-  public apiUrl = 'https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io';
-=======
-
-  public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
->>>>>>> 8203d229d70cef770c89074aa4a0f36a1dc6d038
+                  //https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/Account
+  public apiUrl = "https://8080-ffcdceafdeadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
   constructor(private http: HttpClient) {
 
@@ -26,25 +21,25 @@ export class AccountService {
   }
 
   createAccount(account: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/api/account`, account, { headers: this.getAuthHeaders() });
+    return this.http.post<any>(`${this.apiUrl}/api/Account`, account, { headers: this.getAuthHeaders() });
   }
 
 
   getAccountById(accountId: number): Observable<Account> {
-    return this.http.get<Account>(`${this.apiUrl}/api/account/${accountId}`, { headers: this.getAuthHeaders() });
+    return this.http.get<Account>(`${this.apiUrl}/api/Account/${accountId}`, { headers: this.getAuthHeaders() });
   }
 
   getAccountByUserId(userId: number): Observable<Account[]> {
-    return this.http.get<Account[]>(`${this.apiUrl}/api/account/user/${userId}`, { headers: this.getAuthHeaders() });
+    return this.http.get<Account[]>(`${this.apiUrl}/api/Account/user/${userId}`, { headers: this.getAuthHeaders() });
   }
 
   getAllAccounts(): Observable<Account[]> {
-    return this.http.get<Account[]>(`${this.apiUrl}/api/account`, { headers: this.getAuthHeaders() });
+    return this.http.get<Account[]>(`${this.apiUrl}/api/Account`, { headers: this.getAuthHeaders() });
   }
 
   updateAccount(accountId: number, account: Account): Observable<any> {
     
-    return this.http.put<any>(`${this.apiUrl}/api/account/${accountId}`, account, { headers: this.getAuthHeaders() });
+    return this.http.put<any>(`${this.apiUrl}/api/Account/${accountId}`, account, { headers: this.getAuthHeaders() });
   }
   
 }

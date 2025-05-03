@@ -35,8 +35,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
  
 // Add Database Context
-// builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("myconnection")));
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("User ID=sa;password=examlyMssql@123; server=localhost;Database=main_appdb;trusted_connection=false;Persist Security Info=False;Encrypt=False"));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("myconnection")));
  
 // Register Services
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -103,4 +103,5 @@ app.UseAuthorization();
 app.MapControllers();
  
 app.Run();
+ 
  
