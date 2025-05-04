@@ -1,7 +1,9 @@
-<nav class="navbar" *ngIf="!isLoggedIn"> <!-- Show only when the user is NOT logged in -->
+ <!-- Show only when the user is NOT logged in -->
+
+<nav class="navbar" *ngIf="isLoggedIn === false">
   <div class="logo">BTMS</div>
   <div class="links">
     <a routerLink="/register" routerLinkActive="active">Register</a>
     <a routerLink="/login" routerLinkActive="active">Login</a>
   </div>
-</nav>
+</nav>  

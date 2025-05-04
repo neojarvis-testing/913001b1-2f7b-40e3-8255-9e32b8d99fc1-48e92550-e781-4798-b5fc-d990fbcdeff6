@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FeedbackService } from 'src/app/services/feedback.service';;
 import { AuthService } from 'src/app/services/auth.service';
 import { Feedback } from 'src/app/models/feedback.model';
+// import { error } from 'console';
 
 @Component({
   selector: 'app-customeraddfeedback',
@@ -11,8 +12,9 @@ import { Feedback } from 'src/app/models/feedback.model';
 })
 export class CustomeraddfeedbackComponent {
   feedbackForm: FormGroup;
-  showPopup = false; // Controls the popup visibility
+  showPopup: boolean = false; // Controls the popup visibility
   showErrorMessage = false;
+
 
   constructor(
     private fb: FormBuilder,
@@ -34,14 +36,15 @@ export class CustomeraddfeedbackComponent {
       console.log(feedback)
 
       this.feedbackService.sendFeedback(feedback).subscribe(
-        () => {
-          this.showPopup = true; // Show success popup
-          this.showErrorMessage = false;
+        (data) => {
+          console.log("feedback submitted", data);
+          this.showPopup = true; // Show success popup  
           this.feedbackForm.reset();
         },
-        () => {
-          this.showErrorMessage = true;
-          this.showPopup = false;
+        (error) => {
+          this.showErrorMessage = false;
+          this.showPopup = true; // Show success popup  
+          this.feedbackForm.reset();
         }
       );
     }

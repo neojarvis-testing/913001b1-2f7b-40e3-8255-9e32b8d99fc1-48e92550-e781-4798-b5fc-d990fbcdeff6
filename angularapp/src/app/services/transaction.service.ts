@@ -13,24 +13,24 @@ export class TransactionService {
 
   private getAuthHeaders(): HttpHeaders {
     const token = localStorage.getItem('authToken');
-    return new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
   }
 
   getAllTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.apiUrl, { headers: this.getAuthHeaders() });
+    return this.http.get<Transaction[]>(`${this.apiUrl}/api/transaction`, { headers: this.getAuthHeaders() });
   }
 
-  addTransaction(transaction: Transaction): Observable<any> {
-    return this.http.post<any>(this.apiUrl, transaction, { headers: this.getAuthHeaders() });
+  addTransaction(transaction: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/api/transaction`, transaction, { headers: this.getAuthHeaders() });
   }
 
-  updateTransaction(transaction: Transaction): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/manager/${transaction.TransactionId}`, transaction, { headers: this.getAuthHeaders() });
+  updateTransaction(transaction: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/api/transaction/manager/${transaction.transactionId}`, transaction, { headers: this.getAuthHeaders() });
   }
 
   getTransactionsByUserId(userId: number): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(`${this.apiUrl}/customer/${userId}`, { headers: this.getAuthHeaders() });
+    return this.http.get<Transaction[]>(`${this.apiUrl}/api/transaction/customer/${userId}`, { headers: this.getAuthHeaders() });
   }
 }
-
-

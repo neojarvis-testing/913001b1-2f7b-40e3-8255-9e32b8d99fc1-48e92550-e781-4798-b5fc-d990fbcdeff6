@@ -1,98 +1,146 @@
-/* General styling */
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* Container */
-div {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  width: 450px;
-  text-align: center;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Ensures the div remains in the middle */
 }
 
 /* Heading */
 h1 {
-  font-size: 26px;
+  font-size: 24px;
   color: #333;
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
-/* Textarea */
-textarea {
+
+/* Feedback Container - Centered with Shadow */
+.feedback-container {
+  width: 60%;
+  max-width: 800px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 200px;
+}
+
+/* Feedback Table */
+.feedback-table {
   width: 100%;
-  height: 120px;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  resize: none;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-}
-
-textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-}
-
-/* Error message for validation */
-span {
-  color: #d32f2f;
-  font-size: 14px;
-  font-weight: bold;
-  display: block;
-  margin-top: 5px;
-}
-
-/* Submit Button */
-button {
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  border-collapse: collapse;
   margin-top: 15px;
 }
 
-button:disabled {
-  background-color: #b0b0b0;
-  cursor: not-allowed;
+.feedback-table th,
+.feedback-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-button:hover:not(:disabled) {
-  background-color: #0056b3;
-}
-
-/* Success and Error Messages */
-.success-message,
-.error-message {
+.feedback-table th {
+  background-color: #3498db;
+  color: white;
   font-weight: bold;
-  margin-top: 12px;
-  padding: 10px;
-  border-radius: 6px;
 }
 
-.success-message {
-  background-color: #e8f5e9;
-  color: #28a745;
-  border: 1px solid #28a745;
+.feedback-table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.error-message {
-  background-color: #fdecea;
+.feedback-table tr:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* No Records Message */
+.no-records {
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
   color: #d32f2f;
-  border: 1px solid #d32f2f;
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-message {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Popup Buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #c0392b;
+}
+
+.cancel-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #2980b9;
 }
