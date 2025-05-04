@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Account } from '../models/account.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +11,7 @@ export class AccountService {
 
 
  
-  public apiUrl = "https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
+  public apiUrl = "https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io"
 
   constructor(private http: HttpClient) {
 
@@ -43,6 +44,22 @@ export class AccountService {
     
     return this.http.put<any>(`${this.apiUrl}/api/account/${accountId}`, account, { headers: this.getAuthHeaders() });
   }
+
+
+
+   // Upload proof of identity
+  // uploadProofOfIdentity(file: File): Observable<{imageUrl: string}> {
+  //     const formData = new FormData();
+  //     formData.append('file', file, file.name);
+        
+  //       const httpOptions = {
+  //         headers: new HttpHeaders({
+  //           'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+  //         })
+  //       };
+        
+  //     return this.http.post<{imageUrl: string}>(`${this.apiUrl}/api/account/upload`, formData, httpOptions);
+  //   }
 
   
 }

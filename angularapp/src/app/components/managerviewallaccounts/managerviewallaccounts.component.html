@@ -3,12 +3,20 @@
 
   <!-- Search and Filter Options -->
   <div class="filters">
-    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by Account Holder Name" (input)="searchAccounts()" />
-    <select [(ngModel)]="filterStatus" (change)="filterByStatus()">
-      <option value="All">All</option>
-      <option value="Active">Active</option>
-      <option value="Inactive">Inactive</option>
-    </select>
+    <div>
+      <label for="searchQuery" class="search-label">Filter by Name:</label>
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search by Account Holder Name" (input)="searchAccounts()"
+        class="search-bar" />
+    </div>
+
+    <div>
+      <label for="filterStatus" class="filter-label">Filter By Status:</label>
+      <select [(ngModel)]="filterStatus" (change)="filterByStatus()">
+        <option value="All">All</option>
+        <option value="Active">Active</option>
+        <option value="InActive">InActive</option>
+      </select>
+    </div>
   </div>
 
   <table>
@@ -27,7 +35,7 @@
         <td>{{ account.accountId }}</td>
         <td>{{ account.accountHolderName }}</td>
         <td>{{ account.accountType }}</td>
-        <td>{{ account.balance | currency }}</td>
+        <td style="text-align: right;">{{ account.balance | currency:'INR':'symbol' }}</td>
         <td>{{ account.status }}</td>
         <td>
           <button (click)="showProof(account.proofOfIdentity)">Show Proof</button>
@@ -44,7 +52,9 @@
 <div class="popup" *ngIf="showPopup">
   <div class="popup-content">
     <h3>Proof of Identity</h3>
-    <img [src]="selectedProof" alt="Proof of Identity" class="proof-image" />
+    <!-- <img  [src]="selectedProof" alt="Proof of Identity" class="proof-image" /> -->
+    <img *ngIf="account.ProofOfIdentity" [src]="account.ProofOfIdentity" alt="Proof of Identity" width="100px">
+
     <button (click)="closePopup()">Close</button>
   </div>
 </div>

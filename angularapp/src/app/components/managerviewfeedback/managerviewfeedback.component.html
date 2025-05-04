@@ -24,7 +24,7 @@
                 <td>{{ i + 1 }}</td> <!-- Serial Number -->
                 <td>{{ feedback.user?.username }}</td> <!-- Get Username from Feedback.User -->
                 <td>{{ feedback.comments }}</td>
-                <td>{{ feedback.dateProvided | date:'dd-MM-yyyy' }}</td> <!-- Format Date -->
+                <td>{{ feedback.dateProvided | date:'dd/MM/yyyy' }}</td> <!-- Format Date -->
                 <td>
                     <button (click)="showProfile(feedback)">Show Profile</button>
                 </td>
