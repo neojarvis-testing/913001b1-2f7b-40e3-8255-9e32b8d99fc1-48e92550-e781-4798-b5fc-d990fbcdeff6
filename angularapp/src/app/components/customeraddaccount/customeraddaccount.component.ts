@@ -1,5 +1,4 @@
 
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from 'src/app/services/account.service';
@@ -95,3 +94,4 @@ export class CustomeraddaccountComponent implements OnInit {
     this.router.navigate(['/home']); // Adjust '/home' to your actual home page route
   }
 }
+
