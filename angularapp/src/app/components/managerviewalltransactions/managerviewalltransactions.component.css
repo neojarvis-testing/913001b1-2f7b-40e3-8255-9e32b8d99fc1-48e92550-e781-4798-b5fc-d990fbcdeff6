@@ -84,3 +84,14 @@ button {
   justify-content: space-around;
   margin-top: 15px;
 }
+
+.right-align {
+  text-align: right;
+}
+
+.flex-container
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

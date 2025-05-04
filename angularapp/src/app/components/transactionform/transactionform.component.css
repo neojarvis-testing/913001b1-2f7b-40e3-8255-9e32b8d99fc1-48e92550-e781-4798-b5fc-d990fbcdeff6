@@ -1,83 +1,166 @@
-/* Container Styling */
+/* Container Styles */
 .transaction-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  background: #f8f9fa; /* Light grey background */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Input & Button Styling */
+/* Header */
+.transaction-container h2 {
+  color: #007bff;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-group {
   margin-bottom: 15px;
+  text-align: left;
 }
 
-input.form-control {
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
   width: 100%;
   padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
+/* Buttons */
 button {
-  padding: 10px 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  transition: background 0.3s ease-in-out;
 }
 
 .btn-success {
   background: #28a745;
-  color: white;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #218838;
 }
 
 .btn-secondary {
   background: #6c757d;
-  color: white;
+  color: #fff;
 }
 
-.btn-primary {
-  background: #007bff;
-  color: white;
+.btn-secondary:hover {
+  background: #545b62;
 }
 
-.btn-danger {
-  background: #dc3545;
-  color: white;
-}
-
-/* Modal Overlay Styling */
+/* Approval Modal */
 .modal-overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-/* Show Modal */
-.modal-overlay.show {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }
 
-/* Modal Content Styling */
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .modal-content {
-  background: white;
-  padding: 20px;
+  background: #fff;
+  padding: 25px;
   border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 400px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  width: 300px;
 }
 
+/* Success Message */
+.success-message {
+  background: #d4edda; /* Light green */
+  color: #155724; /* Dark green */
+  padding: 10px 15px;
+  border-left: 5px solid #28a745;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Error Message */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px 15px;
+  border-left: 5px solid #dc3545;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Modal Buttons */
 .modal-buttons {
   display: flex;
-  justify-content: space-around;
-  margin-top: 15px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.modal-buttons .btn-primary {
+  background: #007bff;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.modal-buttons .btn-primary:hover {
+  background: #0056b3;
+}
+
+.modal-buttons .btn-secondary {
+  background: #6c757d;
+  color: #fff;
+}
+
+.modal-buttons .btn-secondary:hover {
+  background: #545b62;
 }

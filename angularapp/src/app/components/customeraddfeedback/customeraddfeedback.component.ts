@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FeedbackService } from 'src/app/services/feedback.service';;
 import { AuthService } from 'src/app/services/auth.service';
 import { Feedback } from 'src/app/models/feedback.model';
-// import { error } from 'console';
 
 @Component({
   selector: 'app-customeraddfeedback',

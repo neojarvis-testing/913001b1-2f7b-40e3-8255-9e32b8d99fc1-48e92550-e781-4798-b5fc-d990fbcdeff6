@@ -14,7 +14,8 @@ export class TransactionformComponent implements OnInit {
   errorMessage: string = ''; 
   successMessage: string = ''; 
   requiresApproval: boolean = false; 
-  isModalOpen: boolean = false; // Controls modal visibility
+  isModalOpen: boolean = false; // Controls approval modal visibility
+  isSuccessModalOpen: boolean = false; // Controls success modal visibility
 
   constructor(
     private route: ActivatedRoute,
@@ -37,18 +38,18 @@ export class TransactionformComponent implements OnInit {
 
     if (this.amount > 10000) {
       this.requiresApproval = true;
-      this.isModalOpen = true; // Show modal inside UI
+      this.isModalOpen = true; // Show approval modal
     } else {
-      this.submitTransaction(); // If amount is below ₹10,000, submit directly
+      this.submitTransaction(); // Proceed directly for small amounts
     }
   }
 
   closeModal(): void {
-    this.isModalOpen = false; // Close the modal
+    this.isModalOpen = false; // Close approval modal
   }
 
   confirmTransaction(): void {
-    this.isModalOpen = false; // Close modal after confirmation
+    this.isModalOpen = false; // Close approval modal
     this.submitTransaction(); // Proceed with transaction
   }
 
@@ -72,13 +73,21 @@ export class TransactionformComponent implements OnInit {
         this.successMessage = this.requiresApproval
           ? 'Transaction submitted for approval.'
           : 'Transaction completed successfully!';
-        this.router.navigate(['customer/mytransactions']);
+        this.isSuccessModalOpen = true; // Open success modal
       },
       error: () => this.errorMessage = 'Error processing transaction.'
     });
   }
 
+  closeSuccessModal(): void {
+    this.isSuccessModalOpen = false; // Close success modal
+  }
+
+  redirectToTransactions(): void {
+    this.router.navigate(['customer/mytransactions']); // Navigate on confirmation
+  }
+
   cancelTransaction(): void {
-    this.router.navigate(['customer/view-account']);
+    this.router.navigate(['customer/view-account']); // Cancel and return to account view
   }
 }

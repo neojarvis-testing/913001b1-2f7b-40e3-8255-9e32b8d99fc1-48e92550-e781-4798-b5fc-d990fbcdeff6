@@ -38,4 +38,19 @@
   <div *ngIf="errorMessage" class="error-message">
     {{ errorMessage }}
   </div>
+
+  <!-- Success Confirmation Modal -->
+<div class="modal-overlay" [class.show]="isSuccessModalOpen">
+  <div class="modal-content">
+    <h3>Transaction Successful</h3>
+    <p>{{ successMessage }}</p>
+    <div class="modal-buttons">
+      <button class="btn btn-primary" (click)="redirectToTransactions()">Go to My Transactions</button>
+      <button class="btn btn-secondary" (click)="closeSuccessModal()">Stay Here</button>
+    </div>
+  </div>
 </div>
+
+
+</div>
+

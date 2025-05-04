@@ -1,10 +1,20 @@
 <div class="transaction-container">
-  <h2>All Transactions</h2>
+  <h2>Transaction Details</h2>
+  <div class="flex-container">
+    <label for="statusFilter" class="filter-label">Filter by Status:</label>
+    <select id="statusFilter" [(ngModel)]="filterStatus" (change)="filterTransactions()" class="filter-dropdown">
+      <option value="All">All</option>
+      <option value="Completed">Completed</option>
+      <option value="Rejected">Rejected</option>
+      <option value="Processing">Processing</option>
+    </select>
+  </div>
+    
   
   <table>
     <thead>
       <tr>
-        <th>Transaction ID</th>
+        <th>S.No</th>
         <th>Account ID</th>
         <th>Date</th>
         <th>Type</th>
@@ -14,12 +24,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let transaction of transactions">
+      <tr *ngFor="let transaction of filteredTransactions">
         <td>{{ transaction.transactionId }}</td>
         <td>{{ transaction.accountId }}</td>
-        <td>{{ transaction.transactionDate | date }}</td>
+        <td>{{ transaction.transactionDate | date:'dd/MM/yyyy' }}</td>
         <td>{{ transaction.transactionType }}</td>
-        <td>{{ transaction.amount | currency }}</td>
+        <td class="right-align">{{ transaction.amount | currency:'INR':'symbol'}}</td>
         <td>{{ transaction.status }}</td>
         <td>
           <ng-container *ngIf="transaction.status !== 'Completed'; else noActionTemplate">
@@ -42,7 +52,7 @@
     <h3>Account Details</h3>
     <p><strong>Account Holder:</strong> {{ selectedAccount?.accountHolderName }}</p>
     <p><strong>Account Type:</strong> {{ selectedAccount?.accountType }}</p>
-    <p><strong>Balance:</strong> {{ selectedAccount?.balance | currency }}</p>
+    <strong>Balance:</strong><span class="right-align"> {{ selectedAccount?.balance | currency:'INR':'symbol' }}</span>
     <p><strong>Status:</strong> {{ selectedAccount?.status }}</p>
     <button class="btn btn-secondary" (click)="closePopup()">Close</button>
   </div>

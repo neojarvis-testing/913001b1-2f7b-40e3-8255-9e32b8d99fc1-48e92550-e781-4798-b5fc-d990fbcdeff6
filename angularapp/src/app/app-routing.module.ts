@@ -17,12 +17,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 import { CustomermytransactionsComponent } from './components/customermytransactions/customermytransactions.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   { path: '', component: NavbarComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
   { path: '', component: AppComponent },
+ 
 
 
   // Customer section with AuthGuard applied
@@ -57,7 +59,8 @@ const routes: Routes = [
       { path: 'transactions', component: ManagerviewalltransactionsComponent },
       { path: 'feedbacks', component: ManagerviewfeedbackComponent }
     ]
-  }
+  },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({

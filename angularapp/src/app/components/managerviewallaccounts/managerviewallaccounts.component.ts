@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+// import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -15,8 +17,11 @@ export class ManagerviewallaccountsComponent implements OnInit {
   filterStatus: string = 'All';
   selectedProof: string | null = null;
   showPopup: boolean = false;
+  // selectedFile: File | null = null;
+  // fileError: string = '';
+  // apiUrl = environment.apiUrl;
 
-  constructor(private accountService: AccountService) { }
+  constructor(private accountService: AccountService,private http: HttpClient,) { }
 
   ngOnInit(): void {
     this.getAllAccounts();
@@ -26,7 +31,7 @@ export class ManagerviewallaccountsComponent implements OnInit {
     this.accountService.getAllAccounts().subscribe({
       next: (data) => {
         this.accounts = data;
-        this.filteredAccounts = data; // Initialize filtered data
+        this.filteredAccounts = data; 
       },
       error: (err) => {
         console.error('Error fetching accounts:', err);
@@ -34,9 +39,30 @@ export class ManagerviewallaccountsComponent implements OnInit {
     });
   }
 
+
+  // for file 
+
+  // getAllAccounts(): void {
+  //   this.accountService.getAllAccounts().subscribe({
+  //     next: (data) => {
+  //       // Process the image paths if needed
+  //       this.accounts = data.map(account => {
+  //         if (account.ProofOfIdentity && !account.ProofOfIdentity.startsWith('http') && !account.ProofOfIdentity.startsWith('/assets')) {
+  //           account.ProofOfIdentity = `${this.apiUrl}/assets/uploads/${account.ProofOfIdentity}`;
+  //         }
+  //         return account;
+  //       });
+  //       this.filteredAccounts = this.accounts;
+  //     },
+  //     error: (err) => {
+  //       console.error("Error fetching accounts:", err);
+  //     }
+  //   });
+  // }
+
   searchAccounts(): void {
     this.filteredAccounts = this.accounts.filter(account =>
-      account.AccountHolderName.toLowerCase().includes(this.searchQuery.toLowerCase())
+      account.accountHolderName.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
   }
 
@@ -44,7 +70,7 @@ export class ManagerviewallaccountsComponent implements OnInit {
     if (this.filterStatus === 'All') {
       this.filteredAccounts = this.accounts;
     } else {
-      this.filteredAccounts = this.accounts.filter(account => account.Status === this.filterStatus);
+      this.filteredAccounts = this.accounts.filter(account => account.status === this.filterStatus);
     }
   }
 
@@ -67,6 +93,13 @@ export class ManagerviewallaccountsComponent implements OnInit {
 
     const newStatus = account.Status === 'Active' ? 'Inactive' : 'Active';
     const updatedAccount: any = { ...account, Status: newStatus };
+
+     // If the proofOfIdentity starts with /assets/, remove that prefix
+    // before sending to the backend
+    // if (updatedAccount.proofOfIdentity && updatedAccount.proofOfIdentity.startsWith('/assets/uploads/')) {
+    //   const filename = updatedAccount.proofOfIdentity.split('/').pop();
+    //   updatedAccount.proofOfIdentity = filename;
+    // }
 
     this.accountService.updateAccount(account.accountId, updatedAccount).subscribe({
       next: () => {
