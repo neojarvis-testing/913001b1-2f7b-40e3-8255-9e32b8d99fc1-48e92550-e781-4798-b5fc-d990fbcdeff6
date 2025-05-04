@@ -32,13 +32,11 @@
         <td class="right-align">{{ transaction.amount | currency:'INR':'symbol'}}</td>
         <td>{{ transaction.status }}</td>
         <td>
-          <!-- Only show actions if the transaction is NOT completed -->
           <ng-container *ngIf="transaction.status !== 'Completed'; else noActionTemplate">
-            <button (click)="showAccountDetails(transaction.account)">Show Account</button>
-            <button (click)="proceedTransaction(transaction)">Proceed</button>
-            <button (click)="rejectTransaction(transaction)">Reject</button>
+            <button class="btn btn-info" (click)="showAccountDetails(transaction.account)">Show Account</button>
+            <button class="btn btn-success" (click)="openModal(transaction)">Proceed</button>
+            <button class="btn btn-danger" (click)="rejectTransaction(transaction)">Reject</button>
           </ng-container>
-          <!-- If transaction is completed, show "No action required" -->
           <ng-template #noActionTemplate>
             <span>No action required</span>
           </ng-template>
@@ -49,13 +47,25 @@
 </div>
 
 <!-- Account Details Popup -->
-<div class="popup" *ngIf="showPopup">
-  <div class="popup-content">
+<div class="modal-overlay" [class.show]="showPopup">
+  <div class="modal-content">
     <h3>Account Details</h3>
     <p><strong>Account Holder:</strong> {{ selectedAccount?.accountHolderName }}</p>
     <p><strong>Account Type:</strong> {{ selectedAccount?.accountType }}</p>
     <strong>Balance:</strong><span class="right-align"> {{ selectedAccount?.balance | currency:'INR':'symbol' }}</span>
     <p><strong>Status:</strong> {{ selectedAccount?.status }}</p>
-    <button (click)="closePopup()">Close</button>
+    <button class="btn btn-secondary" (click)="closePopup()">Close</button>
+  </div>
+</div>
+
+<!-- Confirmation Modal for Manager Approval -->
+<div class="modal-overlay" [class.show]="isModalOpen">
+  <div class="modal-content">
+    <h3>Transaction Approval</h3>
+    <p>Do you want to approve this transaction?</p>
+    <div class="modal-buttons">
+      <button class="btn btn-primary" (click)="confirmTransaction()">Approve</button>
+      <button class="btn btn-danger" (click)="closeModal()">Cancel</button>
+    </div>
   </div>
 </div>
