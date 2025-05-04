@@ -13,6 +13,8 @@ export class ManagerviewalltransactionsComponent implements OnInit {
   selectedAccount: Account | null = null; // To store selected account details
   errorMessage: string = '';
   showPopup: boolean = false; // Controls popup visibility
+  filteredTransactions: Transaction[] = []; 
+  filterStatus: string = 'All'; 
 
   constructor(private transactionService: TransactionService) {}
 
@@ -24,6 +26,7 @@ export class ManagerviewalltransactionsComponent implements OnInit {
     this.transactionService.getAllTransactions().subscribe({
       next: (data) => {
         this.transactions = data;
+        this.filteredTransactions = data;
         console.log(this.transactions);
       },
       error: (err) => {
@@ -31,6 +34,17 @@ export class ManagerviewalltransactionsComponent implements OnInit {
         console.error(err);
       }
     });
+  }
+
+  filterTransactions(): void { 
+    console.log("Filtering transactions by:", this.filterStatus); 
+    if (this.filterStatus === 'All') {
+      this.filteredTransactions = this.transactions;
+    } else {
+      this.filteredTransactions = this.transactions.filter(transaction => 
+        transaction.status.toLowerCase() === this.filterStatus.toLowerCase() 
+      );
+    }
   }
 
   showAccountDetails(account: Account): void {
@@ -59,4 +73,5 @@ export class ManagerviewalltransactionsComponent implements OnInit {
       error: (err) => console.error('Error rejecting transaction:', err)
     });
   }
+  
 }

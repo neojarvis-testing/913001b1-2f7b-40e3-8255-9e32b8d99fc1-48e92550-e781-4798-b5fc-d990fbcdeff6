@@ -66,3 +66,14 @@ button:nth-child(3) { background-color: #dc3545; color: white; } /* Reject */
   background-color: #007bff;
   color: white;
 }
+
+.right-align {
+  text-align: right;
+}
+
+.flex-container
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
