@@ -1,68 +1,86 @@
-/* Transaction Container */
 .transaction-container {
-  width: 80%;
+  max-width: 800px;
   margin: auto;
-  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
-/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 th, td {
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ddd;
-  text-align: left;
 }
 
 th {
-  background-color: #007bff;
+  background: #007bff;
   color: white;
 }
 
-/* Button Styles */
+td {
+  text-align: center;
+}
+
 button {
-  margin: 5px;
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
 }
 
-button:hover {
-  opacity: 0.8;
+.btn-success {
+  background: #28a745;
+  color: white;
 }
 
-/* Different Button Colors */
-button:nth-child(1) { background-color: #28a745; color: white; } /* Show Account */
-button:nth-child(2) { background-color: #ffc107; color: black; } /* Proceed */
-button:nth-child(3) { background-color: #dc3545; color: white; } /* Reject */
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
 
-/* Popup Styles */
-.popup {
+.btn-info {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.popup-content {
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-content {
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 300px;
 }
 
-.popup-content button {
-  background-color: #007bff;
-  color: white;
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }

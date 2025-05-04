@@ -1,7 +1,7 @@
 <div class="transaction-container">
   <h2>{{ action | titlecase }} Money</h2>
 
-  <form (ngSubmit)="submitTransaction()" class="transaction-form">
+  <form (ngSubmit)="openModal()" class="transaction-form">
     <div class="form-group">
       <label for="amount">Enter Amount *</label>
       <input
@@ -15,22 +15,26 @@
       />
     </div>
 
-    <!-- Show approval message when amount exceeds ₹10,000 -->
-    <div *ngIf="requiresApproval" class="approval-message">
-      <strong>Transaction requires managerial approval!</strong> 
-      <p>It will not reflect in your account balance until approved.</p>
-    </div>
-
     <button type="submit" class="btn btn-success">Submit</button>
     <button type="button" class="btn btn-secondary" (click)="cancelTransaction()">Cancel</button>
   </form>
 
-  <!-- Display Success Message -->
+  <!-- Modal for Approval Confirmation -->
+  <div class="modal-overlay" [class.show]="isModalOpen">
+    <div class="modal-content">
+      <h3>Approval Required</h3>
+      <p>This transaction requires managerial approval. Do you want to proceed?</p>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" (click)="confirmTransaction()">Yes, Proceed</button>
+        <button class="btn btn-danger" (click)="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <div *ngIf="successMessage" class="success-message">
     {{ successMessage }}
   </div>
 
-  <!-- Display Error Message -->
   <div *ngIf="errorMessage" class="error-message">
     {{ errorMessage }}
   </div>
