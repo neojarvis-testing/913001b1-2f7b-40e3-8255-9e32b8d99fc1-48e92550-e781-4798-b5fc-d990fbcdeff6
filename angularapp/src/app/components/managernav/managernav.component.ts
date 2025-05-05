@@ -8,16 +8,14 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./managernav.component.css']
 })
 export class ManagernavComponent implements OnInit {
-
+username : string = '';
   showLogoutConfirm: boolean = false;
 
   constructor(private router: Router, private service: AuthService) { }
 
   ngOnInit(): void {
-    const role = this.service.getUserRole();
-    if (role !== 'Manager') {
-      this.router.navigate(['/login']);
-    }
+
+   this.username = this.service.getUsername();
   }
 
   openLogoutPopup(): void {

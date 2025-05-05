@@ -1,11 +1,31 @@
-.home-container {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-h1 {
-    font-size: 48px;
+.h1 {
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: red;
-}
+    color: #d9534f; /* Classic error red */
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #d9534f; /* Red border */
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .h6 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Subtle border */
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 4px;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #f0f0f0; /* Neutral background */
+  }
+  

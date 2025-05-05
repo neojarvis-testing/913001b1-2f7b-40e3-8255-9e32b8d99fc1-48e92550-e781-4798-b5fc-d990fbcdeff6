@@ -62,7 +62,7 @@
     <!-- Proof of Identity -->
     <div class="form-group">
       <label for="proofOfIdentity">Proof of Identity<span class="required">*</span></label>
-      <input id="proofOfIdentity" type="file" (change)="onFileSelected($event)" class="form-control" />
+      <input id="proofOfIdentity" type="file" (change)="onFileSelected($event)" class="form-control" accept=".jpg,.pdf"/>
       <p class="error-message" *ngIf="accountForm.get('proofOfIdentity')?.invalid && accountForm.get('proofOfIdentity')?.touched">
         Proof of Identity is required.
       </p>

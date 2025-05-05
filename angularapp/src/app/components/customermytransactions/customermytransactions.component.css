@@ -1,119 +1,400 @@
-.container {
-    max-width: 900px;
-    margin: 20px auto;
+/* Main Container */
+/* .container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(to right, #f9f9f9, #e8e8e8);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+
+/* Page Title */
+/* h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+} */
+
+/* Filter Section */
+/* .filter-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+} */
+
+/* .filter-section label {
+  font-weight: 600;
+  color: #333;
+} */
+
+/* .filter-section select {
+  padding: 7px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  cursor: pointer;
+} */
+
+/* Transactions Table */
+/* .transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+} */
+
+/* .transactions-table th,
+.transactions-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+/* 
+.transactions-table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+} */
+
+/* .transactions-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+/* .transactions-table tr:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease-in-out;
+} */
+
+/* Action Buttons */
+/* .action-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.action-button:active {
+  background-color: #21618c;
+  transform: scale(0.95);
+} */
+
+/* Modal Backdrop */
+/* .modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+} */
+
+/* Modal Content - Center Alignment */
+/* .modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* Modal Title */
+/* .modal-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+} */
+
+/* Modal Details */
+/* .modal-content p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+} */
+
+/* Modal Close Button */
+/* .modal-close-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+} */
+
+/* .modal-close-button:hover {
+  background-color: #c0392b;
+} */
+
+/* Responsive Adjustments */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 95%;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+
   .filter-section {
-    margin-bottom: 20px;
-    text-align: right;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  
-  .filter-section label {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .filter-section select {
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .transactions-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
+
   .transactions-table th,
   .transactions-table td {
-    border: 1px solid #ddd;
     padding: 10px;
-    text-align: center;
   }
-  
-  .transactions-table th {
-    background-color: #4caf50;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .transactions-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .transactions-table tr:hover {
-    background-color: #ddd;
-  }
-  
+
   .action-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 6px 12px;
   }
+}
+ */
+
+
+
+ /* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1c1f2b, #283149);
+  color: #eee;
+}
+
+/* Centered Container */
+.transaction-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Title */
+.transaction-title {
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Filter Section */
+.filter-container {
+  margin-bottom: 15px;
+}
+
+.filter-container select {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+/* Transactions Table */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  color: #333;
+  border-radius: 10px;
+}
+
+.transactions-table th {
+  background: #0077b6;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.transactions-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.transactions-table td:last-child {
+  text-align: center;
+}
+
+/* Status Label */
+.status-label {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status-label.completed {
+  background: #28a745;
+  color: white;
+}
+
+.status-label.processing {
+  background: #ffc107;
+  color: black;
+}
+
+/* Action Button */
+.action-button {
+  background: #ffdd00;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background: #ffc107;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* Covers entire viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(207, 207, 231, 0.75); /* Deep royal blue for rich contrast */
+  backdrop-filter: blur(10px); /* Smooth background */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Enlarged Modal Container */
+.modal {
+  background: rgba(245, 245, 245, 0.9); /* Soft off-white for better readability */
+  backdrop-filter: blur(15px);
+  padding: 40px; /* Increased padding */
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  max-width: 500px; /* Spacious layout */
+  width: 90%;
+  animation: scaleUp 0.3s ease-in-out;
   
-  .action-button:hover {
-    background-color: #45a049;
+}
+
+/* Enlarged Modal Title */
+.modal-title {
+  font-size: 1.8rem; /* Increased font size */
+  font-weight: bold;
+  color: #ff9800; /* Vibrant amber for a warm feel */
+  margin-bottom: 15px;
+}
+
+/* Modal Content */
+.modal-content {
+  font-size: 6.8rem; /* Increased text size */
+    color: #333; /* Darker shade for readability */
+    font-weight: bold;
+    text-align: left; /* Align content for clarity */
+    line-height: 2; /* Improved spacing */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.7rem; /* Slightly larger */
+  cursor: pointer;
+  color: #888;
+  background: none;
+  border: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  color: #ff9800;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  background: #ff9800; /* Warm amber accent */
+  color: white;
+  padding: 12px 22px; /* Larger button */
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem; /* Larger font */
+  transition: background 0.3s ease-in-out;
+}
+
+.confirm-btn:hover {
+  background: #e68900;
+}
+
+/* Loading Row */
+.loading-row {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Loading Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #0077b6; /* Accent color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading Message */
+.loading-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0077b6;
+  margin-top: 10px;
+}
+
+
+/* Scale-up Animation */
+@keyframes scaleUp {
+  from {
+      transform: scale(0.95);
   }
-  
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  to {
+      transform: scale(1);
   }
-  
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
-  }
-  
-  .modal-content h2 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .modal-content p {
-    margin-bottom: 10px;
-  }
-  
-  .modal-close-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .modal-close-button:hover {
-    background-color: #45a049;
-  }
-  
+}
+
