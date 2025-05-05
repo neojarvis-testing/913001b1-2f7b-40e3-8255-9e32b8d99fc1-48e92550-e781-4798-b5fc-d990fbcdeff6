@@ -108,3 +108,19 @@ WHERE @@ROWCOUNT = 1 AND [AccountId] = scope_identity();
 2025-05-05 04:28:27.088 +00:00 [INF] HTTP POST /api/account responded 201 in 78.8565 ms
 2025-05-05 04:28:27.088 +00:00 [INF] Request finished HTTP/1.1 POST http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api/account application/json 138 - 201 - application/json;+charset=utf-8 79.1405ms
 2025-05-05 04:37:01.655 +00:00 [INF] Application is shutting down...
+2025-05-05 04:39:23.757 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-05-05 04:39:23.845 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-05-05 04:39:23.848 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-05 04:39:23.848 +00:00 [INF] Hosting environment: Development
+2025-05-05 04:39:23.848 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-05-05 04:43:20.734 +00:00 [INF] Application is shutting down...
+2025-05-05 04:59:59.763 +00:00 [INF] User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-05-05 04:59:59.846 +00:00 [INF] Now listening on: http://0.0.0.0:8080
+2025-05-05 04:59:59.849 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-05 04:59:59.849 +00:00 [INF] Hosting environment: Development
+2025-05-05 04:59:59.849 +00:00 [INF] Content root path: /home/coder/project/workspace/dotnetapp/
+2025-05-05 05:04:50.808 +00:00 [INF] Request starting HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api'; - -
+2025-05-05 05:04:50.863 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-05-05 05:04:50.885 +00:00 [INF] HTTP GET /api'; responded 404 in 24.8853 ms
+2025-05-05 05:04:50.892 +00:00 [INF] Request finished HTTP/1.1 GET http://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api'; - - - 404 0 - 87.2035ms
+2025-05-05 05:22:31.647 +00:00 [INF] Application is shutting down...

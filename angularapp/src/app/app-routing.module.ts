@@ -13,18 +13,19 @@ import { ManagerviewallaccountsComponent } from './components/managerviewallacco
 import { ManagerviewalltransactionsComponent } from './components/managerviewalltransactions/managerviewalltransactions.component';
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { AuthGuard } from './components/authguard/auth.guard';
-// import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 import { CustomermytransactionsComponent } from './components/customermytransactions/customermytransactions.component';
 import { ErrorComponent } from './components/error/error.component';
-
+ 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegistrationComponent },  
+  { path: 'register', component: RegistrationComponent },
  
-
-
+ 
+ 
   // Customer section with AuthGuard applied
   {
     path: 'customer',
@@ -44,7 +45,7 @@ const routes: Routes = [
       // { path: 'add-feedback', component: CustomeraddfeedbackComponent }
     ]
   },
-
+ 
   // Manager section with AuthGuard applied
   {
     path: 'manager',
@@ -60,11 +61,13 @@ const routes: Routes = [
   },
   { path: '**', component: ErrorComponent },
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)], // Register the routes
   exports: [RouterModule]                 // Export RouterModule for use in the AppModule
 })
 export class AppRoutingModule { }
-
-
+ 
+ 
+ 
+ 
