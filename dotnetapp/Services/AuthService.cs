@@ -65,7 +65,6 @@ namespace dotnetapp.Services
         {
             try
             {
-               
                 
                 Log.Information("Login process started for email: {Email}", model.Email);
 
