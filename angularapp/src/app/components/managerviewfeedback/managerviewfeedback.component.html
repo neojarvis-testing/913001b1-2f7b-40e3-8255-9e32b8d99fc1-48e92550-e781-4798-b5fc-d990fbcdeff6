@@ -5,9 +5,9 @@
         <button (click)="loadFeedbacks()">Refresh Feedbacks</button>
     </nav>
 
-    <!-- <div *ngIf="!isLoading && feedbacks.length === 0">
+    <div *ngIf="!isLoading && feedbacks.length === 0">
         <p>Oops! No records Found</p>
-    </div> -->
+    </div>
 
     <table *ngIf="!isLoading && feedbacks.length > 0">
         <thead>

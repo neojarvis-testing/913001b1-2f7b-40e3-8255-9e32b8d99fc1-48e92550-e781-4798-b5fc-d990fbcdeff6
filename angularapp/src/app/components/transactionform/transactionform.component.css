@@ -9,6 +9,7 @@
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
+ 
 /* Header */
 .transaction-container h2 {
   color: #007bff;
@@ -16,6 +17,7 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+ 
 /* Form */
 .transaction-form {
   display: flex;
@@ -26,12 +28,21 @@
   margin-bottom: 15px;
   text-align: left;
 }
+ 
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
   color: #333;
-ding: 10px;
+}
+ 
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+ 
 /* Buttons */
 button {
   width: 100%;
@@ -61,5 +72,97 @@ button {
 .btn-secondary:hover {
   background: #545b62;
 }
-
-
+ 
+/* Approval Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+ 
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+ 
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+ 
+/* Success Message */
+.success-message {
+  background: #d4edda; /* Light green */
+  color: #155724; /* Dark green */
+  padding: 10px 15px;
+  border-left: 5px solid #28a745;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10px;
+}
+ 
+/* Error Message */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px 15px;
+  border-left: 5px solid #dc3545;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10px;
+}
+ 
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+ 
+.modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+ 
+.modal-buttons .btn-primary {
+  background: #007bff;
+  color: #fff;
+  margin-right: 5px;
+}
+ 
+.modal-buttons .btn-primary:hover {
+  background: #0056b3;
+}
+ 
+.modal-buttons .btn-secondary {
+  background: #6c757d;
+  color: #fff;
+}
+ 
+.modal-buttons .btn-secondary:hover {
+  background: #545b62;
+}
+ 
+ 
