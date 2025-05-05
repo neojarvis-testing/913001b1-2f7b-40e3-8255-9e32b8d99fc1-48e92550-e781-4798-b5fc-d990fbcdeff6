@@ -22,6 +22,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CommonModule } from '@angular/common';
     RegistrationComponent,
     TransactionformComponent,
     RegistrationComponent,
-    ManagerviewallaccountsComponent
+    ManagerviewallaccountsComponent,
+    FooterComponent
     
 
   ],
