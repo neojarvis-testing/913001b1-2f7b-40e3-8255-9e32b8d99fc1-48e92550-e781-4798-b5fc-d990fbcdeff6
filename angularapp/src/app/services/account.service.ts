@@ -17,6 +17,9 @@ export class AccountService {
 
   }
 
+
+
+
   private getAuthHeaders():
     HttpHeaders {
     const token = localStorage.getItem('authToken');
@@ -36,31 +39,17 @@ export class AccountService {
     return this.http.get<Account[]>(`${this.apiUrl}/api/account/user/${userId}`, { headers: this.getAuthHeaders() });
   }
 
-  getAllAccounts(): Observable<Account[]> {
-    return this.http.get<Account[]>(`${this.apiUrl}/api/account`, { headers: this.getAuthHeaders() });
+  getAllAccounts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/api/account`, { headers: this.getAuthHeaders() });
   }
 
   updateAccount(accountId: number, account: any): Observable<any> {
     
     return this.http.put<any>(`${this.apiUrl}/api/account/${accountId}`, account, { headers: this.getAuthHeaders() });
   }
-
-
-
-   // Upload proof of identity
-  // uploadProofOfIdentity(file: File): Observable<{imageUrl: string}> {
-  //     const formData = new FormData();
-  //     formData.append('file', file, file.name);
-        
-  //       const httpOptions = {
-  //         headers: new HttpHeaders({
-  //           'Authorization': `Bearer ${localStorage.getItem('authToken')}`
-  //         })
-  //       };
-        
-  //     return this.http.post<{imageUrl: string}>(`${this.apiUrl}/api/account/upload`, formData, httpOptions);
-  //   }
-
   
 }
 
+
+
+// proof.jpeg

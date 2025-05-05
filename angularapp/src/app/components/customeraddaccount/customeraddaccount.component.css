@@ -9,7 +9,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+ 
 /* Heading Styles */
 h1 {
   text-align: center;
@@ -18,12 +18,12 @@ h1 {
   color: #333;
   font-weight: bold;
 }
-
+ 
 /* Form Group Styling */
 .form-group {
   margin-bottom: 20px;
 }
-
+ 
 label {
   display: block;
   font-weight: bold;
@@ -31,7 +31,7 @@ label {
   font-size: 14px;
   color: #333;
 }
-
+ 
 /* Input and Select Styles */
 input,
 select {
@@ -42,25 +42,25 @@ select {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
+ 
 input[type="file"] {
   padding: 3px;
 }
-
+ 
 input:focus,
 select:focus {
   border-color: #4caf50;
   outline: none;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
-
+ 
 /* Error Message Styling */
 .error-message {
   color: #ff0000;
   font-size: 12px;
   margin-top: 5px;
 }
-
+ 
 /* Button Styles */
 .button {
   width: 100%;
@@ -73,18 +73,18 @@ select:focus {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
+ 
 .button:hover {
   background-color: #45a049;
 }
-
+ 
 .button:disabled {
   background-color: #9e9e9e;
   cursor: not-allowed;
 }
-
-
-
+ 
+ 
+ 
 /* Popup Styles */
 .popup {
   position: fixed;
@@ -98,7 +98,7 @@ select:focus {
   align-items: center;
   z-index: 1000;
 }
-
+ 
 .popup-content {
   background-color: white;
   padding: 30px;
@@ -107,19 +107,19 @@ select:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 300px;
 }
-
+ 
 .popup-content h2 {
   margin-bottom: 15px;
   font-size: 18px;
   color: #4caf50;
 }
-
+ 
 .popup-content p {
   margin-bottom: 20px;
   font-size: 14px;
   color: #333;
 }
-
+ 
 .popup-content button {
   width: auto;
   padding: 10px 20px;
@@ -129,11 +129,11 @@ select:focus {
   border-radius: 5px;
   cursor: pointer;
 }
-
+ 
 .popup-content button:hover {
   background-color: #45a049;
 }
-
+ 
 /* Error and Success Notification Styles */
 .error-notification {
   color: #ff0000;
@@ -141,15 +141,15 @@ select:focus {
   margin-top: 15px;
   font-size: 14px;
 }
-
+ 
 .success-notification {
   color: #4caf50;
   text-align: center;
   margin-top: 15px;
   font-size: 14px;
 }
-
-
+ 
+ 
 /* Back Button */
 .back-button {
   position: absolute;
@@ -164,16 +164,18 @@ select:focus {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
+ 
 .back-button:hover {
   background-color: #45a049;
 }
-
+ 
 .required {
   color: red;
   font-size: 14px; /* Adjust size to match the label */
   margin-left: 3px;
 }
-
-
-
+ 
+ 
+ 
+ 
+ 

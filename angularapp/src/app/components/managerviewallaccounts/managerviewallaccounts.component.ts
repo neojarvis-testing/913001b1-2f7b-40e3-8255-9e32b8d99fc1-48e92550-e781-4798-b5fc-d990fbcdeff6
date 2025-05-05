@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
-// import { environment } from 'src/environments/environment';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-managerviewallaccounts',
   templateUrl: './managerviewallaccounts.component.html',
   styleUrls: ['./managerviewallaccounts.component.css']
 })
-
 export class ManagerviewallaccountsComponent implements OnInit {
   accounts: any[] = [];
   filteredAccounts: any[] = [];
@@ -17,11 +14,8 @@ export class ManagerviewallaccountsComponent implements OnInit {
   filterStatus: string = 'All';
   selectedProof: string | null = null;
   showPopup: boolean = false;
-  // selectedFile: File | null = null;
-  // fileError: string = '';
-  // apiUrl = environment.apiUrl;
 
-  constructor(private accountService: AccountService,private http: HttpClient,) { }
+  constructor(private accountService: AccountService, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.getAllAccounts();
@@ -30,35 +24,37 @@ export class ManagerviewallaccountsComponent implements OnInit {
   getAllAccounts(): void {
     this.accountService.getAllAccounts().subscribe({
       next: (data) => {
-        this.accounts = data;
-        this.filteredAccounts = data; 
+        this.accounts = data.map(account => {
+          // ✅ Ensure proof of identity path is properly formatted
+          if (account.proofOfIdentity && !account.proofOfIdentity.startsWith('http')) {
+            account.proofOfIdentity = `${window.location.origin}/uploads/${account.proofOfIdentity}`;
+          }
+          return account;
+        });
+  
+        this.filteredAccounts = [...this.accounts]; // Preserve original data
       },
       error: (err) => {
         console.error('Error fetching accounts:', err);
       }
     });
   }
+  
 
+  showProof(proof: string | null): void {
+    if (proof) {
+      this.selectedProof = proof;
+      this.showPopup = true;
+    } else {
+      console.error('Proof of identity not found.');
+    }
+  }
 
-  // for file 
+  closePopup(): void {
+    this.showPopup = false;
+    this.selectedProof = null;
+  }
 
-  // getAllAccounts(): void {
-  //   this.accountService.getAllAccounts().subscribe({
-  //     next: (data) => {
-  //       // Process the image paths if needed
-  //       this.accounts = data.map(account => {
-  //         if (account.ProofOfIdentity && !account.ProofOfIdentity.startsWith('http') && !account.ProofOfIdentity.startsWith('/assets')) {
-  //           account.ProofOfIdentity = `${this.apiUrl}/assets/uploads/${account.ProofOfIdentity}`;
-  //         }
-  //         return account;
-  //       });
-  //       this.filteredAccounts = this.accounts;
-  //     },
-  //     error: (err) => {
-  //       console.error("Error fetching accounts:", err);
-  //     }
-  //   });
-  // }
 
   searchAccounts(): void {
     this.filteredAccounts = this.accounts.filter(account =>
@@ -74,15 +70,7 @@ export class ManagerviewallaccountsComponent implements OnInit {
     }
   }
 
-  showProof(proof: string): void {
-    this.selectedProof = proof;
-    this.showPopup = true;
-  }
 
-  closePopup(): void {
-    this.showPopup = false;
-    this.selectedProof = null;
-  }
 
   toggleAccountStatus(account: any): void {
     console.log(account)
@@ -111,3 +99,6 @@ export class ManagerviewallaccountsComponent implements OnInit {
   }
 
 }
+
+
+// user_17002

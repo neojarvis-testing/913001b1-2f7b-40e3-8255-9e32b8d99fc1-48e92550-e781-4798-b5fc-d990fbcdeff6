@@ -1,7 +1,7 @@
 <div class="container">
   <button class="back-button" (click)="navigateHome()">Back</button>
   <h1>Add New Account</h1>
-  
+ 
   <form [formGroup]="accountForm" (ngSubmit)="createAccount()">
     <!-- Account Holder Name -->
     <div class="form-group">
@@ -17,7 +17,7 @@
         Account Holder Name is required.
       </p>
     </div>
-
+ 
     <!-- User ID (Read-Only) -->
     <div class="form-group">
       <label for="userId">User ID<span class="required">*</span></label>
@@ -29,7 +29,7 @@
         disabled
       />
     </div>
-
+ 
     <!-- Account Type -->
     <div class="form-group">
       <label for="accountType">Account Type<span class="required">*</span></label>
@@ -42,7 +42,7 @@
         Account Type is required.
       </p>
     </div>
-
+ 
     <!-- Initial Balance -->
     <div class="form-group">
       <label for="initialBalance">Initial Balance<span class="required">*</span></label>
@@ -58,7 +58,7 @@
         <span *ngIf="accountForm.get('initialBalance')?.errors?.min">Initial Balance must be at least 1000.</span>
       </p>
     </div>
-
+ 
     <!-- Proof of Identity -->
     <div class="form-group">
       <label for="proofOfIdentity">Proof of Identity<span class="required">*</span></label>
@@ -67,11 +67,11 @@
         Proof of Identity is required.
       </p>
     </div>
-
+ 
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary button" [disabled]="accountForm.invalid">Create Account</button>
   </form>
-
+ 
   <!-- Popup -->
   <div *ngIf="showPopup" class="popup">
     <div class="popup-content">
@@ -80,9 +80,11 @@
       <button class="btn btn-success" (click)="closePopup()">OK</button>
     </div>
   </div>
-
+ 
   <!-- Error Message -->
   <div *ngIf="errorMessage" class="error-notification">
     <p>{{ errorMessage }}</p>
   </div>
 </div>
+ 
+ 

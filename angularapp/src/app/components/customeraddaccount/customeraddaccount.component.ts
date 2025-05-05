@@ -1,12 +1,13 @@
 
 
+ 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from 'src/app/services/account.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { Account } from 'src/app/models/account.model';
-
+ 
 @Component({
   selector: 'app-customeraddaccount',
   templateUrl: './customeraddaccount.component.html',
@@ -17,18 +18,18 @@ export class CustomeraddaccountComponent implements OnInit {
   errorMessage: string = '';
   successMessage: string = '';
   showPopup: boolean = false; // Controls visibility of the popup
-
+ 
   constructor(
     private formBuilder: FormBuilder,
     private accountService: AccountService,
     private router: Router,
     private authService: AuthService // To fetch UserId from the token
   ) {}
-
+ 
   ngOnInit(): void {
     // Retrieve UserId from AuthService
     let userId = +this.authService.getUserId();
-
+ 
     // Check if the user already has an existing account
     this.accountService.getAccountByUserId(userId).subscribe({
       next: (accountExists) => {
@@ -42,7 +43,7 @@ export class CustomeraddaccountComponent implements OnInit {
         this.errorMessage = 'Unable to verify existing account. Please try again.';
       }
     });
-
+ 
     // Initialize the form
     this.accountForm = this.formBuilder.group({
       accountHolderName: ['', Validators.required],
@@ -52,14 +53,14 @@ export class CustomeraddaccountComponent implements OnInit {
       proofOfIdentity: ['', Validators.required]
     });
   }
-
+ 
   onFileSelected(event: any): void {
     const file = event.target.files[0];
     if (file) {
       this.accountForm.patchValue({ proofOfIdentity: file.name });
     }
   }
-
+ 
   createAccount(): void {
     if (this.accountForm.valid) {
         const accountData: any = {
@@ -67,9 +68,9 @@ export class CustomeraddaccountComponent implements OnInit {
             userId: this.authService.getUserId(), // Ensure UserId is added to the data
             initialBalance: parseFloat(this.accountForm.get('initialBalance')?.value) // Parse to a float
         };
-
+ 
         console.log(accountData); // Verify the correct value is being sent
-
+ 
         this.accountService.createAccount(accountData).subscribe({
             next: (response) => {
                 console.log(response);
@@ -84,14 +85,16 @@ export class CustomeraddaccountComponent implements OnInit {
         this.errorMessage = 'Please fill out all required fields correctly.';
     }
 }
-
-
+ 
+ 
   closePopup(): void {
     this.showPopup = false; // Hide popup
-    this.router.navigate(['customer/add-account']); // Navigate to the customerviewaccount page
+    this.router.navigate(['customer/view-account']); // Navigate to the customerviewaccount page
   }
-
+ 
   navigateHome(): void {
     this.router.navigate(['/home']); // Adjust '/home' to your actual home page route
   }
 }
+ 
+ 

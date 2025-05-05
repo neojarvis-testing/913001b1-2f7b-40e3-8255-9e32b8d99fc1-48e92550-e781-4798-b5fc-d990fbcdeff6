@@ -102,4 +102,4 @@ app.UseAuthorization();
 app.MapControllers();
  
 app.Run();
- 
+ ///home/coder/project/workspace/dotnetapp/wwwroot
