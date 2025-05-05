@@ -186,6 +186,7 @@ export class AuthService {
     localStorage.removeItem('userRole');
     this.loggedIn$.next(false);
   }
+<<<<<<< HEAD
  
  
  
@@ -199,6 +200,21 @@ export class AuthService {
   isCustomer(): boolean {
     return this.getUserRole() === 'Customer';
   }
+=======
+
+  
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('authToken');
+  }
+  isManager(): boolean {
+    return this.getUserRole() === 'Manager';
+  }
+ 
+  isCustomer(): boolean {
+    return this.getUserRole() === 'Customer';
+  }
+>>>>>>> 53623fe6063c9f349297b4956d9fe1242243da0d
  
 }
  

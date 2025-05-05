@@ -1,7 +1,6 @@
 `import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TransactionService } from 'src/app/services/transaction.service';
-
 @Component({
   selector: 'app-transactionform',
   templateUrl: './transactionform.component.html',
@@ -22,7 +21,7 @@ export class TransactionformComponent implements OnInit {
     private router: Router,
     private transactionService: TransactionService
   ) {}
-
+ 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.action = params['action']; 
@@ -35,7 +34,7 @@ export class TransactionformComponent implements OnInit {
       this.errorMessage = 'Please enter a valid amount.';
       return;
     }
-
+ 
     if (this.amount > 10000) {
       this.requiresApproval = true;
       this.isModalOpen = true; // Show approval modal
@@ -86,9 +85,10 @@ export class TransactionformComponent implements OnInit {
   redirectToTransactions(): void {
     this.router.navigate(['customer/mytransactions']); // Navigate on confirmation
   }
-
+ 
   cancelTransaction(): void {
     this.router.navigate(['customer/view-account']); // Cancel and return to account view
   }
 }
-`
+ 
+ 

@@ -9,8 +9,8 @@
       <option value="Processing">Processing</option>
     </select>
   </div>
-    
-  
+   
+ 
   <table>
     <thead>
       <tr>
@@ -33,15 +33,14 @@
               </div>
           </td>
       </tr>
-  
+ 
       <!-- Show "No Transactions Found" After Loading Completes -->
       <tr *ngIf="!isLoading && filteredTransactions.length === 0">
           <td colspan="7" class="no-data"> No transactions available.</td>
       </tr>
-  
+ 
       <!-- Show Transaction Data When Available -->
       <tr *ngFor="let transaction of filteredTransactions">
-
           <td>{{ transaction.transactionId }}</td>
           <td>{{ transaction.accountId }}</td>
           <td>{{ transaction.transactionDate | date:'dd/MM/yyyy' }}</td>
@@ -58,7 +57,6 @@
                   <span>No action required</span>
               </ng-template>
           </td>
-
         <td>{{ transaction.transactionId }}</td>
         <td>{{ transaction.accountId }}</td>
         <td>{{ transaction.transactionDate | date:'dd/MM/yyyy' }}</td>
@@ -75,13 +73,12 @@
             <span>No action required</span>
           </ng-template>
         </td>
-
       </tr>
   </tbody>
-  
+ 
   </table>
 </div>
-
+ 
 <!-- Account Details Popup -->
 <div class="modal-overlay" [class.show]="showPopup">
   <div class="modal-content">
@@ -93,7 +90,6 @@
     <button class="btn btn-secondary" (click)="closePopup()">Close</button>
   </div>
 </div>
-
 <!-- Confirmation Modal for Manager Approval -->
 <div class="modal-overlay" [class.show]="isModalOpen">
   <div class="modal-content">

@@ -16,6 +16,10 @@ export class AppComponent {
   shouldShowNavbar(): boolean {
     return !this.authService.isLoggedIn();
   }
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> 53623fe6063c9f349297b4956d9fe1242243da0d
 }
  

@@ -1,5 +1,6 @@
  
 <ng-container *ngIf="shouldShowNavbar()">
+<<<<<<< HEAD
   <ng-container *ngIf="authService.isManager(); else userNav">
     <!-- ✅ Only show `AdminnavComponent` on the main admin page -->
     <app-managernav></app-managernav>
@@ -18,3 +19,23 @@
  
 
 <router-outlet></router-outlet>
+=======
+    <ng-container *ngIf="authService.isManager(); else userNav">
+      <!-- ✅ Only show `AdminnavComponent` on the main admin page -->
+      <app-managernav></app-managernav>
+    </ng-container>
+   
+    <ng-template #userNav>
+      <ng-container *ngIf="authService.isCustomer(); else defaultNav">
+        <app-usernav></app-usernav>
+      </ng-container>
+    </ng-template>
+   
+    <ng-template #defaultNav>
+      <app-navbar></app-navbar>
+    </ng-template>
+  </ng-container>
+   
+ 
+  <router-outlet></router-outlet>
+>>>>>>> 53623fe6063c9f349297b4956d9fe1242243da0d
