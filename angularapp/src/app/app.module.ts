@@ -36,14 +36,14 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     LoginComponent,
     ManagernavComponent,
-    ManagerviewallaccountsComponent,
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
     CustomerviewfeedbackComponent,
     NavbarComponent,
     RegistrationComponent,
     TransactionformComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ManagerviewallaccountsComponent
     
 
   ],

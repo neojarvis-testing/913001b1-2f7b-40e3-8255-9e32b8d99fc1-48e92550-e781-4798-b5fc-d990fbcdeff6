@@ -17,6 +17,7 @@ export class ManagerviewallaccountsComponent implements OnInit {
   filterStatus: string = 'All';
   selectedProof: string | null = null;
   showPopup: boolean = false;
+  isLoading = false;
   // selectedFile: File | null = null;
   // fileError: string = '';
   // apiUrl = environment.apiUrl;
@@ -28,16 +29,20 @@ export class ManagerviewallaccountsComponent implements OnInit {
   }
 
   getAllAccounts(): void {
+    this.isLoading = true; // Show loading spinner
+
     this.accountService.getAllAccounts().subscribe({
-      next: (data) => {
-        this.accounts = data;
-        this.filteredAccounts = data; 
-      },
-      error: (err) => {
-        console.error('Error fetching accounts:', err);
-      }
+        next: (data) => {
+            this.accounts = data;
+            this.filteredAccounts = data;
+            this.isLoading = false; // Hide loading spinner after fetching
+        },
+        error: (err) => {
+            console.error('Error fetching accounts:', err);
+            this.isLoading = false; // Hide spinner on error
+        }
     });
-  }
+}
 
 
   // for file 
@@ -85,29 +90,36 @@ export class ManagerviewallaccountsComponent implements OnInit {
   }
 
   toggleAccountStatus(account: any): void {
-    console.log(account)
+    console.log(account);
+
     if (!account.accountId) {
-      console.error("Error: AccountId is missing!");
-      return;
+        console.error("Error: AccountId is missing!");
+        return;
     }
 
-    const newStatus = account.Status === 'Active' ? 'Inactive' : 'Active';
-    const updatedAccount: any = { ...account, Status: newStatus };
+    const newStatus = account.status === 'Active' ? 'InActive' : 'Active'; // Ensure property name matches backend
+    account.status = newStatus; // Update UI immediately
 
-     // If the proofOfIdentity starts with /assets/, remove that prefix
+    this.accountService.updateAccount(account.accountId, { ...account, status: newStatus }).subscribe({
+        next: () => {
+            console.log(`Account ID ${account.accountId} status updated to ${newStatus} in the database.`);
+        },
+        error: (err) => {
+            console.error('Error updating account status:', err);
+        }
+    });
+}
+
+
+}
+
+
+
+
+
+  // If the proofOfIdentity starts with /assets/, remove that prefix
     // before sending to the backend
     // if (updatedAccount.proofOfIdentity && updatedAccount.proofOfIdentity.startsWith('/assets/uploads/')) {
     //   const filename = updatedAccount.proofOfIdentity.split('/').pop();
     //   updatedAccount.proofOfIdentity = filename;
     // }
-
-    this.accountService.updateAccount(account.accountId, updatedAccount).subscribe({
-      next: () => {
-        account.Status = newStatus; // Update UI instantly
-        console.log(`Account ID ${account.accountId} status updated to ${newStatus} in the database.`);
-      },
-      error: (err) => console.error('Error updating account status:', err)
-    });
-  }
-
-}

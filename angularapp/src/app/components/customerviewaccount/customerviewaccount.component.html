@@ -1,13 +1,19 @@
 <div class="account-container">
   <h1>Your Accounts</h1>
 
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="spinner"></div>
+    <p>Fetching your accounts...</p>
+  </div>
+
   <!-- Error Notification -->
-  <div *ngIf="errorMessage" class="error-notification">
+  <div *ngIf="errorMessage && !loading" class="error-notification">
     <p>{{ errorMessage }}</p>
   </div>
 
   <!-- Display Accounts -->
-  <div *ngIf="accounts.length > 0; else noAccounts" class="accounts-list">
+  <div *ngIf="!loading && accounts.length > 0" class="accounts-list">
     <div *ngFor="let account of accounts" class="account-details">
       <p><strong>Account Name:</strong> {{account?.accountHolderName}}</p>
       <p><strong>Account Type:</strong> {{ account?.accountType }}</p>
@@ -24,9 +30,4 @@
       </div>
     </div>
   </div>
-
-  <!-- No Accounts Found Template -->
-  <ng-template #noAccounts>
-    <p class="no-accounts-message">No accounts found. Please create a new account.</p>
-  </ng-template>
 </div>
