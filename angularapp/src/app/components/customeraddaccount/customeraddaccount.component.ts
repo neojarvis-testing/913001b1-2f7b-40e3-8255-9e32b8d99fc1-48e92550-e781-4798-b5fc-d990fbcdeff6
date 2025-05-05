@@ -88,7 +88,7 @@ export class CustomeraddaccountComponent implements OnInit {
 
   closePopup(): void {
     this.showPopup = false; // Hide popup
-    this.router.navigate(['customer/add-account']); // Navigate to the customerviewaccount page
+    this.router.navigate(['customer/view-account']); // Navigate to the customerviewaccount page
   }
 
   navigateHome(): void {

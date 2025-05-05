@@ -1,4 +1,6 @@
-<ng-container *ngIf="shouldShowNavbar()">
+
+
+  <ng-container *ngIf="shouldShowNavbar()">
     <ng-container *ngIf="authService.isManager(); else userNav">
       <app-managernav></app-managernav>
     </ng-container>
@@ -13,6 +15,19 @@
       <app-navbar></app-navbar>
     </ng-template>
   </ng-container>
+
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
   
-  <router-outlet></router-outlet>
+  <footer class="footer">
+    <p>&copy; 2025 Banking Transaction Management System | Built with Angular & .NET Web API</p>
+    <p>Ensuring Secure, Efficient, and User-Friendly Banking Transactions</p>
+  </footer>
+  
+
+  
+ 
+
+  
   
