@@ -9,11 +9,7 @@
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 /* Header */
 .transaction-container h2 {
   color: #007bff;
@@ -21,11 +17,7 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 /* Form */
 .transaction-form {
   display: flex;
@@ -36,21 +28,13 @@
   margin-bottom: 15px;
   text-align: left;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .form-group label {
   font-size: 16px;
   font-weight: bold;
   color: #333;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .form-group input {
   width: 100%;
   padding: 10px;
@@ -58,11 +42,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 /* Buttons */
 button {
   width: 100%;
@@ -92,11 +72,7 @@ button {
 .btn-secondary:hover {
   background: #545b62;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 /* Approval Modal */
 .modal-overlay {
   position: fixed;
@@ -112,20 +88,12 @@ button {
   opacity: 0;
   transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-overlay.show {
   visibility: visible;
   opacity: 1;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-content {
   background: #fff;
   padding: 25px;
@@ -134,11 +102,7 @@ button {
   width: 400px;
   text-align: center;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 /* Success Message */
 .success-message {
   background: #d4edda; /* Light green */
@@ -151,11 +115,7 @@ button {
   text-align: center;
   margin-top: 10px;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 /* Error Message */
 .error-message {
   background: #f8d7da;
@@ -167,7 +127,6 @@ button {
   border-radius: 4px;
   text-align: center;
   margin-top: 10px;
-<<<<<<< HEAD
 }
  
 /* Modal Buttons */
@@ -177,17 +136,6 @@ button {
   margin-top: 20px;
 }
  
-=======
-}
-
-/* Modal Buttons */
-.modal-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-buttons button {
   flex: 1;
   padding: 10px;
@@ -197,38 +145,22 @@ button {
   border: none;
   transition: background 0.2s ease-in-out;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-buttons .btn-primary {
   background: #007bff;
   color: #fff;
   margin-right: 5px;
 }
-<<<<<<< HEAD
  
 .modal-buttons .btn-primary:hover {
   background: #0056b3;
 }
  
-=======
-
-.modal-buttons .btn-primary:hover {
-  background: #0056b3;
-}
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-buttons .btn-secondary {
   background: #6c757d;
   color: #fff;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-buttons .btn-secondary:hover {
   background: #545b62;
 }

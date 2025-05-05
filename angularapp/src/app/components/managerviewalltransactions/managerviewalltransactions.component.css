@@ -7,11 +7,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background: #fff;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 table {
   width: 100%;
   border-collapse: collapse;
@@ -27,65 +23,37 @@ th {
   background: #007bff;
   color: white;
 }
-<<<<<<< HEAD
  
 td {
   text-align: center;
 }
  
-=======
-
-td {
-  text-align: center;
-}
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 button {
   padding: 8px 12px;
   border: none;
   cursor: pointer;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .btn-success {
   background: #28a745;
   color: white;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .btn-danger {
   background: #dc3545;
   color: white;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .btn-info {
   background: #17a2b8;
   color: white;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .btn-secondary {
   background: #6c757d;
   color: white;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-overlay {
   display: none;
   position: fixed;
@@ -97,19 +65,11 @@ button {
   justify-content: center;
   align-items: center;
 }
-<<<<<<< HEAD
  
 .modal-overlay.show {
   display: flex;
 }
  
-=======
-
-.modal-overlay.show {
-  display: flex;
-}
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-content {
   background: white;
   padding: 20px;
@@ -118,11 +78,7 @@ button {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 300px;
 }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 .modal-buttons {
   display: flex;
   justify-content: space-around;
@@ -177,3 +133,6 @@ button {
   color: #0077b6;
   margin-top: 10px;
 }
+ 
+ 
+ 

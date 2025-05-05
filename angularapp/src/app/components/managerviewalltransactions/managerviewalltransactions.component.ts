@@ -13,17 +13,10 @@ export class ManagerviewalltransactionsComponent implements OnInit {
   errorMessage: string = '';
   showPopup: boolean = false;
   isModalOpen: boolean = false;
-<<<<<<< HEAD
   selectedTransaction: any = null;
   // showPopup: boolean = false; // Controls popup visibility
   filteredTransactions: any[] = [];
   filterStatus: string = 'All';
-=======
-  selectedTransaction: any = null; 
-  // showPopup: boolean = false; // Controls popup visibility
-  filteredTransactions: any[] = []; 
-  filterStatus: string = 'All'; 
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   isLoading = false;
  
  
@@ -69,35 +62,20 @@ export class ManagerviewalltransactionsComponent implements OnInit {
     this.showPopup = false;
     this.selectedAccount = null;
   }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   openModal(transaction: any): void {
     this.selectedTransaction = transaction;
     this.isModalOpen = true;
   }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedTransaction = null;
   }
-<<<<<<< HEAD
  
   confirmTransaction(): void {
     if (!this.selectedTransaction) return;
  
-=======
-
-  confirmTransaction(): void {
-    if (!this.selectedTransaction) return;
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
     this.selectedTransaction.status = 'Approved';
     this.transactionService.updateTransaction(this.selectedTransaction).subscribe({
       next: () => {
@@ -107,11 +85,7 @@ export class ManagerviewalltransactionsComponent implements OnInit {
       error: (err) => console.error('Error approving transaction:', err)
     });
   }
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   rejectTransaction(transaction: any): void {
     transaction.status = 'Rejected';
     this.transactionService.updateTransaction(transaction).subscribe({

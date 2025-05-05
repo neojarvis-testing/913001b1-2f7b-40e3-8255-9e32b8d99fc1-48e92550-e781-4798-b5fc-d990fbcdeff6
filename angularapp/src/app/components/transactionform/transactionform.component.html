@@ -1,10 +1,6 @@
 <div class="transaction-container">
   <h2>{{ action | titlecase }} Money</h2>
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   <form (ngSubmit)="openModal()" class="transaction-form">
     <div class="form-group">
       <label for="amount">Enter Amount *</label>
@@ -18,19 +14,11 @@
         placeholder="Enter amount"
       />
     </div>
-<<<<<<< HEAD
  
     <button type="submit" class="btn btn-success">Submit</button>
     <button type="button" class="btn btn-secondary" (click)="cancelTransaction()">Cancel</button>
   </form>
  
-=======
-
-    <button type="submit" class="btn btn-success">Submit</button>
-    <button type="button" class="btn btn-secondary" (click)="cancelTransaction()">Cancel</button>
-  </form>
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   <!-- Modal for Approval Confirmation -->
   <div class="modal-overlay" [class.show]="isModalOpen">
     <div class="modal-content">
@@ -42,7 +30,6 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
  
   <div *ngIf="successMessage" class="success-message">
     {{ successMessage }}
@@ -52,17 +39,6 @@
     {{ errorMessage }}
   </div>
  
-=======
-
-  <div *ngIf="successMessage" class="success-message">
-    {{ successMessage }}
-  </div>
-
-  <div *ngIf="errorMessage" class="error-message">
-    {{ errorMessage }}
-  </div>
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   <!-- Success Confirmation Modal -->
 <div class="modal-overlay" [class.show]="isSuccessModalOpen">
   <div class="modal-content">
@@ -74,16 +50,9 @@
     </div>
   </div>
 </div>
-<<<<<<< HEAD
  
  
 </div>
  
  
  
-=======
-
-
-</div>
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
