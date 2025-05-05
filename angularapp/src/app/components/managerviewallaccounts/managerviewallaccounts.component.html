@@ -132,7 +132,8 @@
 <div *ngIf="showPopup" class="popup-overlay">
   <div class="popup-box">
       <h3>Proof of Identity</h3>
-      <img *ngIf="account.proofOfIdentity" [src]="account.proofOfIdentity" alt="Proof of Identity" class="proof-image">
+      {{proof}}
+      <img *ngIf="selectedProof" [src]="selectedProof" alt="Proof of Identity" class="proof-image">
       <button class="close-btn" (click)="closePopup()">✖ Close</button>
   </div>
 </div>
