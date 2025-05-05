@@ -187,8 +187,18 @@ export class AuthService {
     this.loggedIn$.next(false);
   }
 
-  isLoggedIn(): Observable<boolean> {
-    return this.loggedIn$.asObservable();
+  
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('authToken');
   }
+  isManager(): boolean {
+    return this.getUserRole() === 'Manager';
+  }
+ 
+  isCustomer(): boolean {
+    return this.getUserRole() === 'Customer';
+  }
+ 
 }
 

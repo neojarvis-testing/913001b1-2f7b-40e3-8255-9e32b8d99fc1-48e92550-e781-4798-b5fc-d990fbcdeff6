@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionService } from 'src/app/services/transaction.service';
 import { Account } from 'src/app/models/account.model';
-
+ 
 @Component({
   selector: 'app-managerviewalltransactions',
   templateUrl: './managerviewalltransactions.component.html',
@@ -13,22 +13,29 @@ export class ManagerviewalltransactionsComponent implements OnInit {
   errorMessage: string = '';
   showPopup: boolean = false;
   isModalOpen: boolean = false;
+<<<<<<< HEAD
+  selectedTransaction: any = null;
+  // showPopup: boolean = false; // Controls popup visibility
+  filteredTransactions: any[] = [];
+  filterStatus: string = 'All';
+=======
   selectedTransaction: any = null; 
   // showPopup: boolean = false; // Controls popup visibility
   filteredTransactions: any[] = []; 
   filterStatus: string = 'All'; 
+>>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   isLoading = false;
-  
-
+ 
+ 
   constructor(private transactionService: TransactionService) {}
-
+ 
   ngOnInit(): void {
     this.getAllTransactions();
   }
-
+ 
   getAllTransactions(): void {
     this.isLoading = true; // Show loading spinner
-
+ 
     this.transactionService.getAllTransactions().subscribe({
         next: (data) => {
             this.transactions = data;
@@ -41,41 +48,56 @@ export class ManagerviewalltransactionsComponent implements OnInit {
         }
     });
 }
-
-  filterTransactions(): void { 
-    console.log("Filtering transactions by:", this.filterStatus); 
+ 
+  filterTransactions(): void {
+    console.log("Filtering transactions by:", this.filterStatus);
     if (this.filterStatus === 'All') {
       this.filteredTransactions = this.transactions;
     } else {
-      this.filteredTransactions = this.transactions.filter(transaction => 
-        transaction.status.toLowerCase() === this.filterStatus.toLowerCase() 
+      this.filteredTransactions = this.transactions.filter(transaction =>
+        transaction.status.toLowerCase() === this.filterStatus.toLowerCase()
       );
     }
   }
-
+ 
   showAccountDetails(account: Account): void {
     this.selectedAccount = account;
     this.showPopup = true;
   }
-
+ 
   closePopup(): void {
     this.showPopup = false;
     this.selectedAccount = null;
   }
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   openModal(transaction: any): void {
     this.selectedTransaction = transaction;
     this.isModalOpen = true;
   }
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedTransaction = null;
   }
+<<<<<<< HEAD
+ 
+  confirmTransaction(): void {
+    if (!this.selectedTransaction) return;
+ 
+=======
 
   confirmTransaction(): void {
     if (!this.selectedTransaction) return;
 
+>>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
     this.selectedTransaction.status = 'Approved';
     this.transactionService.updateTransaction(this.selectedTransaction).subscribe({
       next: () => {
@@ -85,7 +107,11 @@ export class ManagerviewalltransactionsComponent implements OnInit {
       error: (err) => console.error('Error approving transaction:', err)
     });
   }
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
   rejectTransaction(transaction: any): void {
     transaction.status = 'Rejected';
     this.transactionService.updateTransaction(transaction).subscribe({
@@ -93,5 +119,5 @@ export class ManagerviewalltransactionsComponent implements OnInit {
       error: (err) => console.error('Error rejecting transaction:', err)
     });
   }
-  
+ 
 }

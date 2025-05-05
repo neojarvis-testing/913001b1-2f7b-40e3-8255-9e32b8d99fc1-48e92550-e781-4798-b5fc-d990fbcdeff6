@@ -20,10 +20,9 @@ import { CustomermytransactionsComponent } from './components/customermytransact
 import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
-  { path: '', component: NavbarComponent },
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
-  { path: '', component: AppComponent },
  
 
 
