@@ -7,15 +7,12 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./managernav.component.css']
 })
 export class ManagernavComponent implements OnInit {
- 
+ username : string = '';
   constructor(private router: Router,private service : AuthService) { }
  
   ngOnInit(): void {
-    //const role = localStorage.getItem('role');
-    // const role = this.service.getUserRole();
-    // if (role !== 'Manager') {
-    //   this.router.navigate(['/login']);
-    // }
+
+   this.username = this.service.getUsername();
   }
  
   logout(): void {

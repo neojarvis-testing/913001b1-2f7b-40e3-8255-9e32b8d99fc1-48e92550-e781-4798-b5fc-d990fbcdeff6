@@ -9,8 +9,7 @@
       <option value="Processing">Processing</option>
     </select>
   </div>
-   
- 
+
   <table>
     <thead>
       <tr>
@@ -26,52 +25,26 @@
     <tbody>
       <!-- Show Loader while Fetching Data -->
       <tr *ngIf="isLoading">
-          <td colspan="7" class="loading-row">
-              <div class="loading-container">
-                  <div class="spinner"></div>
-                  <p class="loading-message"> Fetching transactions, please wait...</p>
-              </div>
-          </td>
+        <td colspan="7" class="loading-row">
+          <div class="loading-container">
+            <div class="spinner"></div>
+            <p class="loading-message">Fetching transactions, please wait...</p>
+          </div>
+        </td>
       </tr>
- 
+
       <!-- Show "No Transactions Found" After Loading Completes -->
       <tr *ngIf="!isLoading && filteredTransactions.length === 0">
-          <td colspan="7" class="no-data"> No transactions available.</td>
+        <td colspan="7" class="no-data">No transactions available.</td>
       </tr>
- 
+
       <!-- Show Transaction Data When Available -->
-      <tr *ngFor="let transaction of filteredTransactions">
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
-          <td>{{ transaction.transactionId }}</td>
-          <td>{{ transaction.accountId }}</td>
-          <td>{{ transaction.transactionDate | date:'dd/MM/yyyy' }}</td>
-          <td>{{ transaction.transactionType }}</td>
-          <td class="right-align">{{ transaction.amount | currency:'INR':'symbol'}}</td>
-          <td>{{ transaction.status }}</td>
-          <td>
-              <ng-container *ngIf="transaction.status !== 'Completed'; else noActionTemplate">
-                  <button (click)="showAccountDetails(transaction.account)">Show Account</button>
-                  <button (click)="proceedTransaction(transaction)">Proceed</button>
-                  <button (click)="rejectTransaction(transaction)">Reject</button>
-              </ng-container>
-              <ng-template #noActionTemplate>
-                  <span>No action required</span>
-              </ng-template>
-          </td>
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
-        <td>{{ transaction.transactionId }}</td>
+      <tr *ngFor="let transaction of filteredTransactions; let i = index">
+        <td>{{ i + 1 }}</td> <!-- Displaying Serial Number -->
         <td>{{ transaction.accountId }}</td>
         <td>{{ transaction.transactionDate | date:'dd/MM/yyyy' }}</td>
         <td>{{ transaction.transactionType }}</td>
-        <td class="right-align">{{ transaction.amount | currency:'INR':'symbol'}}</td>
+        <td class="right-align">{{ transaction.amount | currency:'INR':'symbol' }}</td>
         <td>{{ transaction.status }}</td>
         <td>
           <ng-container *ngIf="transaction.status !== 'Completed'; else noActionTemplate">
@@ -83,33 +56,23 @@
             <span>No action required</span>
           </ng-template>
         </td>
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
       </tr>
-  </tbody>
- 
+    </tbody>
   </table>
 </div>
- 
+
 <!-- Account Details Popup -->
 <div class="modal-overlay" [class.show]="showPopup">
   <div class="modal-content">
     <h3>Account Details</h3>
     <p><strong>Account Holder:</strong> {{ selectedAccount?.accountHolderName }}</p>
     <p><strong>Account Type:</strong> {{ selectedAccount?.accountType }}</p>
-    <strong>Balance:</strong><span class="right-align"> {{ selectedAccount?.balance | currency:'INR':'symbol' }}</span>
+    <p><strong>Balance:</strong> ₹{{ selectedAccount?.balance | currency:'INR':'symbol' }}</p>
     <p><strong>Status:</strong> {{ selectedAccount?.status }}</p>
     <button class="btn btn-secondary" (click)="closePopup()">Close</button>
   </div>
 </div>
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 0a88c27b3f18b651baf45936730a69d3c2214ef8
 <!-- Confirmation Modal for Manager Approval -->
 <div class="modal-overlay" [class.show]="isModalOpen">
   <div class="modal-content">

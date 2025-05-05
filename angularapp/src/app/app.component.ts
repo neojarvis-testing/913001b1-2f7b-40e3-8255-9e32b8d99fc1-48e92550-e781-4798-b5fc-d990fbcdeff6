@@ -13,8 +13,14 @@ export class AppComponent {
   constructor(public authService: AuthService, public router: Router) {} // ✅ AuthService injected
  
   shouldShowNavbar(): boolean {
-    return !this.authService.isLoggedIn();
-  }
- 
+    const currentPath = window.location.pathname;
+    return (
+      currentPath === '/' ||
+      currentPath.includes('/login') ||
+      currentPath.includes('/register')
+    );
+  }  
 }
+ 
+ 
  
