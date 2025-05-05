@@ -1,7 +1,7 @@
-<div class="container">
+<!-- <div class="container">
   <h1>Transaction Details</h1>
 
-  <!-- Filter Section -->
+  
   <div class="filter-section">
     <label for="filterStatus">Filter by Status:</label>
     <select id="filterStatus" [(ngModel)]="filterStatus" (change)="filterTransactions()">
@@ -11,7 +11,7 @@
     </select>
   </div>
 
-  <!-- Transactions Table -->
+  
   <table class="transactions-table">
     <thead>
       <tr>
@@ -37,7 +37,7 @@
     </tbody>
   </table>
 
-  <!-- Account Details Modal -->
+
   <div class="modal-backdrop" *ngIf="showAccountModal">
     <div class="modal-content">
       <h2>Account Details</h2>
@@ -47,5 +47,75 @@
       <p><strong>Status:</strong> {{ selectedAccountDetails?.status }}</p>
       <button class="modal-close-button" (click)="closeAccountModal()">Close</button>
     </div>
+  </div>
+</div> -->
+
+
+<div class="transaction-container">
+  <h1 class="transaction-title">💳 Transaction History</h1>
+
+  <!-- Filter Section -->
+  <div class="filter-container">
+      <label for="filterStatus"> Filter by Status:</label>
+      <select id="filterStatus" [(ngModel)]="filterStatus" (change)="filterTransactions()">
+          <option value="">All</option>
+          <option value="Completed"> Completed</option>
+          <option value="Processing"> Processing</option>
+      </select>
+  </div>
+
+  <!-- Transactions Table -->
+  <table class="transactions-table">
+      <thead>
+          <tr>
+              <th>S.No</th>
+              <th>Transaction Type</th>
+              <th>Amount (₹)</th>
+              <th>Transaction Date</th>
+              <th>Status</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+        <!-- Show Loader when Data is Fetching -->
+        <tr *ngIf="isLoading">
+            <td colspan="6" class="loading-row">
+                <div class="loading-container">
+                    <div class="spinner"></div>
+                    <p class="loading-message"> Fetching transactions, please wait...</p>
+                </div>
+            </td>
+        </tr>
+    
+        <!-- Show "No Transactions Found" Only When Loading is Done -->
+        <tr *ngIf="!isLoading && filteredTransactions.length === 0">
+            <td colspan="6" class="no-records"> No transactions available!</td>
+        </tr>
+    
+        <!-- Show Transaction Data When Available -->
+        <tr *ngFor="let transaction of filteredTransactions; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ transaction.transactionType }}</td>
+            <td style="text-align: right;">{{ transaction.amount | currency:'INR':'symbol' }}</td>
+            <td>{{ transaction.transactionDate | date: 'dd/MM/yyyy' }}</td>
+            <td><span class="status-label {{ transaction.status | lowercase }}">{{ transaction.status }}</span></td>
+            <td>
+                <button class="action-button" (click)="showAccountDetails(transaction)"> View Account</button>
+            </td>
+        </tr>
+    </tbody>
+    
+  </table>
+</div>
+
+<!-- Account Details Modal -->
+<div *ngIf="showAccountModal" class="modal-overlay">
+  <div class="modal">
+      <span class="close-btn" (click)="closeAccountModal()">&times;</span>
+      <h2 class="modal-title">Account Information</h2>
+      <p><strong> Holder Name:</strong> {{ selectedAccountDetails?.accountHolderName }}</p>
+      <p><strong> Account Type:</strong> {{ selectedAccountDetails?.accountType }}</p>
+      <p><strong> Balance:</strong> ₹{{ selectedAccountDetails?.balance }}</p>
+      <p><strong> Status:</strong> <span class="status-label {{ selectedAccountDetails?.status | lowercase }}">{{ selectedAccountDetails?.status }}</span></p>
   </div>
 </div>

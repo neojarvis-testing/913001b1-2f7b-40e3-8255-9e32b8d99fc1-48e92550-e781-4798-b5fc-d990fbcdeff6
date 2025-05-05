@@ -15,6 +15,8 @@ export class ManagerviewalltransactionsComponent implements OnInit {
   showPopup: boolean = false; // Controls popup visibility
   filteredTransactions: Transaction[] = []; 
   filterStatus: string = 'All'; 
+  isLoading = false;
+  
 
   constructor(private transactionService: TransactionService) {}
 
@@ -23,18 +25,20 @@ export class ManagerviewalltransactionsComponent implements OnInit {
   }
 
   getAllTransactions(): void {
+    this.isLoading = true; // Show loading spinner
+
     this.transactionService.getAllTransactions().subscribe({
-      next: (data) => {
-        this.transactions = data;
-        this.filteredTransactions = data;
-        console.log(this.transactions);
-      },
-      error: (err) => {
-        this.errorMessage = 'Error fetching transactions. Please try again later.';
-        console.error(err);
-      }
+        next: (data) => {
+            this.transactions = data;
+            this.filteredTransactions = data;
+            this.isLoading = false; // Hide loading spinner after fetching
+        },
+        error: (err) => {
+            console.error('Error fetching transactions:', err);
+            this.isLoading = false; // Hide spinner on error
+        }
     });
-  }
+}
 
   filterTransactions(): void { 
     console.log("Filtering transactions by:", this.filterStatus); 
