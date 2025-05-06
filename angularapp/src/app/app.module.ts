@@ -22,6 +22,9 @@ import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/m
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
+// import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -35,14 +38,14 @@ import { TransactionformComponent } from './components/transactionform/transacti
     HomeComponent,
     LoginComponent,
     ManagernavComponent,
-    ManagerviewallaccountsComponent,
     ManagerviewalltransactionsComponent,
     ManagerviewfeedbackComponent,
     CustomerviewfeedbackComponent,
     NavbarComponent,
     RegistrationComponent,
     TransactionformComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ManagerviewallaccountsComponent
     
 
   ],
@@ -54,7 +57,8 @@ import { TransactionformComponent } from './components/transactionform/transacti
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule
-
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

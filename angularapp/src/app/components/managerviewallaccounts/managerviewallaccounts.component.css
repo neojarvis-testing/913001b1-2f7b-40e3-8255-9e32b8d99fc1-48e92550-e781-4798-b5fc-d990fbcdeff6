@@ -1,4 +1,3 @@
-
 .account-container {
   width: 90%;
   margin: auto;
@@ -6,9 +5,12 @@
   font-family: Arial, sans-serif;
 }
 
-/* Search and Filter */
+
 .filters {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
+  
 }
 
 input, select {
@@ -16,7 +18,7 @@ input, select {
   margin-right: 10px;
 }
 
-/* Table Styling */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -35,7 +37,6 @@ th {
   color: white;
 }
 
-/* Buttons */
 button {
   margin: 5px;
   padding: 8px 12px;
@@ -49,11 +50,11 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Button Colors */
-button:nth-child(1) { background-color: #28a745; color: white; } /* Show Proof */
-button:nth-child(2) { background-color: #dc3545; color: white; } /* Activate/Deactivate */
 
-/* Popup Styling */
+button:nth-child(1) { background-color: #28a745; color: white; } 
+button:nth-child(2) { background-color: #dc3545; color: white; } 
+
+
 .popup {
   position: fixed;
   top: 0;
@@ -82,5 +83,3 @@ button:nth-child(2) { background-color: #dc3545; color: white; } /* Activate/Dea
   border-radius: 5px;
   margin-bottom: 10px;
 }
-
-

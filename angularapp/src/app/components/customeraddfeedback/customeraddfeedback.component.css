@@ -1,76 +1,111 @@
-.feedback-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 8px;
-  background: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* Background & Container Styling */
+.feedback-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
 }
 
-h1 {
-  font-size: 22px;
-  margin-bottom: 10px;
+/* Feedback Card */
+.feedback-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
 }
 
-textarea {
-  width: 100%;
-  height: 80px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: none;
+/* Heading & Description */
+.feedback-box h2 {
+    color: #0077b6;
+    margin-bottom: 10px;
 }
 
+.feedback-box p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Textarea */
+.feedback-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 1rem;
+}
+
+/* Validation Message */
 .error-text {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  border: none;
-  background: #007bff;
-  color: white;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+/* Submit Button */
+.submit-btn {
+    background: #ffdd00;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
-button[disabled] {
-  background: #aaa;
-  cursor: not-allowed;
+.submit-btn:hover {
+    background: #ffc107;
 }
 
+/* Popup Styling */
 .popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.popup button {
-  background: green;
-  padding: 6px 12px;
-  margin-top: 10px;
+.popup h3 {
+    color: #0077b6;
 }
 
+.popup-btn {
+    background: #0077b6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup-btn:hover {
+    background: #005f8d;
+}
+
+/* Error Message */
 .error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+    margin-top: 15px;
 }

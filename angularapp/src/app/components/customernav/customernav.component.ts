@@ -15,12 +15,12 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 
 export class CustomernavComponent implements OnInit {
+   username : string ='';
+  constructor(private router: Router, private service: AuthService) {}
 
-  showLogoutConfirm = false;
-
-  constructor(private router: Router, private service: AuthService) { }
-
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.username = this.service.getUsername();
+  }
 
   logout(): void {
 

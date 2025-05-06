@@ -92,7 +92,7 @@ if (app.Environment.IsDevelopment())
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
  
- 
+app.UseStaticFiles();
 app.UseCors(MyAllowSpecificOrigins);
  
 // Add Authentication and Authorization middleware

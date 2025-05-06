@@ -1,14 +1,22 @@
-<div class="account-container">
+<!-- <div class="account-container">
   <h2>All Accounts</h2>
 
-  <!-- Search and Filter Options -->
+  
   <div class="filters">
-    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by Account Holder Name" (input)="searchAccounts()" />
-    <select [(ngModel)]="filterStatus" (change)="filterByStatus()">
-      <option value="All">All</option>
-      <option value="Active">Active</option>
-      <option value="Inactive">Inactive</option>
-    </select>
+    <div>
+      <label for="searchQuery" class="search-label">Filter by Name:</label>
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search by Account Holder Name" (input)="searchAccounts()"
+        class="search-bar" />
+    </div>
+
+    <div>
+      <label for="filterStatus" class="filter-label">Filter By Status:</label>
+      <select [(ngModel)]="filterStatus" (change)="filterByStatus()">
+        <option value="All">All</option>
+        <option value="Active">Active</option>
+        <option value="InActive">InActive</option>
+      </select>
+    </div>
   </div>
 
   <table>
@@ -27,7 +35,7 @@
         <td>{{ account.accountId }}</td>
         <td>{{ account.accountHolderName }}</td>
         <td>{{ account.accountType }}</td>
-        <td>{{ account.balance | currency }}</td>
+        <td style="text-align: right;">{{ account.balance | currency:'INR':'symbol' }}</td>
         <td>{{ account.status }}</td>
         <td>
           <button (click)="showProof(account.proofOfIdentity)">Show Proof</button>
@@ -40,12 +48,92 @@
   </table>
 </div>
 
-<!-- Proof Popup -->
+
 <div class="popup" *ngIf="showPopup">
   <div class="popup-content">
     <h3>Proof of Identity</h3>
-    <img [src]="selectedProof" alt="Proof of Identity" class="proof-image" />
+    
+    <img *ngIf="account.ProofOfIdentity" [src]="account.ProofOfIdentity" alt="Proof of Identity" width="100px">
+
     <button (click)="closePopup()">Close</button>
+  </div>
+</div> -->
+
+<div class="account-container">
+  <h2>All Accounts</h2>
+
+ 
+  <div class="filters">
+      <div class="filter-group">
+          <label for="searchQuery">Filter by Name:</label>
+          <input type="text" [(ngModel)]="searchQuery" placeholder=" Search by Account Holder Name" (input)="searchAccounts()" class="input-field"/>
+      </div>
+
+      <div class="filter-group">
+          <label for="filterStatus">Filter By Status:</label>
+          <select [(ngModel)]="filterStatus" (change)="filterByStatus()" class="dropdown">
+              <option value="All"> All</option>
+              <option value="Active"> Active</option>
+              <option value="InActive"> Inactive</option>
+          </select>
+      </div>
+  </div>
+
+ 
+  <div class="table-wrapper">
+      <table class="styled-table">
+          <thead>
+              <tr>
+                  <th>Account ID</th>
+                  <th>Holder Name</th>
+                  <th>Account Type</th>
+                  <th>Balance</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+            <!-- Show Loader while Fetching Data -->
+            <tr *ngIf="isLoading">
+                <td colspan="6" class="loading-row">
+                    <div class="loading-container">
+                        <div class="spinner"></div>
+                        <p class="loading-message"> Fetching accounts, please wait...</p>
+                    </div>
+                </td>
+            </tr>
+        
+            <!-- Show "No Accounts Found" Only After Loading Completes -->
+            <tr *ngIf="!isLoading && filteredAccounts.length === 0">
+                <td colspan="6" class="no-data"> No accounts available!</td>
+            </tr>
+        
+            <!-- Show Account Data When Available -->
+            <tr *ngFor="let account of filteredAccounts">
+                <td>{{ account.accountId }}</td>
+                <td>{{ account.accountHolderName }}</td>
+                <td>{{ account.accountType }}</td>
+                <td style="text-align: right;">{{ account.balance | currency:'INR':'symbol' }}</td>
+                <td><span class="status-badge {{ account.status | lowercase }}">{{ account.status }}</span></td>
+                <td>
+                    <button class="action-btn view-proof" (click)="showProof(account.proofOfIdentity)"> Show Proof</button>
+                    <button class="action-btn toggle-status" (click)="toggleAccountStatus(account)">
+                        {{ account.status === 'Active' ? 'Deactivate' : 'Activate' }}
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        
+      </table>
+  </div>
+</div>
+
+
+<div *ngIf="showPopup" class="popup-overlay">
+  <div class="popup-box">
+      <h3>Proof of Identity</h3>
+      <img *ngIf="account.proofOfIdentity" [src]="account.proofOfIdentity" alt="Proof of Identity" class="proof-image">
+      <button class="close-btn" (click)="closePopup()">✖ Close</button>
   </div>
 </div>
 

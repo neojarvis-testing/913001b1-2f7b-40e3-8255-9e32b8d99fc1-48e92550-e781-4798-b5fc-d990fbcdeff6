@@ -14,18 +14,18 @@ import { ManagerviewalltransactionsComponent } from './components/managerviewall
 import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { AuthGuard } from './components/authguard/auth.guard';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+// import { NavbarComponent } from './components/navbar/navbar.component';
 import { TransactionformComponent } from './components/transactionform/transactionform.component';
 import { CustomermytransactionsComponent } from './components/customermytransactions/customermytransactions.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route redirects to login
+  // { path: '', component: AppComponent },
+
+  {path:'',component:HomeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
  
-
-
-  // Customer section with AuthGuard applied
   {
     path: 'customer',
     component: CustomernavComponent, 
@@ -58,7 +58,8 @@ const routes: Routes = [
       { path: 'feedbacks', component: ManagerviewfeedbackComponent },
       
     ]
-  }
+  },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({

@@ -5,11 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, BehaviorSubject } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://8080-fcfcacacacacadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api';
+  private apiUrl = 'https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io/api';
   private tokenKey = 'authToken';
   private role = '';
   private loggedIn$ = new BehaviorSubject<boolean>(false);
@@ -58,6 +59,8 @@ export class AuthService {
       try {
         const payload = JSON.parse(atob(token.split('.')[1]));
         return payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+        //http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
+
       } catch (error) {
         console.error('Error decoding token:', error);
         return null;
@@ -87,9 +90,32 @@ export class AuthService {
     localStorage.removeItem('userRole');
     this.loggedIn$.next(false);
   }
-
-  isLoggedIn(): Observable<boolean> {
-    return this.loggedIn$.asObservable();
+  
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('authToken');
   }
+  isManager(): boolean {
+    return this.getUserRole() === 'Manager';
+  }
+ 
+  isCustomer(): boolean {
+    return this.getUserRole() === 'Customer';
+  }
+
+  getUsername(): string | null {
+    const token = this.getToken();
+    if (token) {
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1])); // Decode JWT
+        console.log("Decoded Payload:", payload); // Debugging Output
+        return payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'] || null; // Ensure proper key access
+      } catch (error) {
+        console.error("Error decoding token:", error);
+        return null;
+      }
+    }
+    return null;
+  }
+ 
 }
 
