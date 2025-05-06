@@ -8,20 +8,11 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./customernav.component.css']
 })
 export class CustomernavComponent implements OnInit {
-
+   username : string ='';
   constructor(private router: Router, private service: AuthService) {}
 
   ngOnInit(): void {
-    // Optionally check for valid login or role here
-    // const role = localStorage.getItem('role');
-    // const role = this.service.getUserRole();
-    // console.log(role);
-    // if (role !== 'Customer') {
-    //   this.router.navigate(['/login']);
-    // }
-    // else{
-    //   console.log("not match")
-    // }
+    this.username = this.service.getUsername();
   }
 
   logout(): void {

@@ -1,3 +1,18 @@
-<!-- <app-navbar></app-navbar>  -->
-<!-- <app-home></app-home> -->
-<router-outlet></router-outlet>
+<ng-container *ngIf="shouldShowNavbar()">
+    <ng-container *ngIf="authService.isManager(); else userNav">
+      <app-managernav></app-managernav>
+    </ng-container>
+  
+    <ng-template #userNav>
+      <ng-container *ngIf="authService.isCustomer(); else defaultNav">
+        <app-usernav></app-usernav>
+      </ng-container>
+    </ng-template>
+  
+    <ng-template #defaultNav>
+      <app-navbar></app-navbar>
+    </ng-template>
+  </ng-container>
+  
+  <router-outlet></router-outlet>
+  

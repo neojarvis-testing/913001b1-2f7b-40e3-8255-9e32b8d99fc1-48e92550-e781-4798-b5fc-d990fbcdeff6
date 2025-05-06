@@ -111,5 +111,58 @@ namespace dotnetapp.Controllers
             _accountService.DeleteAccount(id);
             return NoContent();
         }
+
+
+        //for uploading a file 
+
+        [HttpPost("upload")]
+        [Authorize(Roles = "Manager, Customer")]
+        public async Task<IActionResult> UploadImage(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded");
+ 
+            // Validate file type
+            string[] allowedExtensions = { ".jpg", ".jpeg", ".png" };
+            var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
+            
+            if (!allowedExtensions.Contains(fileExtension))
+                return BadRequest("Only jpg, jpeg, and png files are allowed");
+ 
+            try
+            {
+                // Create a unique filename to prevent overwriting
+                var uniqueFileName = $"{Guid.NewGuid()}{fileExtension}";
+                
+                // Calculate paths - adjust these paths according to your project structure
+                string webRootPath = Directory.GetCurrentDirectory();
+                string uploadPath = Path.Combine(webRootPath, "ClientApp", "src", "assets", "uploads");
+                
+                // Create directory if it doesn't exist
+                if (!Directory.Exists(uploadPath))
+                    Directory.CreateDirectory(uploadPath);
+                    
+                var filePath = Path.Combine(uploadPath, uniqueFileName);
+                
+                // Save the file
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                
+                // Return the relative path that will be stored in the database
+                // Just the filename - we'll construct the full path in the frontend
+                
+                Log.Information($"File uploaded successfully: {uniqueFileName}");
+                
+                return Ok(new { ImageUrl = $"/assets/uploads/{uniqueFileName}" });
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Error uploading file: {ex.Message}");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
+    
 }

@@ -1,15 +1,15 @@
 <div>
-    <h1>Feedback Details</h1> <!-- Added required heading -->
+    <h1>Feedback Details</h1> 
 
     <nav>
         <button (click)="loadFeedbacks()">Refresh Feedbacks</button>
     </nav>
 
-    <div *ngIf="feedbacks.length === 0">
+    <!-- <div *ngIf="!isLoading && feedbacks.length === 0">
         <p>Oops! No records Found</p>
-    </div>
+    </div> -->
 
-    <table *ngIf="feedbacks.length > 0">
+    <table *ngIf="!isLoading && feedbacks.length > 0">
         <thead>
             <tr>
                 <th>S.No.</th>
@@ -20,23 +20,41 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Show Loader while Fetching Data -->
+            <tr *ngIf="isLoading">
+                <td colspan="5" class="loading-row">
+                    <div class="loading-container">
+                        <div class="spinner"></div>
+                        <p class="loading-message"> Fetching feedback, please wait...</p>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- Show "No Feedback Found" Only After Loading Completes -->
+            <tr *ngIf="!isLoading && feedbacks.length === 0">
+                <td colspan="5" class="no-data"> No feedback available.</td>
+            </tr>
+        
+            <!-- Show Feedback Data When Available -->
             <tr *ngFor="let feedback of feedbacks; let i = index">
-                <td>{{ i + 1 }}</td> <!-- Serial Number -->
-                <td>{{ feedback.user?.username }}</td> <!-- Get Username from Feedback.User -->
+                <td>{{ i + 1 }}</td> 
+                <td>{{ feedback.user?.username }}</td> 
                 <td>{{ feedback.comments }}</td>
-                <td>{{ feedback.dateProvided | date:'dd-MM-yyyy' }}</td> <!-- Format Date -->
+                <td>{{ feedback.dateProvided | date:'dd/MM/yyyy' }}</td> 
                 <td>
                     <button (click)="showProfile(feedback)">Show Profile</button>
                 </td>
             </tr>
+           
         </tbody>
+        
     </table>
 
-    <!-- Profile Popup -->
+    
     <div *ngIf="showProfileModal" class="modal">
         <div class="modal-content">
             <span class="close" (click)="closeProfileModal()">&times;</span>
-            <h2>User Details</h2> <!-- Added heading inside modal -->
+            <h2>User Details</h2> 
             <p><strong>Name:</strong> {{ selectedUser?.username }}</p>
             <p><strong>Email:</strong> {{ selectedUser?.email }}</p>
             <p><strong>Mobile:</strong> {{ selectedUser?.mobileNumber }}</p>

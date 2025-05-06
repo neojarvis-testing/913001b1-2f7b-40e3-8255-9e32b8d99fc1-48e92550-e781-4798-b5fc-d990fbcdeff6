@@ -10,7 +10,6 @@ using dotnetapp.Services;
 using Serilog;
  
  
- 
 var MyAllowSpecificOrigins = "urls";
 var builder = WebApplication.CreateBuilder(args);
  
@@ -92,7 +91,7 @@ if (app.Environment.IsDevelopment())
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
  
- 
+app.UseStaticFiles();
 app.UseCors(MyAllowSpecificOrigins);
  
 // Add Authentication and Authorization middleware

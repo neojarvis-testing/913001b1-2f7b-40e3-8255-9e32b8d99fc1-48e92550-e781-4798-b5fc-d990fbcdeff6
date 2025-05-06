@@ -75,6 +75,7 @@ namespace dotnetapp.Controllers
             }
         }
 
+
         [HttpGet("customer/{userId}")]
         [Authorize(Roles = "Customer,Manager")]
         public IActionResult GetTransactionsByUserId(int userId)

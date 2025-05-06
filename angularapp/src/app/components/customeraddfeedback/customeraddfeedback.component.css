@@ -1,36 +1,111 @@
+/* Background & Container Styling */
+.feedback-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+}
+
+/* Feedback Card */
+.feedback-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Heading & Description */
+.feedback-box h2 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.feedback-box p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Textarea */
+.feedback-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 1rem;
+}
+
+/* Validation Message */
+.error-text {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #ffdd00;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #ffc107;
+}
+
+/* Popup Styling */
 .popup-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.popup p {
-  font-size: 18px;
-  color: #007bff;
-  margin-bottom: 15px;
+.popup h3 {
+    color: #0077b6;
 }
 
-.popup button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.popup-btn {
+    background: #0077b6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.popup button:hover {
-  background-color: #0056b3;
+.popup-btn:hover {
+    background: #005f8d;
+}
+
+/* Error Message */
+.error-message {
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+    margin-top: 15px;
 }
