@@ -7,7 +7,7 @@ import { Transaction } from '../models/transaction.model';
   providedIn: 'root'
 })
 export class TransactionService {
-  public apiUrl = 'https://8080-adbeaecaedadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io';
+  public apiUrl = 'https://8080-bebececaaeeaadefcbfefdfaeebfcdfbcdeff.premiumproject.examly.io';
 
   constructor(private http: HttpClient) { }
 
@@ -33,4 +33,5 @@ export class TransactionService {
   getTransactionsByUserId(userId: number): Observable<Transaction[]> {
     return this.http.get<Transaction[]>(`${this.apiUrl}/api/transaction/customer/${userId}`, { headers: this.getAuthHeaders() });
   }
+  
 }

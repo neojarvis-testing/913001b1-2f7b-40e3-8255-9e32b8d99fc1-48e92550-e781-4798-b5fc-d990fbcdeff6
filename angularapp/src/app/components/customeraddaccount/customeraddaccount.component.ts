@@ -4,7 +4,10 @@ import { AccountService } from 'src/app/services/account.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { Account } from 'src/app/models/account.model';
- 
+import { promise } from 'protractor';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
+
 @Component({
   selector: 'app-customeraddaccount',
   templateUrl: './customeraddaccount.component.html',
@@ -76,7 +79,9 @@ export class CustomeraddaccountComponent implements OnInit {
     }
     )
   }
- 
+
+
+
   createAccount(): void {
     if (this.accountForm.valid) {
         const accountData: any = {
