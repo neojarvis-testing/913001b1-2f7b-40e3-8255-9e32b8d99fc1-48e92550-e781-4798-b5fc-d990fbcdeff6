@@ -230,6 +230,7 @@ body {
   color: white;
   padding: 12px;
   text-align: left;
+  text-align: center;
 }
 
 .transactions-table td {

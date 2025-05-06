@@ -53,11 +53,30 @@ export class CustomeraddaccountComponent implements OnInit {
     });
   }
 
+
+
   onFileSelected(event: any): void {
     const file = event.target.files[0];
     if (file) {
-      this.accountForm.patchValue({ proofOfIdentity: file.name });
+      this.handleBase64(file).then(
+        (basestring) => {
+          console.log(basestring);
+      this.accountForm.patchValue({ proofOfIdentity: basestring });
+         
+        }
+      )
+      // this.accountForm.patchValue({ proofOfIdentity: file.name });
     }
+  }
+ 
+  handleBase64(file:File): Promise<string>{
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = (error) => reject(error);
+      reader.readAsDataURL(file);
+    }
+    )
   }
 
   createAccount(): void {
