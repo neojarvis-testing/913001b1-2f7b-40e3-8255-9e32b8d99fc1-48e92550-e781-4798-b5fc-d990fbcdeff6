@@ -75,7 +75,7 @@ export class TransactionformComponent implements OnInit {
           : 'Transaction completed successfully!';
         this.isSuccessModalOpen = true; // Open success modal
       },
-      error: () => this.errorMessage = 'Error processing transaction.'
+      error: () => this.errorMessage = 'Not Enough Balance.'
     });
   }
  
