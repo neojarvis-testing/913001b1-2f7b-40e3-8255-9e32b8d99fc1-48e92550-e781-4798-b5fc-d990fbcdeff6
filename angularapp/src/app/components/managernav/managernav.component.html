@@ -1,13 +1,24 @@
 <nav class="navbar">
   <div class="logo">BTMS</div>
   <ul class="nav-links">
-    <div class="role">Manager</div>
+    <div class="role">{{username}}/Manager</div>
     <a routerLink="/manager/home">Home</a>
     <a routerLink="/manager/accounts">Accounts</a>
     <a routerLink="/manager/transactions">Transactions</a>
     <a routerLink="/manager/feedbacks">Feedbacks</a>
-    <button (click)="logout()">Logout</button>
+    <button (click)="openLogoutPopup()" class="logout-button">Logout</button>
   </ul>
 </nav>
-<!-- Displays manager-specific child components -->
-<router-outlet></router-outlet> 
+
+<!-- Logout Confirmation Modal -->
+<div class="modal" *ngIf="showLogoutConfirm">
+  <div class="modal-content">
+    <p>Are you sure you want to logout?</p>
+    <div class="modal-actions">
+      <button class="confirm" (click)="confirmLogout()">Yes, Logout</button>
+      <button class="cancel" (click)="cancelLogout()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -64,6 +64,7 @@ export class CustomerviewfeedbackComponent implements OnInit {
   showDeletePopup = false;
   feedbackToDelete: number | null = null;
   userId: number = 0; // **Added a property to store the user ID**
+  isLoading = false;
 
   constructor(private feedbackService: FeedbackService, private authService: AuthService) { } // **Fixed typo in 'authService'**
 
@@ -77,16 +78,38 @@ export class CustomerviewfeedbackComponent implements OnInit {
     return isNaN(id) ? 0 : id; // **Validating the result**
   }
 
+  // loadFeedbacks() {
+  //   if (this.userId > 0) { // **Ensure valid user ID before making API call**
+
+  //     this.feedbackService.getAllFeedbacksByUserId(this.userId).subscribe((feedbacks) => {
+  //       this.feedbacks = feedbacks;
+  //       console.log(feedbacks);
+  //     });
+  //   } else {
+  //     console.warn('Invalid User ID');
+  //   }
+  // }
+
   loadFeedbacks() {
-    if (this.userId > 0) { // **Ensure valid user ID before making API call**
-      this.feedbackService.getAllFeedbacksByUserId(this.userId).subscribe((feedbacks) => {
-        this.feedbacks = feedbacks;
-        console.log(feedbacks);
-      });
+    if (this.userId > 0) {
+        this.isLoading = true; // Show loading spinner
+
+        this.feedbackService.getAllFeedbacksByUserId(this.userId).subscribe(
+            (feedbacks) => {
+                this.feedbacks = feedbacks;
+                this.isLoading = false; // Hide loading spinner after fetching
+            },
+            (error) => {
+                console.error("Error fetching feedback", error);
+                this.isLoading = false; // Hide spinner on error
+            }
+        );
     } else {
-      console.warn('Invalid User ID');
+        console.warn('Invalid User ID');
     }
-  }
+}
+
+
 
   confirmDelete(feedbackId: number) {
     this.feedbackToDelete = feedbackId;

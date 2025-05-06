@@ -37,8 +37,8 @@ namespace dotnetapp.Models
         [StringLength(50, ErrorMessage = "Status cannot exceed 50 characters.")]
         public string? Status {get;set;}  //it is optional
 
-        [Required (ErrorMessage = "ProoOfIdentity is required.")]
-        [StringLength(255, ErrorMessage = "ProofOfIdentity cannot exceed 255 characters.")] 
+        [Required (ErrorMessage = "ProofOfIdentity is required.")]
+        // [StringLength(255, ErrorMessage = "ProofOfIdentity cannot exceed 255 characters.")] 
         public string ProofOfIdentity {get;set;} 
 
         public DateTime? DateCreated {get;set;}  // it is also optional

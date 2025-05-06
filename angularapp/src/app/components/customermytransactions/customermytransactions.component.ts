@@ -15,6 +15,7 @@ export class CustomermytransactionsComponent implements OnInit{
   userId: number | null = null; // Holds logged-in user's ID
   showAccountModal: boolean = false;
   selectedAccountDetails: any = null;
+  isLoading = false; // Loader state
 
   constructor(
     private transactionService: TransactionService,
@@ -31,17 +32,21 @@ export class CustomermytransactionsComponent implements OnInit{
 
   fetchTransactionsByUser(): void {
     if (this.userId) {
-      this.transactionService.getTransactionsByUserId(this.userId).subscribe({
-        next: (transactions: any[]) => {
-          this.transactions = transactions;
-          this.filteredTransactions = transactions; // Default view
-        },
-        error: (err) => {
-          console.error('Error fetching transactions:', err);
-        }
-      });
+        this.isLoading = true; // Show loader
+
+        this.transactionService.getTransactionsByUserId(this.userId).subscribe({
+            next: (transactions: any[]) => {
+                this.transactions = transactions;
+                this.filteredTransactions = transactions;
+                this.isLoading = false; // Hide loader after fetching
+            },
+            error: (err) => {
+                console.error('Error fetching transactions:', err);
+                this.isLoading = false; // Hide loader on error
+            }
+        });
     }
-  }
+}
 
   filterTransactions(): void {
     this.filteredTransactions = this.filterStatus

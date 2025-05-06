@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class CustomerviewaccountComponent implements OnInit {
   accounts: Account[] = []; // Holds all accounts related to the customer
   errorMessage: string = ''; // Holds any error messages
+  loading: boolean = false;
 
   constructor(
     private accountService: AccountService,
@@ -24,26 +25,32 @@ export class CustomerviewaccountComponent implements OnInit {
   }
 
   getCustomerAccounts(): void {
-    // Retrieve UserId from the AuthService
-    const userId = +this.authService.getUserId(); // Convert string to number
+    this.loading = true; // Start loading
+  
+    const userId = +this.authService.getUserId();
     if (!userId || isNaN(userId)) {
       this.errorMessage = 'Unable to fetch user information.';
+      this.loading = false; // Stop loading on error
       return;
     }
-
-    // Fetch accounts using AccountService
+  
     this.accountService.getAccountByUserId(userId).subscribe({
       next: (data: Account[]) => {
-        this.accounts = data; // Assign fetched accounts
-        console.log('Fetched accounts:', this.accounts);
+        if (data.length === 0) {
+          this.errorMessage = 'No accounts found.'; // Instead of displaying a separate message
+        } else {
+          this.accounts = data;
+        }
+        this.loading = false; // Stop loading after response
       },
       error: (err) => {
         console.error('Error fetching accounts:', err);
-        this.errorMessage = 'Error fetching accounts. Please try again later.';
+        this.errorMessage = 'No account is found.';
+        this.loading = false; // Stop loading on error
       }
     });
   }
-
+  
   onDeposit(accountId: number): void {
     this.router.navigate(['/customer/transactionform'], { queryParams: { action: 'Deposit', accountId } });
   }

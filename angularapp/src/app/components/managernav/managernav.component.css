@@ -1,46 +1,99 @@
 nav {
-    background-color: #1f1f1f;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-   
-  nav .brand {
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-   
-  nav .nav-links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-   
-  nav .nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-  }
-   
-  nav .nav-links a:hover {
-    background-color: #333;
-  }
-   
-  .logout-button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-   
-  .logout-button:hover {
-    background-color: #c0392b;
-  }
-   
+  background-color: #1f1f1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+nav .brand {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+nav .nav-links a:hover {
+  background-color: #333;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Logout Confirmation Modal */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1000;
+  text-align: center;
+  flex-direction: column;
+}
+
+.modal-content p {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel {
+  background-color: #333;
+  color: white;
+}
+
+.confirm:hover {
+  background-color: #c0392b;
+}
+
+.cancel:hover {
+  background-color: #1f1f1f;
+}

@@ -1,13 +1,16 @@
-.account-container {
+/* .account-container {
   width: 90%;
   margin: auto;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
-/* Search and Filter */
+
 .filters {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
+  
 }
 
 input, select {
@@ -15,7 +18,7 @@ input, select {
   margin-right: 10px;
 }
 
-/* Table Styling */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -34,7 +37,6 @@ th {
   color: white;
 }
 
-/* Buttons */
 button {
   margin: 5px;
   padding: 8px 12px;
@@ -48,11 +50,11 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Button Colors */
-button:nth-child(1) { background-color: #28a745; color: white; } /* Show Proof */
-button:nth-child(2) { background-color: #dc3545; color: white; } /* Activate/Deactivate */
 
-/* Popup Styling */
+button:nth-child(1) { background-color: #28a745; color: white; } 
+button:nth-child(2) { background-color: #dc3545; color: white; } 
+
+
 .popup {
   position: fixed;
   top: 0;
@@ -80,4 +82,192 @@ button:nth-child(2) { background-color: #dc3545; color: white; } /* Activate/Dea
   max-width: 300px;
   border-radius: 5px;
   margin-bottom: 10px;
+} */
+
+
+/* Account Management Container */
+.account-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
+
+/* Filters Section */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Filter Group */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input Fields & Dropdown */
+.input-field, .dropdown {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styled Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+}
+
+.styled-table th {
+  background: #0077b6;
+  color: white;
+  padding: 14px;
+}
+
+.styled-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status-badge.active {
+  background: #28a745;
+  color: white;
+}
+
+.status-badge.inactive {
+  background: #ff5722;
+  color: white;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.view-proof {
+  background: #ffdd00;
+  color: black;
+}
+
+.toggle-status {
+  background: #0077b6;
+  color: white;
+}
+
+.view-proof:hover {
+  background: #ffc107;
+}
+
+.toggle-status:hover {
+  background: #005f8d;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* Popup Box */
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Proof Image */
+.proof-image {
+  width: 150px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+/* Close Button */
+.close-btn {
+  background: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.close-btn:hover {
+  background: #c92a34;
+}
+
+/* Loading Row */
+.loading-row {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Loading Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #0077b6; /* Accent color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading Message */
+.loading-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0077b6;
+  margin-top: 10px;
+}
+

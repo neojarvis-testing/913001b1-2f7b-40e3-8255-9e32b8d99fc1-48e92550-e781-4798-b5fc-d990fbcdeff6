@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthGuard } from './components/authguard/auth.guard';
+import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
  
 @Component({
@@ -8,20 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isLoggedIn: boolean = false; // Default to false (logged out)
-  title = "angularapp";
-
-  constructor(private authGuard: AuthGuard, private router: Router) {}
+  title = 'angularapp';
  
-  ngOnInit() {
-    this.isLoggedIn = this.authGuard.isAuthenticated(); // Check login status
-  }
+  constructor(public authService: AuthService, public router: Router) {} // ✅ AuthService injected
  
-  onLogout() {
-    localStorage.removeItem('authToken'); // Clear authentication token
-    this.isLoggedIn = false; // Update state
-    this.router.navigate(['/']); // Navigate to the navbar as default view
-  }
+  shouldShowNavbar(): boolean {
+    const currentPath = window.location.pathname;
+    return (
+      currentPath === '/' ||
+      currentPath.includes('/login') ||
+      currentPath.includes('/register')
+    );
+  }  
 }
+ 
  
  

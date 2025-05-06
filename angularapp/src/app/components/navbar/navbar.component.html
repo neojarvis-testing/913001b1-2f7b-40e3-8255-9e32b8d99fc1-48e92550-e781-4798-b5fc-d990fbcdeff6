@@ -1,9 +1,11 @@
  <!-- Show only when the user is NOT logged in -->
 
-<nav class="navbar" *ngIf="isLoggedIn === false">
+<nav class="navbar">
   <div class="logo">BTMS</div>
   <div class="links">
+    <a routerLink="/" routerLinkActive="active">Home</a>
     <a routerLink="/register" routerLinkActive="active">Register</a>
     <a routerLink="/login" routerLinkActive="active">Login</a>
   </div>
-</nav>  
+  
+</nav>
