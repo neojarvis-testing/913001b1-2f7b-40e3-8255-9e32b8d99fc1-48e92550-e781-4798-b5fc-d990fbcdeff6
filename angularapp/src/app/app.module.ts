@@ -46,8 +46,6 @@ import { FooterComponent } from './footer/footer.component';
     RegistrationComponent,
     ManagerviewallaccountsComponent,
     FooterComponent
-    
-
   ],
   imports: [
     BrowserModule,

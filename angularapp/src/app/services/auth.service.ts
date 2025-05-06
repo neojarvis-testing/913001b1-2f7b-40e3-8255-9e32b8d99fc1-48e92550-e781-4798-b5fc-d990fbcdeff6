@@ -91,26 +91,10 @@ export class AuthService {
     localStorage.removeItem('userRole');
     this.loggedIn$.next(false);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
- 
- 
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem('authToken');
-  }
-  isManager(): boolean {
-    return this.getUserRole() === 'Manager';
-  }
- 
-  isCustomer(): boolean {
-    return this.getUserRole() === 'Customer';
-  }
-=======
 
-=======
->>>>>>> 0d0a7e433143e2263f9c50b183d7c88a1bcaf771
-  
+ 
+ 
+ 
   isLoggedIn(): boolean {
     return !!localStorage.getItem('authToken');
   }
@@ -121,9 +105,7 @@ export class AuthService {
   isCustomer(): boolean {
     return this.getUserRole() === 'Customer';
   }
-<<<<<<< HEAD
->>>>>>> 53623fe6063c9f349297b4956d9fe1242243da0d
-=======
+
 
   getUsername(): string | null {
     const token = this.getToken();
@@ -139,8 +121,7 @@ export class AuthService {
     }
     return null;
   }
->>>>>>> 0d0a7e433143e2263f9c50b183d7c88a1bcaf771
- 
+
 }
  
  

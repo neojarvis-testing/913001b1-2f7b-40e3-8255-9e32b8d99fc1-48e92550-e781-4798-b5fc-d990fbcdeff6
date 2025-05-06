@@ -1,4 +1,4 @@
-`import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TransactionService } from 'src/app/services/transaction.service';
  
@@ -91,5 +91,4 @@ export class TransactionformComponent implements OnInit {
     this.router.navigate(['customer/view-account']); // Cancel and return to account view
   }
 }
- 
  

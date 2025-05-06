@@ -66,10 +66,13 @@ export class ManagerviewallaccountsComponent implements OnInit {
   }
 
   filterByStatus(): void {
-    this.filteredAccounts = this.filterStatus === 'All'
-      ? [...this.accounts]
-      : this.accounts.filter(account => account.status === this.filterStatus);
+    if (this.filterStatus === 'All') {
+      this.filteredAccounts = this.accounts;
+    } else {
+      this.filteredAccounts = this.accounts.filter(account => account.status === this.filterStatus);
+    }
   }
+
 
   toggleAccountStatus(account: any): void {
     if (!account.accountId) {

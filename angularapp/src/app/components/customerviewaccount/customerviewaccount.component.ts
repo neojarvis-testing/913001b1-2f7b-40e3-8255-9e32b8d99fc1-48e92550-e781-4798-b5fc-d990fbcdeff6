@@ -45,7 +45,7 @@ export class CustomerviewaccountComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error fetching accounts:', err);
-        this.errorMessage = 'Error fetching accounts. Please try again later.';
+        this.errorMessage = 'No account is found.';
         this.loading = false; // Stop loading on error
       }
     });
