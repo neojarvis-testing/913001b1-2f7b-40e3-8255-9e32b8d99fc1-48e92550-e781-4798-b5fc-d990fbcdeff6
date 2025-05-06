@@ -34,8 +34,8 @@ export class AccountService {
     return this.http.get<Account[]>(`${this.apiUrl}/api/account/user/${userId}`, { headers: this.getAuthHeaders() });
   }
 
-  getAllAccounts(): Observable<Account[]> {
-    return this.http.get<Account[]>(`${this.apiUrl}/api/account`, { headers: this.getAuthHeaders() });
+  getAllAccounts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/api/account`, { headers: this.getAuthHeaders() });
   }
 
   updateAccount(accountId: number, account: any): Observable<any> {
