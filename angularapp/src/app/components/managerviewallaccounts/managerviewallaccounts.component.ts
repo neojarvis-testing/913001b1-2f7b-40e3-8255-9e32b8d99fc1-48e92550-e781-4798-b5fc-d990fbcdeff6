@@ -80,6 +80,10 @@ export class ManagerviewallaccountsComponent implements OnInit {
   }
 
   showProof(proof: string): void {
+    console.log(proof);
+    
+    console.log(this.accounts);
+    
     this.selectedProof = proof;
     this.showPopup = true;
   }

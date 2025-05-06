@@ -67,7 +67,7 @@
     <h3>Account Details</h3>
     <p><strong>Account Holder:</strong> {{ selectedAccount?.accountHolderName }}</p>
     <p><strong>Account Type:</strong> {{ selectedAccount?.accountType }}</p>
-    <p><strong>Balance:</strong> ₹{{ selectedAccount?.balance | currency:'INR':'symbol' }}</p>
+    <p><strong>Balance:</strong> {{ selectedAccount?.balance | currency:'INR':'symbol' }}</p>
     <p><strong>Status:</strong> {{ selectedAccount?.status }}</p>
     <button class="btn btn-secondary" (click)="closePopup()">Close</button>
   </div>
